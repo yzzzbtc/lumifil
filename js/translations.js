@@ -67,6 +67,17 @@ const translations = {
                 internalDesc: "Szeroki wybór stylów – od klasycznych po nowoczesne. Drzwi przylgowe, bezprzylgowe, przesuwne, ukryte. Różne wykończenia i kolory.",
                 brands: "<strong>Producenci:</strong> Hörmann, Gerda, Porta, DRE, Erkado, Barański"
             },
+            garage: {
+                title: "Bramy garażowe",
+                sectional: "Bramy segmentowe",
+                sectionalDesc: "Najpopularniejsze rozwiązanie do garaży. Otwieranie pionowe, doskonała izolacja termiczna, szeroki wybór wzorów i kolorów.",
+                roller: "Bramy rolowane",
+                rollerDesc: "Kompaktowe bramy zwijane do garaży z ograniczoną przestrzenią. Nie wymagają miejsca pod sufitem.",
+                side: "Bramy uchylne i rozsuwane",
+                sideDesc: "Klasyczne rozwiązania dla większych otworów garażowych. Możliwość wykonania z różnych materiałów.",
+                features: "Sterowanie: ręczne, elektryczne z pilotem, integracja ze smart home. Opcje antywłamaniowe.",
+                brands: "<strong>Producenci:</strong> Hörmann, Wiśniowski, Krispol, Normstahl"
+            },
             extShutters: {
                 title: "Rolety zewnętrzne",
                 flush: "Rolety podtynkowe",
@@ -223,6 +234,17 @@ const translations = {
                 internal: "Innentüren",
                 internalDesc: "Große Auswahl an Stilen – von klassisch bis modern. Falztüren, stumpfe Türen, Schiebetüren, verdeckte Türen. Verschiedene Oberflächen und Farben.",
                 brands: "<strong>Hersteller:</strong> Hörmann, Gerda, Porta, DRE, Erkado, Barański"
+            },
+            garage: {
+                title: "Garagentore",
+                sectional: "Sektionaltore",
+                sectionalDesc: "Die beliebteste Lösung für Garagen. Vertikale Öffnung, hervorragende Wärmedämmung, große Auswahl an Designs und Farben.",
+                roller: "Rolltore",
+                rollerDesc: "Kompakte Aufrolltore für Garagen mit begrenztem Platz. Kein Platz unter der Decke erforderlich.",
+                side: "Kipp- und Schiebetore",
+                sideDesc: "Klassische Lösungen für größere Garagenöffnungen. Herstellung aus verschiedenen Materialien möglich.",
+                features: "Steuerung: manuell, elektrisch mit Fernbedienung, Smart-Home-Integration. Einbruchschutz-Optionen.",
+                brands: "<strong>Hersteller:</strong> Hörmann, Wiśniowski, Krispol, Normstahl"
             },
             extShutters: {
                 title: "Außenrollläden",
@@ -381,6 +403,17 @@ const translations = {
                 internalDesc: "Wide choice of styles – from classic to modern. Rebated, flush, sliding, hidden doors. Various finishes and colours.",
                 brands: "<strong>Manufacturers:</strong> Hörmann, Gerda, Porta, DRE, Erkado, Barański"
             },
+            garage: {
+                title: "Garage Doors",
+                sectional: "Sectional Doors",
+                sectionalDesc: "The most popular solution for garages. Vertical opening, excellent thermal insulation, wide choice of designs and colours.",
+                roller: "Roller Doors",
+                rollerDesc: "Compact roll-up doors for garages with limited space. No ceiling space required.",
+                side: "Tilt and Sliding Doors",
+                sideDesc: "Classic solutions for larger garage openings. Can be made from various materials.",
+                features: "Control: manual, electric with remote, smart home integration. Anti-burglary options.",
+                brands: "<strong>Manufacturers:</strong> Hörmann, Wiśniowski, Krispol, Normstahl"
+            },
             extShutters: {
                 title: "External Blinds",
                 flush: "Flush-mounted Blinds",
@@ -537,6 +570,17 @@ const translations = {
                 internal: "Portes intérieures",
                 internalDesc: "Large choix de styles – du classique au moderne. Portes à recouvrement, affleurantes, coulissantes, cachées. Différentes finitions et couleurs.",
                 brands: "<strong>Fabricants:</strong> Hörmann, Gerda, Porta, DRE, Erkado, Barański"
+            },
+            garage: {
+                title: "Portes de garage",
+                sectional: "Portes sectionnelles",
+                sectionalDesc: "La solution la plus populaire pour les garages. Ouverture verticale, excellente isolation thermique, large choix de designs et couleurs.",
+                roller: "Portes enroulables",
+                rollerDesc: "Portes compactes enroulables pour garages avec espace limité. Pas d'espace sous plafond nécessaire.",
+                side: "Portes basculantes et coulissantes",
+                sideDesc: "Solutions classiques pour les grandes ouvertures de garage. Possibilité de fabrication en différents matériaux.",
+                features: "Commande: manuelle, électrique avec télécommande, intégration domotique. Options anti-effraction.",
+                brands: "<strong>Fabricants:</strong> Hörmann, Wiśniowski, Krispol, Normstahl"
             },
             extShutters: {
                 title: "Volets extérieurs",

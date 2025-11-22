@@ -187,11 +187,12 @@ img {
 }
 
 .logo-text {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.75rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
     color: var(--primary);
+    text-transform: uppercase;
 }
 
 .nav {
@@ -410,8 +411,7 @@ img {
     overflow: hidden;
 }
 
-.hero::before {
-    content: '';
+.hero-accent {
     position: absolute;
     left: 24px;
     width: 5px;
@@ -419,6 +419,7 @@ img {
     background: var(--accent);
     top: 50%;
     transform: translateY(-50%);
+    border-radius: 3px;
 }
 
 .hero::after {
@@ -1057,7 +1058,7 @@ img {
     margin-bottom: 12px;
     display: block;
     color: var(--white);
-    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .footer-brand p {
@@ -1170,7 +1171,7 @@ img {
         padding-top: 100px;
     }
 
-    .hero::before {
+    .hero-accent {
         left: 16px;
         height: 200px;
         width: 4px;

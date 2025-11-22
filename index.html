@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body class="landing-page">
     <!-- Language Selection Landing Page -->
@@ -80,6 +80,7 @@
 
         <!-- Hero Section -->
         <section id="home" class="section hero">
+            <div class="hero-accent"></div>
             <div class="container">
                 <div class="hero-content">
                     <h1 data-i18n="hero.title">30 lat tradycji i doświadczenia</h1>
@@ -281,6 +282,34 @@
                             </div>
 
                             <p class="offer-brands" data-i18n="offer.doors.brands"><strong>Producenci:</strong> Hörmann, Gerda, Porta, DRE, Erkado, Barański</p>
+                        </div>
+                    </div>
+
+                    <!-- Garage Doors -->
+                    <div class="offer-card" onclick="toggleOfferDetails(this)">
+                        <div class="offer-header">
+                            <span class="offer-icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="1"/><line x1="2" y1="8" x2="22" y2="8"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="16" x2="22" y2="16"/></svg></span>
+                            <h3 data-i18n="offer.garage.title">Bramy garażowe</h3>
+                            <span class="offer-toggle">+</span>
+                        </div>
+                        <div class="offer-details">
+                            <div class="offer-subsection">
+                                <h4 data-i18n="offer.garage.sectional">Bramy segmentowe</h4>
+                                <p data-i18n="offer.garage.sectionalDesc">Najpopularniejsze rozwiązanie do garaży. Otwieranie pionowe, doskonała izolacja termiczna, szeroki wybór wzorów i kolorów.</p>
+                            </div>
+
+                            <div class="offer-subsection">
+                                <h4 data-i18n="offer.garage.roller">Bramy rolowane</h4>
+                                <p data-i18n="offer.garage.rollerDesc">Kompaktowe bramy zwijane do garaży z ograniczoną przestrzenią. Nie wymagają miejsca pod sufitem.</p>
+                            </div>
+
+                            <div class="offer-subsection">
+                                <h4 data-i18n="offer.garage.side">Bramy uchylne i rozsuwane</h4>
+                                <p data-i18n="offer.garage.sideDesc">Klasyczne rozwiązania dla większych otworów garażowych. Możliwość wykonania z różnych materiałów.</p>
+                            </div>
+
+                            <p data-i18n="offer.garage.features">Sterowanie: ręczne, elektryczne z pilotem, integracja ze smart home. Opcje antywłamaniowe.</p>
+                            <p class="offer-brands" data-i18n="offer.garage.brands"><strong>Producenci:</strong> Hörmann, Wiśniowski, Krispol, Normstahl</p>
                         </div>
                     </div>
 
@@ -489,7 +518,7 @@
                             <span class="contact-icon">📍</span>
                             <div>
                                 <strong data-i18n="contact.address">Adres:</strong>
-                                <p>ul. Przykładowa 123<br>00-000 Warszawa</p>
+                                <p>ul. Wojska Polskiego 66<br>86-100 Świecie</p>
                             </div>
                         </div>
 
@@ -497,8 +526,7 @@
                             <span class="contact-icon">📞</span>
                             <div>
                                 <strong data-i18n="contact.phone">Telefon:</strong>
-                                <p><a href="tel:+48123456789">+48 123 456 789</a></p>
-                                <p><a href="tel:+48987654321">+48 987 654 321</a></p>
+                                <p><a href="tel:+48663715148">+48 663 715 148</a></p>
                             </div>
                         </div>
 
@@ -506,7 +534,7 @@
                             <span class="contact-icon">✉️</span>
                             <div>
                                 <strong data-i18n="contact.email">E-mail:</strong>
-                                <p><a href="mailto:biuro@filipex.pl">biuro@filipex.pl</a></p>
+                                <p><a href="mailto:Lumifil@xl.wp.pl">Lumifil@xl.wp.pl</a></p>
                             </div>
                         </div>
 
@@ -519,7 +547,7 @@
                             </div>
                         </div>
 
-                        <a href="https://maps.google.com/?q=Warszawa" target="_blank" class="btn btn-outline" data-i18n="contact.mapBtn">
+                        <a href="https://maps.google.com/?q=Wojska+Polskiego+66,+86-100+Świecie" target="_blank" class="btn btn-outline" data-i18n="contact.mapBtn">
                             Zobacz na mapie Google
                         </a>
                     </div>
@@ -580,7 +608,7 @@
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <p>&copy; 2024 LUMIFIL. <span data-i18n="footer.rights">Wszelkie prawa zastrzeżone.</span></p>
+                    <p>&copy; 2025 LUMIFIL. <span data-i18n="footer.rights">Wszelkie prawa zastrzeżone.</span></p>
                 </div>
             </div>
         </footer>
