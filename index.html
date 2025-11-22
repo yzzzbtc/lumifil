@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filipex - Okna, Drzwi, Rolety</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="landing-page">
+    <!-- Language Selection Landing Page -->
+    <div id="language-selector" class="language-selector">
+        <div class="language-content">
+            <div class="logo-large">
+                <h1>LUMIFIL</h1>
+                <p class="tagline">Okna • Drzwi • Rolety</p>
+            </div>
+            <div class="language-options">
+                <button class="lang-btn" data-lang="pl" onclick="selectLanguage('pl')">
+                    <span class="flag">🇵🇱</span>
+                    <span class="lang-name">Polski</span>
+                </button>
+                <button class="lang-btn" data-lang="de" onclick="selectLanguage('de')">
+                    <span class="flag">🇩🇪</span>
+                    <span class="lang-name">Deutsch</span>
+                </button>
+                <button class="lang-btn" data-lang="en" onclick="selectLanguage('en')">
+                    <span class="flag">🇬🇧</span>
+                    <span class="lang-name">English</span>
+                </button>
+                <button class="lang-btn" data-lang="fr" onclick="selectLanguage('fr')">
+                    <span class="flag">🇫🇷</span>
+                    <span class="lang-name">Français</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Website -->
+    <div id="main-site" class="main-site hidden">
+        <!-- Navigation -->
+        <header class="header">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#" class="logo" onclick="showSection('home')">
+                        <span class="logo-text">LUMIFIL</span>
+                    </a>
+                    <nav class="nav">
+                        <a href="#about" class="nav-link" data-section="about" data-i18n="nav.about">O nas</a>
+                        <a href="#projects" class="nav-link" data-section="projects" data-i18n="nav.projects">Realizacje</a>
+                        <a href="#offer" class="nav-link" data-section="offer" data-i18n="nav.offer">Oferta</a>
+                        <a href="#contact" class="nav-link" data-section="contact" data-i18n="nav.contact">Kontakt</a>
+                    </nav>
+                    <div class="nav-right">
+                        <button class="lang-switch" onclick="showLanguageSelector()">
+                            <span id="current-lang-flag">🇵🇱</span>
+                        </button>
+                        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="#about" class="mobile-nav-link" data-i18n="nav.about" onclick="navigateTo('about')">O nas</a>
+            <a href="#projects" class="mobile-nav-link" data-i18n="nav.projects" onclick="navigateTo('projects')">Realizacje</a>
+            <a href="#offer" class="mobile-nav-link" data-i18n="nav.offer" onclick="navigateTo('offer')">Oferta</a>
+            <a href="#contact" class="mobile-nav-link" data-i18n="nav.contact" onclick="navigateTo('contact')">Kontakt</a>
+        </div>
+
+        <!-- Hero Section -->
+        <section id="home" class="section hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 data-i18n="hero.title">30 lat tradycji i doświadczenia</h1>
+                    <p data-i18n="hero.subtitle">Profesjonalny montaż okien, drzwi i rolet w Polsce i za granicą</p>
+                    <a href="#contact" class="btn btn-primary" data-i18n="hero.cta" onclick="showSection('contact')">Skontaktuj się</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about">
+            <div class="container">
+                <h2 class="section-title" data-i18n="about.title">O nas</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p data-i18n="about.p1">
+                            <strong>LUMIFIL</strong> to firma z ponad 30-letnią tradycją w branży stolarki otworowej. Od początku naszej działalności stawiamy na jakość, profesjonalizm i pełne zadowolenie klienta.
+                        </p>
+                        <p data-i18n="about.p2">
+                            Przez lata zrealizowaliśmy setki projektów zarówno w Polsce, jak i na rynkach międzynarodowych – w Niemczech, Francji, Belgii i innych krajach Europy Zachodniej. Nasze doświadczenie obejmuje zarówno małe realizacje prywatne, jak i duże projekty komercyjne.
+                        </p>
+                        <p data-i18n="about.p3">
+                            Dysponujemy własnymi, doświadczonymi ekipami monterskimi, które gwarantują najwyższą jakość wykonania. Każdy członek naszego zespołu posiada wieloletnie doświadczenie i regularnie podnosi swoje kwalifikacje.
+                        </p>
+                        <p data-i18n="about.p4">
+                            <strong>Gwarancja jakości</strong> – to nie tylko hasło, ale nasza filozofia działania. Oferujemy pełną gwarancję na wszystkie wykonane prace oraz produkty, zapewniając klientom spokój i pewność na lata.
+                        </p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">30+</span>
+                            <span class="stat-label" data-i18n="about.stat1">lat doświadczenia</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label" data-i18n="about.stat2">zrealizowanych projektów</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label" data-i18n="about.stat3">krajów działalności</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects">
+            <div class="container">
+                <h2 class="section-title" data-i18n="projects.title">Realizacje</h2>
+                <p class="section-subtitle" data-i18n="projects.subtitle">Wybrane projekty z naszego portfolio</p>
+
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all" data-i18n="projects.filterAll">Wszystkie</button>
+                    <button class="filter-btn" data-filter="windows" data-i18n="projects.filterWindows">Okna</button>
+                    <button class="filter-btn" data-filter="doors" data-i18n="projects.filterDoors">Drzwi</button>
+                    <button class="filter-btn" data-filter="shutters" data-i18n="projects.filterShutters">Rolety</button>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card" data-category="windows">
+                        <div class="project-image" style="background: linear-gradient(135deg, #1a237e 0%, #0d1421 100%);">
+                            <div class="project-overlay">
+                                <span class="project-icon">🏢</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-i18n="projects.p1.title">Biurowiec Berlin</h3>
+                            <p data-i18n="projects.p1.desc">Kompleksowa wymiana okien aluminiowych w 12-piętrowym biurowcu. 480 okien, fasada strukturalna.</p>
+                            <span class="project-tag" data-i18n="projects.tagWindows">Okna ALU</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="doors">
+                        <div class="project-image" style="background: linear-gradient(135deg, #263238 0%, #0d1421 100%);">
+                            <div class="project-overlay">
+                                <span class="project-icon">🏠</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-i18n="projects.p2.title">Osiedle Zielone Wzgórza</h3>
+                            <p data-i18n="projects.p2.desc">Montaż drzwi zewnętrznych i wewnętrznych w 45 domach jednorodzinnych. Drzwi drewniane i PCV.</p>
+                            <span class="project-tag" data-i18n="projects.tagDoors">Drzwi</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="shutters">
+                        <div class="project-image" style="background: linear-gradient(135deg, #1a237e 0%, #263238 100%);">
+                            <div class="project-overlay">
+                                <span class="project-icon">🏨</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-i18n="projects.p3.title">Hotel Nadmorski</h3>
+                            <p data-i18n="projects.p3.desc">Instalacja rolet zewnętrznych podtynkowych w 120 pokojach hotelowych z systemem smart home.</p>
+                            <span class="project-tag" data-i18n="projects.tagShutters">Rolety</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="windows">
+                        <div class="project-image" style="background: linear-gradient(135deg, #0d47a1 0%, #1a237e 100%);">
+                            <div class="project-overlay">
+                                <span class="project-icon">🏫</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-i18n="projects.p4.title">Szkoła w Monachium</h3>
+                            <p data-i18n="projects.p4.desc">Wymiana okien PCV z pakietami trzyszybowymi. Projekt termomodernizacji budynku publicznego.</p>
+                            <span class="project-tag" data-i18n="projects.tagPVC">Okna PCV</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="windows">
+                        <div class="project-image" style="background: linear-gradient(135deg, #37474f 0%, #0d1421 100%);">
+                            <div class="project-overlay">
+                                <span class="project-icon">🏛️</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-i18n="projects.p5.title">Willa zabytkowa Paryż</h3>
+                            <p data-i18n="projects.p5.desc">Renowacja i wymiana drewnianych okien skrzynkowych z zachowaniem charakteru historycznego.</p>
+                            <span class="project-tag" data-i18n="projects.tagWood">Okna drewniane</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="doors">
+                        <div class="project-image" style="background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);">
+                            <div class="project-overlay">
+                                <span class="project-icon">🏬</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-i18n="projects.p6.title">Centrum handlowe Kraków</h3>
+                            <p data-i18n="projects.p6.desc">Montaż automatycznych drzwi przesuwnych oraz witryn aluminiowych na parterze obiektu.</p>
+                            <span class="project-tag" data-i18n="projects.tagAuto">Drzwi automatyczne</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Offer Section -->
+        <section id="offer" class="section offer">
+            <div class="container">
+                <h2 class="section-title" data-i18n="offer.title">Oferta</h2>
+                <p class="section-subtitle" data-i18n="offer.subtitle">Kompleksowe rozwiązania dla Twojego domu i firmy</p>
+
+                <div class="offer-grid">
+                    <!-- Windows -->
+                    <div class="offer-card" onclick="toggleOfferDetails(this)">
+                        <div class="offer-header">
+                            <span class="offer-icon">🪟</span>
+                            <h3 data-i18n="offer.windows.title">Okna</h3>
+                            <span class="offer-toggle">+</span>
+                        </div>
+                        <div class="offer-details">
+                            <p data-i18n="offer.windows.intro">Oferujemy szeroki wybór okien od najlepszych producentów:</p>
+
+                            <div class="offer-subsection">
+                                <h4 data-i18n="offer.windows.pvc">Okna PCV</h4>
+                                <p data-i18n="offer.windows.pvcDesc">Najpopularniejsze rozwiązanie łączące doskonałą izolacyjność termiczną z przystępną ceną. Profile 5-7 komorowe, pakiety dwu- i trzyszybowe.</p>
+                            </div>
+
+                            <div class="offer-subsection">
+                                <h4 data-i18n="offer.windows.alu">Okna aluminiowe</h4>
+                                <p data-i18n="offer.windows.aluDesc">Idealne do nowoczesnych budynków i dużych przeszkleń. Smukłe profile, wysoka wytrzymałość, różnorodność kolorów RAL.</p>
+                            </div>
+
+                            <div class="offer-subsection">
+                                <h4 data-i18n="offer.windows.wood">Okna drewniane</h4>
+                                <p data-i18n="offer.windows.woodDesc">Klasyczna elegancja i naturalne piękno drewna. Sosna, meranti, dąb. Doskonałe do budynków zabytkowych.</p>
+                            </div>
+
+                            <div class="offer-subsection">
+                                <h4 data-i18n="offer.windows.sliding">Okna przesuwne HST/PSK</h4>
+                                <p data-i18n="offer.windows.slidingDesc">Duże przeszklenia tarasowe z systemem podnoszono-przesuwnym lub uchylno-przesuwnym. Maksymalne doświetlenie wnętrz.</p>
+                            </div>
+
+                            <p class="offer-brands" data-i18n="offer.windows.brands"><strong>Producenci:</strong> Schüco, Rehau, Veka, Salamander, Aluplast, Internorm</p>
+                        </div>
+                    </div>
+
+                    <!-- Doors -->
+                    <div class="offer-card" onclick="toggleOfferDetails(this)">
+                        <div class="offer-header">
+                            <span class="offer-icon">🚪</span>
+                            <h3 data-i18n="offer.doors.title">Drzwi</h3>
+                            <span class="offer-toggle">+</span>
+                        </div>
+                        <div class="offer-details">
+                            <div class="offer-subsection">
+                                <h4 data-i18n="offer.doors.external">Drzwi zewnętrzne</h4>
+                                <p data-i18n="offer.doors.externalDesc">Stalowe, aluminiowe i drewniane. Antywłamaniowe klasy RC2-RC4. Nowoczesne wzornictwo, doskonała izolacja termiczna i akustyczna.</p>
+                            </div>
+
+                            <div class="offer-subsection">
+                                <h4 data-i18n="offer.doors.internal">Drzwi wewnętrzne</h4>
+                                <p data-i18n="offer.doors.internalDesc">Szeroki wybór stylów – od klasycznych po nowoczesne. Drzwi przylgowe, bezprzylgowe, przesuwne, ukryte. Różne wykończenia i kolory.</p>
+                            </div>
+
+                            <p class="offer-brands" data-i18n="offer.doors.brands"><strong>Producenci:</strong> Hörmann, Gerda, Porta, DRE, Erkado, Barański</p>
+                        </div>
+                    </div>
+
+                    <!-- External Shutters -->
+                    <div class="offer-card" onclick="toggleOfferDetails(this)">
+                        <div class="offer-header">
+                            <span class="offer-icon">🏠</span>
+                            <h3 data-i18n="offer.extShutters.title">Rolety zewnętrzne</h3>
+                            <span class="offer-toggle">+</span>
+                        </div>
+                        <div class="offer-details">
+                            <div class="offer-subsection">
+                                <h4 data-i18n="offer.extShutters.flush">Rolety podtynkowe</h4>
+                                <p data-i18n="offer.extShutters.flushDesc">Montowane w fazie budowy, skrzynka ukryta w ścianie. Estetyczne rozwiązanie bez widocznych elementów na elewacji.</p>
+                            </div>
+
+                            <div class="offer-subsection">
+                                <h4 data-i18n="offer.extShutters.surface">Rolety natynkowe</h4>
+                                <p data-i18n="offer.extShutters.surfaceDesc">Montowane na gotowej elewacji. Różne wielkości skrzynek, możliwość dopasowania koloru do fasady budynku.</p>
+                            </div>
+
+                            <p data-i18n="offer.extShutters.features">Sterowanie: ręczne, elektryczne, smart home. Ochrona przed słońcem, hałasem i włamaniem.</p>
+                        </div>
+                    </div>
+
+                    <!-- Internal Shutters -->
+                    <div class="offer-card" onclick="toggleOfferDetails(this)">
+                        <div class="offer-header">
+                            <span class="offer-icon">🌅</span>
+                            <h3 data-i18n="offer.intShutters.title">Rolety wewnętrzne</h3>
+                            <span class="offer-toggle">+</span>
+                        </div>
+                        <div class="offer-details">
+                            <ul class="offer-list">
+                                <li data-i18n="offer.intShutters.fabric">Rolety materiałowe – klasyczne i nowoczesne tkaniny</li>
+                                <li data-i18n="offer.intShutters.dayNight">Rolety dzień-noc – regulacja poziomu światła</li>
+                                <li data-i18n="offer.intShutters.blackout">Rolety zaciemniające – idealne do sypialni</li>
+                                <li data-i18n="offer.intShutters.roman">Rolety rzymskie – elegancki, dekoracyjny wygląd</li>
+                                <li data-i18n="offer.intShutters.pleated">Plisy – do okien nietypowych kształtów</li>
+                                <li data-i18n="offer.intShutters.vertical">Żaluzje pionowe – do dużych przeszkleń</li>
+                                <li data-i18n="offer.intShutters.horizontal">Żaluzje poziome – aluminiowe i drewniane</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Mosquito Nets -->
+                    <div class="offer-card" onclick="toggleOfferDetails(this)">
+                        <div class="offer-header">
+                            <span class="offer-icon">🦟</span>
+                            <h3 data-i18n="offer.mosquito.title">Moskitiery</h3>
+                            <span class="offer-toggle">+</span>
+                        </div>
+                        <div class="offer-details">
+                            <ul class="offer-list">
+                                <li data-i18n="offer.mosquito.frame">Moskitiery ramkowe – klasyczne, łatwy montaż</li>
+                                <li data-i18n="offer.mosquito.roll">Moskitiery rolowane – wygodne zwijanie</li>
+                                <li data-i18n="offer.mosquito.pleated">Moskitiery plisowane – do drzwi tarasowych</li>
+                                <li data-i18n="offer.mosquito.door">Moskitiery drzwiowe – z samozamykaczem</li>
+                            </ul>
+                            <p data-i18n="offer.mosquito.materials">Siatki standardowe, przeciwpyłowe i dla alergików.</p>
+                        </div>
+                    </div>
+
+                    <!-- Windowsills -->
+                    <div class="offer-card" onclick="toggleOfferDetails(this)">
+                        <div class="offer-header">
+                            <span class="offer-icon">📐</span>
+                            <h3 data-i18n="offer.sills.title">Parapety</h3>
+                            <span class="offer-toggle">+</span>
+                        </div>
+                        <div class="offer-details">
+                            <div class="offer-subsection">
+                                <h4 data-i18n="offer.sills.external">Parapety zewnętrzne</h4>
+                                <p data-i18n="offer.sills.externalDesc">Aluminiowe i stalowe z powłoką PVD. Odprowadzanie wody, ochrona elewacji. Szeroka gama kolorów.</p>
+                            </div>
+
+                            <div class="offer-subsection">
+                                <h4 data-i18n="offer.sills.internal">Parapety wewnętrzne</h4>
+                                <p data-i18n="offer.sills.internalDesc">PCV, drewniane, konglomerat, kamień naturalny. Dopasowanie do stylu wnętrza i rodzaju okien.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Finishing -->
+                    <div class="offer-card" onclick="toggleOfferDetails(this)">
+                        <div class="offer-header">
+                            <span class="offer-icon">🔧</span>
+                            <h3 data-i18n="offer.finishing.title">Obróbki i wykończenia</h3>
+                            <span class="offer-toggle">+</span>
+                        </div>
+                        <div class="offer-details">
+                            <p data-i18n="offer.finishing.intro">Kompleksowe usługi wykończeniowe po montażu:</p>
+                            <ul class="offer-list">
+                                <li data-i18n="offer.finishing.plaster">Obróbki tynkarskie ościeży</li>
+                                <li data-i18n="offer.finishing.drywall">Wykończenia płytami g-k</li>
+                                <li data-i18n="offer.finishing.panels">Panele PCV do ościeży</li>
+                                <li data-i18n="offer.finishing.sealing">Uszczelnienia i izolacje</li>
+                                <li data-i18n="offer.finishing.painting">Malowanie i szpachlowanie</li>
+                            </ul>
+                            <p data-i18n="offer.finishing.guarantee">Wszystkie prace objęte gwarancją. Terminowa realizacja.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <h2 class="section-title" data-i18n="contact.title">Kontakt</h2>
+                <p class="section-subtitle" data-i18n="contact.subtitle">Skontaktuj się z nami – odpowiemy najszybciej jak to możliwe</p>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <strong data-i18n="contact.address">Adres:</strong>
+                                <p>ul. Przykładowa 123<br>00-000 Warszawa</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <div>
+                                <strong data-i18n="contact.phone">Telefon:</strong>
+                                <p><a href="tel:+48123456789">+48 123 456 789</a></p>
+                                <p><a href="tel:+48987654321">+48 987 654 321</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <div>
+                                <strong data-i18n="contact.email">E-mail:</strong>
+                                <p><a href="mailto:biuro@filipex.pl">biuro@filipex.pl</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <span class="contact-icon">🕐</span>
+                            <div>
+                                <strong data-i18n="contact.hours">Godziny pracy:</strong>
+                                <p data-i18n="contact.hoursWeek">Pon-Pt: 8:00 - 17:00</p>
+                                <p data-i18n="contact.hoursSat">Sob: 9:00 - 13:00</p>
+                            </div>
+                        </div>
+
+                        <a href="https://maps.google.com/?q=Warszawa" target="_blank" class="btn btn-outline" data-i18n="contact.mapBtn">
+                            Zobacz na mapie Google
+                        </a>
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="name" data-i18n="contact.form.name">Imię i nazwisko</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email" data-i18n="contact.form.email">E-mail</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" data-i18n="contact.form.phone">Telefon</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" data-i18n="contact.form.subject">Temat</label>
+                                <select id="subject" name="subject">
+                                    <option value="quote" data-i18n="contact.form.subjectQuote">Zapytanie o wycenę</option>
+                                    <option value="info" data-i18n="contact.form.subjectInfo">Informacje o produkcie</option>
+                                    <option value="service" data-i18n="contact.form.subjectService">Serwis/Reklamacja</option>
+                                    <option value="other" data-i18n="contact.form.subjectOther">Inne</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" data-i18n="contact.form.message">Wiadomość</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full" data-i18n="contact.form.send">Wyślij wiadomość</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <span class="logo-text">LUMIFIL</span>
+                        <p data-i18n="footer.desc">Profesjonalny montaż okien, drzwi i rolet od ponad 30 lat.</p>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#about" data-i18n="nav.about">O nas</a>
+                        <a href="#projects" data-i18n="nav.projects">Realizacje</a>
+                        <a href="#offer" data-i18n="nav.offer">Oferta</a>
+                        <a href="#contact" data-i18n="nav.contact">Kontakt</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 LUMIFIL. <span data-i18n="footer.rights">Wszelkie prawa zastrzeżone.</span></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

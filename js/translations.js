@@ -1,0 +1,563 @@
+// Translations for Filipex website
+const translations = {
+    pl: {
+        nav: {
+            about: "O nas",
+            projects: "Realizacje",
+            offer: "Oferta",
+            contact: "Kontakt"
+        },
+        hero: {
+            title: "30 lat tradycji i doświadczenia",
+            subtitle: "Profesjonalny montaż okien, drzwi i rolet w Polsce i za granicą",
+            cta: "Skontaktuj się"
+        },
+        about: {
+            title: "O nas",
+            p1: "<strong>LUMIFIL</strong> to firma z ponad 30-letnią tradycją w branży stolarki otworowej. Od początku naszej działalności stawiamy na jakość, profesjonalizm i pełne zadowolenie klienta.",
+            p2: "Przez lata zrealizowaliśmy setki projektów zarówno w Polsce, jak i na rynkach międzynarodowych – w Niemczech, Francji, Belgii i innych krajach Europy Zachodniej. Nasze doświadczenie obejmuje zarówno małe realizacje prywatne, jak i duże projekty komercyjne.",
+            p3: "Dysponujemy własnymi, doświadczonymi ekipami monterskimi, które gwarantują najwyższą jakość wykonania. Każdy członek naszego zespołu posiada wieloletnie doświadczenie i regularnie podnosi swoje kwalifikacje.",
+            p4: "<strong>Gwarancja jakości</strong> – to nie tylko hasło, ale nasza filozofia działania. Oferujemy pełną gwarancję na wszystkie wykonane prace oraz produkty, zapewniając klientom spokój i pewność na lata.",
+            stat1: "lat doświadczenia",
+            stat2: "zrealizowanych projektów",
+            stat3: "krajów działalności"
+        },
+        projects: {
+            title: "Realizacje",
+            subtitle: "Wybrane projekty z naszego portfolio",
+            filterAll: "Wszystkie",
+            filterWindows: "Okna",
+            filterDoors: "Drzwi",
+            filterShutters: "Rolety",
+            p1: { title: "Biurowiec Berlin", desc: "Kompleksowa wymiana okien aluminiowych w 12-piętrowym biurowcu. 480 okien, fasada strukturalna." },
+            p2: { title: "Osiedle Zielone Wzgórza", desc: "Montaż drzwi zewnętrznych i wewnętrznych w 45 domach jednorodzinnych. Drzwi drewniane i PCV." },
+            p3: { title: "Hotel Nadmorski", desc: "Instalacja rolet zewnętrznych podtynkowych w 120 pokojach hotelowych z systemem smart home." },
+            p4: { title: "Szkoła w Monachium", desc: "Wymiana okien PCV z pakietami trzyszybowymi. Projekt termomodernizacji budynku publicznego." },
+            p5: { title: "Willa zabytkowa Paryż", desc: "Renowacja i wymiana drewnianych okien skrzynkowych z zachowaniem charakteru historycznego." },
+            p6: { title: "Centrum handlowe Kraków", desc: "Montaż automatycznych drzwi przesuwnych oraz witryn aluminiowych na parterze obiektu." },
+            tagWindows: "Okna ALU",
+            tagDoors: "Drzwi",
+            tagShutters: "Rolety",
+            tagPVC: "Okna PCV",
+            tagWood: "Okna drewniane",
+            tagAuto: "Drzwi automatyczne"
+        },
+        offer: {
+            title: "Oferta",
+            subtitle: "Kompleksowe rozwiązania dla Twojego domu i firmy",
+            windows: {
+                title: "Okna",
+                intro: "Oferujemy szeroki wybór okien od najlepszych producentów:",
+                pvc: "Okna PCV",
+                pvcDesc: "Najpopularniejsze rozwiązanie łączące doskonałą izolacyjność termiczną z przystępną ceną. Profile 5-7 komorowe, pakiety dwu- i trzyszybowe.",
+                alu: "Okna aluminiowe",
+                aluDesc: "Idealne do nowoczesnych budynków i dużych przeszkleń. Smukłe profile, wysoka wytrzymałość, różnorodność kolorów RAL.",
+                wood: "Okna drewniane",
+                woodDesc: "Klasyczna elegancja i naturalne piękno drewna. Sosna, meranti, dąb. Doskonałe do budynków zabytkowych.",
+                sliding: "Okna przesuwne HST/PSK",
+                slidingDesc: "Duże przeszklenia tarasowe z systemem podnoszono-przesuwnym lub uchylno-przesuwnym. Maksymalne doświetlenie wnętrz.",
+                brands: "<strong>Producenci:</strong> Schüco, Rehau, Veka, Salamander, Aluplast, Internorm"
+            },
+            doors: {
+                title: "Drzwi",
+                external: "Drzwi zewnętrzne",
+                externalDesc: "Stalowe, aluminiowe i drewniane. Antywłamaniowe klasy RC2-RC4. Nowoczesne wzornictwo, doskonała izolacja termiczna i akustyczna.",
+                internal: "Drzwi wewnętrzne",
+                internalDesc: "Szeroki wybór stylów – od klasycznych po nowoczesne. Drzwi przylgowe, bezprzylgowe, przesuwne, ukryte. Różne wykończenia i kolory.",
+                brands: "<strong>Producenci:</strong> Hörmann, Gerda, Porta, DRE, Erkado, Barański"
+            },
+            extShutters: {
+                title: "Rolety zewnętrzne",
+                flush: "Rolety podtynkowe",
+                flushDesc: "Montowane w fazie budowy, skrzynka ukryta w ścianie. Estetyczne rozwiązanie bez widocznych elementów na elewacji.",
+                surface: "Rolety natynkowe",
+                surfaceDesc: "Montowane na gotowej elewacji. Różne wielkości skrzynek, możliwość dopasowania koloru do fasady budynku.",
+                features: "Sterowanie: ręczne, elektryczne, smart home. Ochrona przed słońcem, hałasem i włamaniem."
+            },
+            intShutters: {
+                title: "Rolety wewnętrzne",
+                fabric: "Rolety materiałowe – klasyczne i nowoczesne tkaniny",
+                dayNight: "Rolety dzień-noc – regulacja poziomu światła",
+                blackout: "Rolety zaciemniające – idealne do sypialni",
+                roman: "Rolety rzymskie – elegancki, dekoracyjny wygląd",
+                pleated: "Plisy – do okien nietypowych kształtów",
+                vertical: "Żaluzje pionowe – do dużych przeszkleń",
+                horizontal: "Żaluzje poziome – aluminiowe i drewniane"
+            },
+            mosquito: {
+                title: "Moskitiery",
+                frame: "Moskitiery ramkowe – klasyczne, łatwy montaż",
+                roll: "Moskitiery rolowane – wygodne zwijanie",
+                pleated: "Moskitiery plisowane – do drzwi tarasowych",
+                door: "Moskitiery drzwiowe – z samozamykaczem",
+                materials: "Siatki standardowe, przeciwpyłowe i dla alergików."
+            },
+            sills: {
+                title: "Parapety",
+                external: "Parapety zewnętrzne",
+                externalDesc: "Aluminiowe i stalowe z powłoką PVD. Odprowadzanie wody, ochrona elewacji. Szeroka gama kolorów.",
+                internal: "Parapety wewnętrzne",
+                internalDesc: "PCV, drewniane, konglomerat, kamień naturalny. Dopasowanie do stylu wnętrza i rodzaju okien."
+            },
+            finishing: {
+                title: "Obróbki i wykończenia",
+                intro: "Kompleksowe usługi wykończeniowe po montażu:",
+                plaster: "Obróbki tynkarskie ościeży",
+                drywall: "Wykończenia płytami g-k",
+                panels: "Panele PCV do ościeży",
+                sealing: "Uszczelnienia i izolacje",
+                painting: "Malowanie i szpachlowanie",
+                guarantee: "Wszystkie prace objęte gwarancją. Terminowa realizacja."
+            }
+        },
+        contact: {
+            title: "Kontakt",
+            subtitle: "Skontaktuj się z nami – odpowiemy najszybciej jak to możliwe",
+            address: "Adres:",
+            phone: "Telefon:",
+            email: "E-mail:",
+            hours: "Godziny pracy:",
+            hoursWeek: "Pon-Pt: 8:00 - 17:00",
+            hoursSat: "Sob: 9:00 - 13:00",
+            mapBtn: "Zobacz na mapie Google",
+            form: {
+                name: "Imię i nazwisko",
+                email: "E-mail",
+                phone: "Telefon",
+                subject: "Temat",
+                subjectQuote: "Zapytanie o wycenę",
+                subjectInfo: "Informacje o produkcie",
+                subjectService: "Serwis/Reklamacja",
+                subjectOther: "Inne",
+                message: "Wiadomość",
+                send: "Wyślij wiadomość"
+            }
+        },
+        footer: {
+            desc: "Profesjonalny montaż okien, drzwi i rolet od ponad 30 lat.",
+            rights: "Wszelkie prawa zastrzeżone."
+        }
+    },
+    de: {
+        nav: {
+            about: "Über uns",
+            projects: "Projekte",
+            offer: "Angebot",
+            contact: "Kontakt"
+        },
+        hero: {
+            title: "30 Jahre Tradition und Erfahrung",
+            subtitle: "Professionelle Montage von Fenstern, Türen und Rollläden in Polen und im Ausland",
+            cta: "Kontaktieren Sie uns"
+        },
+        about: {
+            title: "Über uns",
+            p1: "<strong>LUMIFIL</strong> ist ein Unternehmen mit über 30 Jahren Tradition in der Fenster- und Türenbranche. Von Anfang an setzen wir auf Qualität, Professionalität und volle Kundenzufriedenheit.",
+            p2: "Im Laufe der Jahre haben wir Hunderte von Projekten sowohl in Polen als auch auf internationalen Märkten realisiert – in Deutschland, Frankreich, Belgien und anderen westeuropäischen Ländern. Unsere Erfahrung umfasst sowohl kleine private Projekte als auch große kommerzielle Vorhaben.",
+            p3: "Wir verfügen über eigene, erfahrene Montageteams, die höchste Ausführungsqualität garantieren. Jedes Teammitglied verfügt über langjährige Erfahrung und bildet sich regelmäßig weiter.",
+            p4: "<strong>Qualitätsgarantie</strong> – das ist nicht nur ein Slogan, sondern unsere Geschäftsphilosophie. Wir bieten volle Garantie auf alle durchgeführten Arbeiten und Produkte und gewährleisten unseren Kunden Ruhe und Sicherheit für Jahre.",
+            stat1: "Jahre Erfahrung",
+            stat2: "realisierte Projekte",
+            stat3: "Länder der Tätigkeit"
+        },
+        projects: {
+            title: "Projekte",
+            subtitle: "Ausgewählte Projekte aus unserem Portfolio",
+            filterAll: "Alle",
+            filterWindows: "Fenster",
+            filterDoors: "Türen",
+            filterShutters: "Rollläden",
+            p1: { title: "Bürogebäude Berlin", desc: "Kompletter Austausch von Aluminiumfenstern in einem 12-stöckigen Bürogebäude. 480 Fenster, Strukturfassade." },
+            p2: { title: "Siedlung Grüne Hügel", desc: "Montage von Außen- und Innentüren in 45 Einfamilienhäusern. Holz- und PVC-Türen." },
+            p3: { title: "Strandhotel", desc: "Installation von Unterputz-Außenrollläden in 120 Hotelzimmern mit Smart-Home-System." },
+            p4: { title: "Schule in München", desc: "Austausch von PVC-Fenstern mit Dreifachverglasung. Thermische Sanierung eines öffentlichen Gebäudes." },
+            p5: { title: "Historische Villa Paris", desc: "Renovierung und Austausch von Holzkastenfenstern unter Bewahrung des historischen Charakters." },
+            p6: { title: "Einkaufszentrum Krakau", desc: "Montage von automatischen Schiebetüren und Aluminiumvitrinen im Erdgeschoss." },
+            tagWindows: "ALU-Fenster",
+            tagDoors: "Türen",
+            tagShutters: "Rollläden",
+            tagPVC: "PVC-Fenster",
+            tagWood: "Holzfenster",
+            tagAuto: "Automatiktüren"
+        },
+        offer: {
+            title: "Angebot",
+            subtitle: "Komplettlösungen für Ihr Zuhause und Ihr Unternehmen",
+            windows: {
+                title: "Fenster",
+                intro: "Wir bieten eine große Auswahl an Fenstern von den besten Herstellern:",
+                pvc: "PVC-Fenster",
+                pvcDesc: "Die beliebteste Lösung, die hervorragende Wärmedämmung mit einem erschwinglichen Preis verbindet. 5-7 Kammer-Profile, Zwei- und Dreifachverglasung.",
+                alu: "Aluminiumfenster",
+                aluDesc: "Ideal für moderne Gebäude und große Verglasungen. Schlanke Profile, hohe Belastbarkeit, vielfältige RAL-Farben.",
+                wood: "Holzfenster",
+                woodDesc: "Klassische Eleganz und natürliche Schönheit des Holzes. Kiefer, Meranti, Eiche. Ausgezeichnet für historische Gebäude.",
+                sliding: "Schiebefenster HST/PSK",
+                slidingDesc: "Große Terrassenverglasungen mit Hebe-Schiebe- oder Kipp-Schiebe-System. Maximale Belichtung der Innenräume.",
+                brands: "<strong>Hersteller:</strong> Schüco, Rehau, Veka, Salamander, Aluplast, Internorm"
+            },
+            doors: {
+                title: "Türen",
+                external: "Außentüren",
+                externalDesc: "Stahl, Aluminium und Holz. Einbruchsicher der Klassen RC2-RC4. Modernes Design, hervorragende Wärme- und Schalldämmung.",
+                internal: "Innentüren",
+                internalDesc: "Große Auswahl an Stilen – von klassisch bis modern. Falztüren, stumpfe Türen, Schiebetüren, verdeckte Türen. Verschiedene Oberflächen und Farben.",
+                brands: "<strong>Hersteller:</strong> Hörmann, Gerda, Porta, DRE, Erkado, Barański"
+            },
+            extShutters: {
+                title: "Außenrollläden",
+                flush: "Unterputzrollläden",
+                flushDesc: "Montage in der Bauphase, Kasten in der Wand verborgen. Ästhetische Lösung ohne sichtbare Elemente an der Fassade.",
+                surface: "Aufputzrollläden",
+                surfaceDesc: "Montage auf der fertigen Fassade. Verschiedene Kastengrößen, Farbanpassung an die Gebäudefassade möglich.",
+                features: "Steuerung: manuell, elektrisch, Smart Home. Schutz vor Sonne, Lärm und Einbruch."
+            },
+            intShutters: {
+                title: "Innenrollläden",
+                fabric: "Stoffrollos – klassische und moderne Stoffe",
+                dayNight: "Tag-Nacht-Rollos – Lichtregulierung",
+                blackout: "Verdunkelungsrollos – ideal für Schlafzimmer",
+                roman: "Römische Rollos – elegantes, dekoratives Aussehen",
+                pleated: "Plissees – für Fenster mit ungewöhnlichen Formen",
+                vertical: "Vertikaljalousien – für große Verglasungen",
+                horizontal: "Horizontaljalousien – Aluminium und Holz"
+            },
+            mosquito: {
+                title: "Moskitonetze",
+                frame: "Rahmen-Moskitonetze – klassisch, einfache Montage",
+                roll: "Roll-Moskitonetze – bequemes Aufrollen",
+                pleated: "Plissee-Moskitonetze – für Terrassentüren",
+                door: "Tür-Moskitonetze – mit Selbstschließer",
+                materials: "Standard-, Staubschutz- und Allergikernetze."
+            },
+            sills: {
+                title: "Fensterbänke",
+                external: "Außenfensterbänke",
+                externalDesc: "Aluminium und Stahl mit PVD-Beschichtung. Wasserableitung, Fassadenschutz. Breite Farbpalette.",
+                internal: "Innenfensterbänke",
+                internalDesc: "PVC, Holz, Konglomerat, Naturstein. Anpassung an den Innenraumstil und die Fensterart."
+            },
+            finishing: {
+                title: "Verarbeitung und Ausführung",
+                intro: "Umfassende Abschlussarbeiten nach der Montage:",
+                plaster: "Putzarbeiten an Leibungen",
+                drywall: "Trockenbau-Ausführungen",
+                panels: "PVC-Paneele für Leibungen",
+                sealing: "Abdichtungen und Isolierungen",
+                painting: "Malen und Spachteln",
+                guarantee: "Alle Arbeiten mit Garantie. Termingerechte Ausführung."
+            }
+        },
+        contact: {
+            title: "Kontakt",
+            subtitle: "Kontaktieren Sie uns – wir antworten so schnell wie möglich",
+            address: "Adresse:",
+            phone: "Telefon:",
+            email: "E-Mail:",
+            hours: "Öffnungszeiten:",
+            hoursWeek: "Mo-Fr: 8:00 - 17:00",
+            hoursSat: "Sa: 9:00 - 13:00",
+            mapBtn: "Auf Google Maps ansehen",
+            form: {
+                name: "Name",
+                email: "E-Mail",
+                phone: "Telefon",
+                subject: "Betreff",
+                subjectQuote: "Angebotsanfrage",
+                subjectInfo: "Produktinformationen",
+                subjectService: "Service/Reklamation",
+                subjectOther: "Sonstiges",
+                message: "Nachricht",
+                send: "Nachricht senden"
+            }
+        },
+        footer: {
+            desc: "Professionelle Montage von Fenstern, Türen und Rollläden seit über 30 Jahren.",
+            rights: "Alle Rechte vorbehalten."
+        }
+    },
+    en: {
+        nav: {
+            about: "About",
+            projects: "Projects",
+            offer: "Offer",
+            contact: "Contact"
+        },
+        hero: {
+            title: "30 Years of Tradition and Experience",
+            subtitle: "Professional installation of windows, doors and blinds in Poland and abroad",
+            cta: "Contact Us"
+        },
+        about: {
+            title: "About Us",
+            p1: "<strong>LUMIFIL</strong> is a company with over 30 years of tradition in the window and door industry. From the very beginning, we have focused on quality, professionalism and complete customer satisfaction.",
+            p2: "Over the years, we have completed hundreds of projects both in Poland and in international markets – in Germany, France, Belgium and other Western European countries. Our experience covers both small private projects and large commercial ventures.",
+            p3: "We have our own experienced installation teams that guarantee the highest quality of workmanship. Every team member has many years of experience and regularly upgrades their qualifications.",
+            p4: "<strong>Quality Guarantee</strong> – this is not just a slogan, but our business philosophy. We offer a full guarantee on all work performed and products, providing customers with peace of mind and confidence for years.",
+            stat1: "years of experience",
+            stat2: "completed projects",
+            stat3: "countries of operation"
+        },
+        projects: {
+            title: "Projects",
+            subtitle: "Selected projects from our portfolio",
+            filterAll: "All",
+            filterWindows: "Windows",
+            filterDoors: "Doors",
+            filterShutters: "Blinds",
+            p1: { title: "Office Building Berlin", desc: "Complete replacement of aluminium windows in a 12-storey office building. 480 windows, structural facade." },
+            p2: { title: "Green Hills Estate", desc: "Installation of external and internal doors in 45 single-family houses. Wooden and PVC doors." },
+            p3: { title: "Seaside Hotel", desc: "Installation of flush-mounted external blinds in 120 hotel rooms with smart home system." },
+            p4: { title: "School in Munich", desc: "Replacement of PVC windows with triple glazing. Thermal modernisation of a public building." },
+            p5: { title: "Historic Villa Paris", desc: "Renovation and replacement of wooden box windows while preserving the historic character." },
+            p6: { title: "Shopping Center Krakow", desc: "Installation of automatic sliding doors and aluminium showcases on the ground floor." },
+            tagWindows: "ALU Windows",
+            tagDoors: "Doors",
+            tagShutters: "Blinds",
+            tagPVC: "PVC Windows",
+            tagWood: "Wooden Windows",
+            tagAuto: "Automatic Doors"
+        },
+        offer: {
+            title: "Our Offer",
+            subtitle: "Comprehensive solutions for your home and business",
+            windows: {
+                title: "Windows",
+                intro: "We offer a wide selection of windows from the best manufacturers:",
+                pvc: "PVC Windows",
+                pvcDesc: "The most popular solution combining excellent thermal insulation with an affordable price. 5-7 chamber profiles, double and triple glazing.",
+                alu: "Aluminium Windows",
+                aluDesc: "Ideal for modern buildings and large glazings. Slim profiles, high durability, variety of RAL colours.",
+                wood: "Wooden Windows",
+                woodDesc: "Classic elegance and natural beauty of wood. Pine, meranti, oak. Excellent for historic buildings.",
+                sliding: "Sliding Windows HST/PSK",
+                slidingDesc: "Large terrace glazings with lift-and-slide or tilt-and-slide system. Maximum interior lighting.",
+                brands: "<strong>Manufacturers:</strong> Schüco, Rehau, Veka, Salamander, Aluplast, Internorm"
+            },
+            doors: {
+                title: "Doors",
+                external: "External Doors",
+                externalDesc: "Steel, aluminium and wooden. Burglar-proof classes RC2-RC4. Modern design, excellent thermal and acoustic insulation.",
+                internal: "Internal Doors",
+                internalDesc: "Wide choice of styles – from classic to modern. Rebated, flush, sliding, hidden doors. Various finishes and colours.",
+                brands: "<strong>Manufacturers:</strong> Hörmann, Gerda, Porta, DRE, Erkado, Barański"
+            },
+            extShutters: {
+                title: "External Blinds",
+                flush: "Flush-mounted Blinds",
+                flushDesc: "Installed during the construction phase, box hidden in the wall. Aesthetic solution without visible elements on the facade.",
+                surface: "Surface-mounted Blinds",
+                surfaceDesc: "Installed on the finished facade. Various box sizes, colour matching to the building facade possible.",
+                features: "Control: manual, electric, smart home. Protection against sun, noise and burglary."
+            },
+            intShutters: {
+                title: "Internal Blinds",
+                fabric: "Fabric blinds – classic and modern fabrics",
+                dayNight: "Day-night blinds – light level regulation",
+                blackout: "Blackout blinds – ideal for bedrooms",
+                roman: "Roman blinds – elegant, decorative look",
+                pleated: "Pleated blinds – for unusually shaped windows",
+                vertical: "Vertical blinds – for large glazings",
+                horizontal: "Horizontal blinds – aluminium and wooden"
+            },
+            mosquito: {
+                title: "Mosquito Nets",
+                frame: "Frame mosquito nets – classic, easy installation",
+                roll: "Roller mosquito nets – convenient rolling",
+                pleated: "Pleated mosquito nets – for terrace doors",
+                door: "Door mosquito nets – with self-closer",
+                materials: "Standard, anti-dust and allergy-friendly nets."
+            },
+            sills: {
+                title: "Window Sills",
+                external: "External Window Sills",
+                externalDesc: "Aluminium and steel with PVD coating. Water drainage, facade protection. Wide colour range.",
+                internal: "Internal Window Sills",
+                internalDesc: "PVC, wooden, conglomerate, natural stone. Matching interior style and window type."
+            },
+            finishing: {
+                title: "Finishing Works",
+                intro: "Comprehensive finishing services after installation:",
+                plaster: "Plastering of reveals",
+                drywall: "Drywall finishing",
+                panels: "PVC panels for reveals",
+                sealing: "Sealing and insulation",
+                painting: "Painting and filling",
+                guarantee: "All work covered by warranty. Timely completion."
+            }
+        },
+        contact: {
+            title: "Contact",
+            subtitle: "Get in touch with us – we will respond as soon as possible",
+            address: "Address:",
+            phone: "Phone:",
+            email: "E-mail:",
+            hours: "Working Hours:",
+            hoursWeek: "Mon-Fri: 8:00 - 17:00",
+            hoursSat: "Sat: 9:00 - 13:00",
+            mapBtn: "View on Google Maps",
+            form: {
+                name: "Full Name",
+                email: "E-mail",
+                phone: "Phone",
+                subject: "Subject",
+                subjectQuote: "Quote Request",
+                subjectInfo: "Product Information",
+                subjectService: "Service/Complaint",
+                subjectOther: "Other",
+                message: "Message",
+                send: "Send Message"
+            }
+        },
+        footer: {
+            desc: "Professional installation of windows, doors and blinds for over 30 years.",
+            rights: "All rights reserved."
+        }
+    },
+    fr: {
+        nav: {
+            about: "À propos",
+            projects: "Réalisations",
+            offer: "Offre",
+            contact: "Contact"
+        },
+        hero: {
+            title: "30 ans de tradition et d'expérience",
+            subtitle: "Installation professionnelle de fenêtres, portes et volets en Pologne et à l'étranger",
+            cta: "Contactez-nous"
+        },
+        about: {
+            title: "À propos de nous",
+            p1: "<strong>LUMIFIL</strong> est une entreprise avec plus de 30 ans de tradition dans l'industrie des fenêtres et portes. Depuis le début, nous misons sur la qualité, le professionnalisme et la satisfaction totale du client.",
+            p2: "Au fil des années, nous avons réalisé des centaines de projets tant en Pologne que sur les marchés internationaux – en Allemagne, en France, en Belgique et dans d'autres pays d'Europe occidentale. Notre expérience couvre aussi bien les petits projets privés que les grandes réalisations commerciales.",
+            p3: "Nous disposons de nos propres équipes de montage expérimentées qui garantissent la plus haute qualité d'exécution. Chaque membre de notre équipe possède de nombreuses années d'expérience et améliore régulièrement ses qualifications.",
+            p4: "<strong>Garantie de qualité</strong> – ce n'est pas qu'un slogan, mais notre philosophie d'entreprise. Nous offrons une garantie complète sur tous les travaux effectués et les produits, assurant aux clients tranquillité et confiance pour les années à venir.",
+            stat1: "ans d'expérience",
+            stat2: "projets réalisés",
+            stat3: "pays d'activité"
+        },
+        projects: {
+            title: "Réalisations",
+            subtitle: "Projets sélectionnés de notre portfolio",
+            filterAll: "Tous",
+            filterWindows: "Fenêtres",
+            filterDoors: "Portes",
+            filterShutters: "Volets",
+            p1: { title: "Immeuble de bureaux Berlin", desc: "Remplacement complet des fenêtres en aluminium dans un immeuble de bureaux de 12 étages. 480 fenêtres, façade structurelle." },
+            p2: { title: "Lotissement Collines Vertes", desc: "Installation de portes extérieures et intérieures dans 45 maisons individuelles. Portes en bois et PVC." },
+            p3: { title: "Hôtel Bord de Mer", desc: "Installation de volets extérieurs encastrés dans 120 chambres d'hôtel avec système domotique." },
+            p4: { title: "École à Munich", desc: "Remplacement des fenêtres PVC avec triple vitrage. Projet de rénovation thermique d'un bâtiment public." },
+            p5: { title: "Villa historique Paris", desc: "Rénovation et remplacement des fenêtres en bois à caisson en préservant le caractère historique." },
+            p6: { title: "Centre commercial Cracovie", desc: "Installation de portes coulissantes automatiques et vitrines en aluminium au rez-de-chaussée." },
+            tagWindows: "Fenêtres ALU",
+            tagDoors: "Portes",
+            tagShutters: "Volets",
+            tagPVC: "Fenêtres PVC",
+            tagWood: "Fenêtres bois",
+            tagAuto: "Portes automatiques"
+        },
+        offer: {
+            title: "Notre Offre",
+            subtitle: "Solutions complètes pour votre maison et votre entreprise",
+            windows: {
+                title: "Fenêtres",
+                intro: "Nous offrons un large choix de fenêtres des meilleurs fabricants:",
+                pvc: "Fenêtres PVC",
+                pvcDesc: "La solution la plus populaire combinant une excellente isolation thermique avec un prix abordable. Profilés 5-7 chambres, double et triple vitrage.",
+                alu: "Fenêtres en aluminium",
+                aluDesc: "Idéales pour les bâtiments modernes et les grands vitrages. Profilés fins, haute résistance, variété de couleurs RAL.",
+                wood: "Fenêtres en bois",
+                woodDesc: "Élégance classique et beauté naturelle du bois. Pin, meranti, chêne. Excellentes pour les bâtiments historiques.",
+                sliding: "Fenêtres coulissantes HST/PSK",
+                slidingDesc: "Grands vitrages de terrasse avec système levant-coulissant ou oscillo-coulissant. Éclairage maximal des intérieurs.",
+                brands: "<strong>Fabricants:</strong> Schüco, Rehau, Veka, Salamander, Aluplast, Internorm"
+            },
+            doors: {
+                title: "Portes",
+                external: "Portes extérieures",
+                externalDesc: "Acier, aluminium et bois. Anti-effraction classes RC2-RC4. Design moderne, excellente isolation thermique et acoustique.",
+                internal: "Portes intérieures",
+                internalDesc: "Large choix de styles – du classique au moderne. Portes à recouvrement, affleurantes, coulissantes, cachées. Différentes finitions et couleurs.",
+                brands: "<strong>Fabricants:</strong> Hörmann, Gerda, Porta, DRE, Erkado, Barański"
+            },
+            extShutters: {
+                title: "Volets extérieurs",
+                flush: "Volets encastrés",
+                flushDesc: "Installés pendant la construction, caisson caché dans le mur. Solution esthétique sans éléments visibles sur la façade.",
+                surface: "Volets en applique",
+                surfaceDesc: "Installés sur la façade finie. Différentes tailles de caissons, possibilité d'adaptation de la couleur à la façade.",
+                features: "Commande: manuelle, électrique, domotique. Protection contre le soleil, le bruit et l'effraction."
+            },
+            intShutters: {
+                title: "Stores intérieurs",
+                fabric: "Stores en tissu – tissus classiques et modernes",
+                dayNight: "Stores jour-nuit – régulation du niveau de lumière",
+                blackout: "Stores occultants – idéaux pour les chambres",
+                roman: "Stores romains – aspect élégant et décoratif",
+                pleated: "Stores plissés – pour fenêtres de formes atypiques",
+                vertical: "Stores verticaux – pour grands vitrages",
+                horizontal: "Stores horizontaux – aluminium et bois"
+            },
+            mosquito: {
+                title: "Moustiquaires",
+                frame: "Moustiquaires à cadre – classiques, installation facile",
+                roll: "Moustiquaires enroulables – enroulement pratique",
+                pleated: "Moustiquaires plissées – pour portes de terrasse",
+                door: "Moustiquaires de porte – avec fermeture automatique",
+                materials: "Toiles standard, anti-poussière et pour allergiques."
+            },
+            sills: {
+                title: "Appuis de fenêtre",
+                external: "Appuis extérieurs",
+                externalDesc: "Aluminium et acier avec revêtement PVD. Évacuation de l'eau, protection de façade. Large gamme de couleurs.",
+                internal: "Appuis intérieurs",
+                internalDesc: "PVC, bois, aggloméré, pierre naturelle. Adaptation au style intérieur et au type de fenêtre."
+            },
+            finishing: {
+                title: "Finitions et travaux",
+                intro: "Services de finition complets après installation:",
+                plaster: "Travaux de plâtre sur les tableaux",
+                drywall: "Finitions en plaques de plâtre",
+                panels: "Panneaux PVC pour tableaux",
+                sealing: "Étanchéité et isolation",
+                painting: "Peinture et enduit",
+                guarantee: "Tous les travaux sous garantie. Réalisation dans les délais."
+            }
+        },
+        contact: {
+            title: "Contact",
+            subtitle: "Contactez-nous – nous vous répondrons dans les plus brefs délais",
+            address: "Adresse:",
+            phone: "Téléphone:",
+            email: "E-mail:",
+            hours: "Heures d'ouverture:",
+            hoursWeek: "Lun-Ven: 8h00 - 17h00",
+            hoursSat: "Sam: 9h00 - 13h00",
+            mapBtn: "Voir sur Google Maps",
+            form: {
+                name: "Nom complet",
+                email: "E-mail",
+                phone: "Téléphone",
+                subject: "Sujet",
+                subjectQuote: "Demande de devis",
+                subjectInfo: "Informations produit",
+                subjectService: "Service/Réclamation",
+                subjectOther: "Autre",
+                message: "Message",
+                send: "Envoyer le message"
+            }
+        },
+        footer: {
+            desc: "Installation professionnelle de fenêtres, portes et volets depuis plus de 30 ans.",
+            rights: "Tous droits réservés."
+        }
+    }
+};
+
+// Flag mapping
+const flags = {
+    pl: '🇵🇱',
+    de: '🇩🇪',
+    en: '🇬🇧',
+    fr: '🇫🇷'
+};
