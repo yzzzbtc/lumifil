@@ -5,6 +5,7 @@ const translations = {
             about: "O nas",
             projects: "Realizacje",
             offer: "Oferta",
+            blog: "Blog",
             contact: "Kontakt"
         },
         hero: {
@@ -110,6 +111,24 @@ const translations = {
                 guarantee: "Wszystkie prace objęte gwarancją. Terminowa realizacja."
             }
         },
+        blog: {
+            title: "Blog",
+            subtitle: "Porady, nowości i inspiracje ze świata stolarki otworowej",
+            categories: "Kategorie",
+            catAll: "Wszystkie",
+            catWindows: "Okna",
+            catDoors: "Drzwi",
+            catShutters: "Rolety",
+            catTips: "Porady",
+            catTrends: "Trendy",
+            readMore: "Czytaj więcej",
+            post1: { title: "Jak wybrać okna energooszczędne?", excerpt: "Poznaj kluczowe parametry okien, które wpływają na oszczędność energii w Twoim domu..." },
+            post2: { title: "Konserwacja okien PCV - kompletny poradnik", excerpt: "Dowiedz się, jak prawidłowo dbać o okna PCV, aby służyły przez wiele lat..." },
+            post3: { title: "Drzwi antywłamaniowe - co warto wiedzieć?", excerpt: "Przegląd klas antywłamaniowych i najważniejsze cechy bezpiecznych drzwi..." },
+            post4: { title: "Rolety zewnętrzne vs. wewnętrzne", excerpt: "Porównanie zalet i wad obu rozwiązań - które wybrać do swojego domu?" },
+            post5: { title: "Trendy w stolarce okiennej 2024", excerpt: "Minimalistyczne ramy, duże przeszklenia i smart home - zobacz co jest modne..." },
+            post6: { title: "Okna aluminiowe czy PCV?", excerpt: "Szczegółowe porównanie obu materiałów - wady, zalety i zastosowania..." }
+        },
         contact: {
             title: "Kontakt",
             subtitle: "Skontaktuj się z nami – odpowiemy najszybciej jak to możliwe",
@@ -143,6 +162,7 @@ const translations = {
             about: "Über uns",
             projects: "Projekte",
             offer: "Angebot",
+            blog: "Blog",
             contact: "Kontakt"
         },
         hero: {
@@ -248,6 +268,24 @@ const translations = {
                 guarantee: "Alle Arbeiten mit Garantie. Termingerechte Ausführung."
             }
         },
+        blog: {
+            title: "Blog",
+            subtitle: "Tipps, Neuigkeiten und Inspirationen aus der Welt der Fenster und Türen",
+            categories: "Kategorien",
+            catAll: "Alle",
+            catWindows: "Fenster",
+            catDoors: "Türen",
+            catShutters: "Rollläden",
+            catTips: "Tipps",
+            catTrends: "Trends",
+            readMore: "Mehr lesen",
+            post1: { title: "Wie wählt man energiesparende Fenster?", excerpt: "Lernen Sie die wichtigsten Fensterparameter kennen, die die Energieeinsparung beeinflussen..." },
+            post2: { title: "PVC-Fensterpflege - vollständiger Leitfaden", excerpt: "Erfahren Sie, wie Sie PVC-Fenster richtig pflegen..." },
+            post3: { title: "Einbruchsichere Türen - was Sie wissen sollten", excerpt: "Überblick über Sicherheitsklassen und die wichtigsten Merkmale..." },
+            post4: { title: "Außenrollläden vs. Innenrollläden", excerpt: "Vergleich der Vor- und Nachteile beider Lösungen..." },
+            post5: { title: "Fenstertrends 2024", excerpt: "Minimalistische Rahmen, große Verglasungen und Smart Home..." },
+            post6: { title: "Aluminium- oder PVC-Fenster?", excerpt: "Detaillierter Vergleich beider Materialien..." }
+        },
         contact: {
             title: "Kontakt",
             subtitle: "Kontaktieren Sie uns – wir antworten so schnell wie möglich",
@@ -281,6 +319,7 @@ const translations = {
             about: "About",
             projects: "Projects",
             offer: "Offer",
+            blog: "Blog",
             contact: "Contact"
         },
         hero: {
@@ -386,6 +425,24 @@ const translations = {
                 guarantee: "All work covered by warranty. Timely completion."
             }
         },
+        blog: {
+            title: "Blog",
+            subtitle: "Tips, news and inspiration from the world of windows and doors",
+            categories: "Categories",
+            catAll: "All",
+            catWindows: "Windows",
+            catDoors: "Doors",
+            catShutters: "Blinds",
+            catTips: "Tips",
+            catTrends: "Trends",
+            readMore: "Read more",
+            post1: { title: "How to choose energy-efficient windows?", excerpt: "Learn the key window parameters that affect energy savings..." },
+            post2: { title: "PVC window maintenance - complete guide", excerpt: "Learn how to properly care for PVC windows..." },
+            post3: { title: "Burglar-proof doors - what to know?", excerpt: "Overview of security classes and key features..." },
+            post4: { title: "External vs. internal blinds", excerpt: "Comparison of pros and cons of both solutions..." },
+            post5: { title: "Window trends 2024", excerpt: "Minimalist frames, large glazings and smart home..." },
+            post6: { title: "Aluminium or PVC windows?", excerpt: "Detailed comparison of both materials..." }
+        },
         contact: {
             title: "Contact",
             subtitle: "Get in touch with us – we will respond as soon as possible",
@@ -419,6 +476,7 @@ const translations = {
             about: "À propos",
             projects: "Réalisations",
             offer: "Offre",
+            blog: "Blog",
             contact: "Contact"
         },
         hero: {
@@ -523,6 +581,24 @@ const translations = {
                 painting: "Peinture et enduit",
                 guarantee: "Tous les travaux sous garantie. Réalisation dans les délais."
             }
+        },
+        blog: {
+            title: "Blog",
+            subtitle: "Conseils, actualités et inspirations du monde des fenêtres et portes",
+            categories: "Catégories",
+            catAll: "Tous",
+            catWindows: "Fenêtres",
+            catDoors: "Portes",
+            catShutters: "Volets",
+            catTips: "Conseils",
+            catTrends: "Tendances",
+            readMore: "Lire plus",
+            post1: { title: "Comment choisir des fenêtres économes en énergie?", excerpt: "Découvrez les paramètres clés des fenêtres qui affectent les économies d'énergie..." },
+            post2: { title: "Entretien des fenêtres PVC - guide complet", excerpt: "Apprenez comment entretenir correctement les fenêtres PVC..." },
+            post3: { title: "Portes anti-effraction - ce qu'il faut savoir", excerpt: "Aperçu des classes de sécurité et des caractéristiques principales..." },
+            post4: { title: "Volets extérieurs vs. intérieurs", excerpt: "Comparaison des avantages et inconvénients des deux solutions..." },
+            post5: { title: "Tendances fenêtres 2024", excerpt: "Cadres minimalistes, grands vitrages et maison intelligente..." },
+            post6: { title: "Fenêtres aluminium ou PVC?", excerpt: "Comparaison détaillée des deux matériaux..." }
         },
         contact: {
             title: "Contact",

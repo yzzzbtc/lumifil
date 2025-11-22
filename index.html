@@ -45,12 +45,14 @@
             <div class="container">
                 <div class="nav-wrapper">
                     <a href="#" class="logo" onclick="showSection('home')">
+                        <img src="images/logo.png" alt="LUMIFIL" class="logo-img">
                         <span class="logo-text">LUMIFIL</span>
                     </a>
                     <nav class="nav">
                         <a href="#about" class="nav-link" data-section="about" data-i18n="nav.about">O nas</a>
                         <a href="#projects" class="nav-link" data-section="projects" data-i18n="nav.projects">Realizacje</a>
                         <a href="#offer" class="nav-link" data-section="offer" data-i18n="nav.offer">Oferta</a>
+                        <a href="#blog" class="nav-link" data-section="blog" data-i18n="nav.blog">Blog</a>
                         <a href="#contact" class="nav-link" data-section="contact" data-i18n="nav.contact">Kontakt</a>
                     </nav>
                     <div class="nav-right">
@@ -72,6 +74,7 @@
             <a href="#about" class="mobile-nav-link" data-i18n="nav.about" onclick="navigateTo('about')">O nas</a>
             <a href="#projects" class="mobile-nav-link" data-i18n="nav.projects" onclick="navigateTo('projects')">Realizacje</a>
             <a href="#offer" class="mobile-nav-link" data-i18n="nav.offer" onclick="navigateTo('offer')">Oferta</a>
+            <a href="#blog" class="mobile-nav-link" data-i18n="nav.blog" onclick="navigateTo('blog')">Blog</a>
             <a href="#contact" class="mobile-nav-link" data-i18n="nav.contact" onclick="navigateTo('contact')">Kontakt</a>
         </div>
 
@@ -138,7 +141,7 @@
 
                 <div class="projects-grid">
                     <div class="project-card" data-category="windows">
-                        <div class="project-image" style="background: linear-gradient(135deg, #1a237e 0%, #0d1421 100%);">
+                        <div class="project-image" style="background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);">
                             <div class="project-overlay">
                                 <span class="project-icon">🏢</span>
                             </div>
@@ -151,7 +154,7 @@
                     </div>
 
                     <div class="project-card" data-category="doors">
-                        <div class="project-image" style="background: linear-gradient(135deg, #263238 0%, #0d1421 100%);">
+                        <div class="project-image" style="background: linear-gradient(135deg, #4fc3f7 0%, #81d4fa 100%);">
                             <div class="project-overlay">
                                 <span class="project-icon">🏠</span>
                             </div>
@@ -164,7 +167,7 @@
                     </div>
 
                     <div class="project-card" data-category="shutters">
-                        <div class="project-image" style="background: linear-gradient(135deg, #1a237e 0%, #263238 100%);">
+                        <div class="project-image" style="background: linear-gradient(135deg, #0277bd 0%, #0288d1 100%);">
                             <div class="project-overlay">
                                 <span class="project-icon">🏨</span>
                             </div>
@@ -177,7 +180,7 @@
                     </div>
 
                     <div class="project-card" data-category="windows">
-                        <div class="project-image" style="background: linear-gradient(135deg, #0d47a1 0%, #1a237e 100%);">
+                        <div class="project-image" style="background: linear-gradient(135deg, #29b6f6 0%, #4fc3f7 100%);">
                             <div class="project-overlay">
                                 <span class="project-icon">🏫</span>
                             </div>
@@ -190,7 +193,7 @@
                     </div>
 
                     <div class="project-card" data-category="windows">
-                        <div class="project-image" style="background: linear-gradient(135deg, #37474f 0%, #0d1421 100%);">
+                        <div class="project-image" style="background: linear-gradient(135deg, #03a9f4 0%, #29b6f6 100%);">
                             <div class="project-overlay">
                                 <span class="project-icon">🏛️</span>
                             </div>
@@ -203,7 +206,7 @@
                     </div>
 
                     <div class="project-card" data-category="doors">
-                        <div class="project-image" style="background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);">
+                        <div class="project-image" style="background: linear-gradient(135deg, #0288d1 0%, #0277bd 100%);">
                             <div class="project-overlay">
                                 <span class="project-icon">🏬</span>
                             </div>
@@ -228,7 +231,7 @@
                     <!-- Windows -->
                     <div class="offer-card" onclick="toggleOfferDetails(this)">
                         <div class="offer-header">
-                            <span class="offer-icon">🪟</span>
+                            <span class="offer-icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="3" y1="12" x2="21" y2="12"/></svg></span>
                             <h3 data-i18n="offer.windows.title">Okna</h3>
                             <span class="offer-toggle">+</span>
                         </div>
@@ -262,7 +265,7 @@
                     <!-- Doors -->
                     <div class="offer-card" onclick="toggleOfferDetails(this)">
                         <div class="offer-header">
-                            <span class="offer-icon">🚪</span>
+                            <span class="offer-icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="14" height="20" rx="1"/><circle cx="15" cy="12" r="1.5"/></svg></span>
                             <h3 data-i18n="offer.doors.title">Drzwi</h3>
                             <span class="offer-toggle">+</span>
                         </div>
@@ -284,7 +287,7 @@
                     <!-- External Shutters -->
                     <div class="offer-card" onclick="toggleOfferDetails(this)">
                         <div class="offer-header">
-                            <span class="offer-icon">🏠</span>
+                            <span class="offer-icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="6" width="18" height="4" rx="1"/><rect x="3" y="6" width="18" height="14" rx="1"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
                             <h3 data-i18n="offer.extShutters.title">Rolety zewnętrzne</h3>
                             <span class="offer-toggle">+</span>
                         </div>
@@ -306,7 +309,7 @@
                     <!-- Internal Shutters -->
                     <div class="offer-card" onclick="toggleOfferDetails(this)">
                         <div class="offer-header">
-                            <span class="offer-icon">🌅</span>
+                            <span class="offer-icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="13" x2="21" y2="13"/></svg></span>
                             <h3 data-i18n="offer.intShutters.title">Rolety wewnętrzne</h3>
                             <span class="offer-toggle">+</span>
                         </div>
@@ -326,7 +329,7 @@
                     <!-- Mosquito Nets -->
                     <div class="offer-card" onclick="toggleOfferDetails(this)">
                         <div class="offer-header">
-                            <span class="offer-icon">🦟</span>
+                            <span class="offer-icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 3l18 18M21 3l-18 18"/></svg></span>
                             <h3 data-i18n="offer.mosquito.title">Moskitiery</h3>
                             <span class="offer-toggle">+</span>
                         </div>
@@ -344,7 +347,7 @@
                     <!-- Windowsills -->
                     <div class="offer-card" onclick="toggleOfferDetails(this)">
                         <div class="offer-header">
-                            <span class="offer-icon">📐</span>
+                            <span class="offer-icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="18" width="20" height="3" rx="0.5"/><rect x="2" y="14" width="16" height="3" rx="0.5"/></svg></span>
                             <h3 data-i18n="offer.sills.title">Parapety</h3>
                             <span class="offer-toggle">+</span>
                         </div>
@@ -364,7 +367,7 @@
                     <!-- Finishing -->
                     <div class="offer-card" onclick="toggleOfferDetails(this)">
                         <div class="offer-header">
-                            <span class="offer-icon">🔧</span>
+                            <span class="offer-icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
                             <h3 data-i18n="offer.finishing.title">Obróbki i wykończenia</h3>
                             <span class="offer-toggle">+</span>
                         </div>
@@ -378,6 +381,96 @@
                                 <li data-i18n="offer.finishing.painting">Malowanie i szpachlowanie</li>
                             </ul>
                             <p data-i18n="offer.finishing.guarantee">Wszystkie prace objęte gwarancją. Terminowa realizacja.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="section blog">
+            <div class="container">
+                <h2 class="section-title" data-i18n="blog.title">Blog</h2>
+                <p class="section-subtitle" data-i18n="blog.subtitle">Porady, nowości i inspiracje ze świata stolarki otworowej</p>
+
+                <div class="blog-layout">
+                    <!-- Blog Sidebar Navigation -->
+                    <aside class="blog-sidebar">
+                        <nav class="blog-nav">
+                            <h3 data-i18n="blog.categories">Kategorie</h3>
+                            <ul class="blog-categories">
+                                <li><a href="#" class="blog-cat-link active" data-category="all" data-i18n="blog.catAll">Wszystkie</a></li>
+                                <li><a href="#" class="blog-cat-link" data-category="windows" data-i18n="blog.catWindows">Okna</a></li>
+                                <li><a href="#" class="blog-cat-link" data-category="doors" data-i18n="blog.catDoors">Drzwi</a></li>
+                                <li><a href="#" class="blog-cat-link" data-category="shutters" data-i18n="blog.catShutters">Rolety</a></li>
+                                <li><a href="#" class="blog-cat-link" data-category="tips" data-i18n="blog.catTips">Porady</a></li>
+                                <li><a href="#" class="blog-cat-link" data-category="trends" data-i18n="blog.catTrends">Trendy</a></li>
+                            </ul>
+                        </nav>
+                    </aside>
+
+                    <!-- Blog Posts Grid -->
+                    <div class="blog-content">
+                        <div class="blog-grid">
+                            <article class="blog-card" data-category="windows">
+                                <div class="blog-card-image" style="background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);"></div>
+                                <div class="blog-card-content">
+                                    <span class="blog-card-category" data-i18n="blog.catWindows">Okna</span>
+                                    <h4 data-i18n="blog.post1.title">Jak wybrać okna energooszczędne?</h4>
+                                    <p data-i18n="blog.post1.excerpt">Poznaj kluczowe parametry okien, które wpływają na oszczędność energii w Twoim domu...</p>
+                                    <a href="#" class="blog-read-more" data-i18n="blog.readMore">Czytaj więcej</a>
+                                </div>
+                            </article>
+
+                            <article class="blog-card" data-category="tips">
+                                <div class="blog-card-image" style="background: linear-gradient(135deg, #4fc3f7 0%, #81d4fa 100%);"></div>
+                                <div class="blog-card-content">
+                                    <span class="blog-card-category" data-i18n="blog.catTips">Porady</span>
+                                    <h4 data-i18n="blog.post2.title">Konserwacja okien PCV - kompletny poradnik</h4>
+                                    <p data-i18n="blog.post2.excerpt">Dowiedz się, jak prawidłowo dbać o okna PCV, aby służyły przez wiele lat...</p>
+                                    <a href="#" class="blog-read-more" data-i18n="blog.readMore">Czytaj więcej</a>
+                                </div>
+                            </article>
+
+                            <article class="blog-card" data-category="doors">
+                                <div class="blog-card-image" style="background: linear-gradient(135deg, #0277bd 0%, #0288d1 100%);"></div>
+                                <div class="blog-card-content">
+                                    <span class="blog-card-category" data-i18n="blog.catDoors">Drzwi</span>
+                                    <h4 data-i18n="blog.post3.title">Drzwi antywłamaniowe - co warto wiedzieć?</h4>
+                                    <p data-i18n="blog.post3.excerpt">Przegląd klas antywłamaniowych i najważniejsze cechy bezpiecznych drzwi...</p>
+                                    <a href="#" class="blog-read-more" data-i18n="blog.readMore">Czytaj więcej</a>
+                                </div>
+                            </article>
+
+                            <article class="blog-card" data-category="shutters">
+                                <div class="blog-card-image" style="background: linear-gradient(135deg, #29b6f6 0%, #4fc3f7 100%);"></div>
+                                <div class="blog-card-content">
+                                    <span class="blog-card-category" data-i18n="blog.catShutters">Rolety</span>
+                                    <h4 data-i18n="blog.post4.title">Rolety zewnętrzne vs. wewnętrzne</h4>
+                                    <p data-i18n="blog.post4.excerpt">Porównanie zalet i wad obu rozwiązań - które wybrać do swojego domu?</p>
+                                    <a href="#" class="blog-read-more" data-i18n="blog.readMore">Czytaj więcej</a>
+                                </div>
+                            </article>
+
+                            <article class="blog-card" data-category="trends">
+                                <div class="blog-card-image" style="background: linear-gradient(135deg, #03a9f4 0%, #29b6f6 100%);"></div>
+                                <div class="blog-card-content">
+                                    <span class="blog-card-category" data-i18n="blog.catTrends">Trendy</span>
+                                    <h4 data-i18n="blog.post5.title">Trendy w stolarce okiennej 2024</h4>
+                                    <p data-i18n="blog.post5.excerpt">Minimalistyczne ramy, duże przeszklenia i smart home - zobacz co jest modne...</p>
+                                    <a href="#" class="blog-read-more" data-i18n="blog.readMore">Czytaj więcej</a>
+                                </div>
+                            </article>
+
+                            <article class="blog-card" data-category="windows">
+                                <div class="blog-card-image" style="background: linear-gradient(135deg, #0288d1 0%, #0277bd 100%);"></div>
+                                <div class="blog-card-content">
+                                    <span class="blog-card-category" data-i18n="blog.catWindows">Okna</span>
+                                    <h4 data-i18n="blog.post6.title">Okna aluminiowe czy PCV?</h4>
+                                    <p data-i18n="blog.post6.excerpt">Szczegółowe porównanie obu materiałów - wady, zalety i zastosowania...</p>
+                                    <a href="#" class="blog-read-more" data-i18n="blog.readMore">Czytaj więcej</a>
+                                </div>
+                            </article>
                         </div>
                     </div>
                 </div>

@@ -234,6 +234,41 @@ function initProjectCardStyles() {
     document.head.appendChild(style);
 }
 
+// Blog Category Filter
+function initBlogFilter() {
+    const categoryLinks = document.querySelectorAll('.blog-cat-link');
+    const blogCards = document.querySelectorAll('.blog-card');
+
+    categoryLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            // Update active link
+            categoryLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+
+            // Filter blog posts
+            const category = link.getAttribute('data-category');
+
+            blogCards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 10);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+    });
+}
+
 // Initialize on DOM load
 document.addEventListener('DOMContentLoaded', () => {
     // Check for saved language preference
@@ -246,6 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize all features
     initProjectFilter();
+    initBlogFilter();
     initContactForm();
     initHeaderScroll();
     initActiveNavLink();
