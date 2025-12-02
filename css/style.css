@@ -406,7 +406,7 @@ img {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: var(--white);
+    background: linear-gradient(135deg, var(--white) 0%, var(--primary-pale) 50%, #d4e8f0 100%);
     position: relative;
     overflow: hidden;
 }
@@ -427,10 +427,10 @@ img {
     position: absolute;
     top: 0;
     right: 0;
-    width: 50%;
+    width: 55%;
     height: 100%;
-    background: linear-gradient(135deg, var(--gray-lightest) 0%, var(--primary-pale) 100%);
-    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+    background: linear-gradient(135deg, #c9dfe8 0%, #a8cdd9 50%, #8bbfd0 100%);
+    clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
     z-index: 0;
 }
 
@@ -456,52 +456,67 @@ img {
     flex: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 15px;
-    max-width: 500px;
-    height: 450px;
+    grid-template-rows: 1.2fr 1fr;
+    gap: 16px;
+    max-width: 580px;
+    height: 520px;
 }
 
 .hero-image-main {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 20px 60px rgba(26, 95, 122, 0.25);
 }
 
 .hero-image-main img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hero-image-main:hover img {
+    transform: scale(1.03);
 }
 
 .hero-image-secondary {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 15px 40px rgba(26, 95, 122, 0.2);
 }
 
 .hero-image-secondary img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hero-image-secondary:hover img {
+    transform: scale(1.03);
 }
 
 .hero-image-accent {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 15px 40px rgba(26, 95, 122, 0.2);
 }
 
 .hero-image-accent img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hero-image-accent:hover img {
+    transform: scale(1.03);
 }
 
 .hero h1 {
