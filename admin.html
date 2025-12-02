@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMIFIL - Panel Admina</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Ekran logowania -->
+    <div id="login-screen" class="login-screen">
+        <div class="login-box">
+            <h1>LUMIFIL</h1>
+            <p>Panel Administracyjny</p>
+            <form id="login-form">
+                <input type="password" id="password" placeholder="Wprowadź hasło" required>
+                <button type="submit">Zaloguj</button>
+                <p id="login-error" class="error hidden">Nieprawidłowe hasło</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Panel admina -->
+    <div id="admin-panel" class="admin-panel hidden">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>LUMIFIL</h2>
+                <span>Admin</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-section="dashboard">
+                    <span class="icon">📊</span> Dashboard
+                </a>
+                <a href="#" class="nav-item" data-section="projects">
+                    <span class="icon">🏗️</span> Realizacje
+                </a>
+                <a href="#" class="nav-item" data-section="blog">
+                    <span class="icon">📝</span> Blog
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="logout-btn" class="logout-btn">Wyloguj</button>
+            </div>
+        </aside>
+
+        <!-- Main content -->
+        <main class="main-content">
+            <!-- Dashboard -->
+            <section id="section-dashboard" class="section active">
+                <h1>Dashboard</h1>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-icon">🏗️</span>
+                        <div class="stat-info">
+                            <span class="stat-number" id="projects-count">0</span>
+                            <span class="stat-label">Realizacji</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-icon">📝</span>
+                        <div class="stat-info">
+                            <span class="stat-number" id="blog-count">0</span>
+                            <span class="stat-label">Artykułów</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="firebase-status" id="firebase-status">
+                    <p>Status Firebase: <span id="fb-status">Sprawdzanie...</span></p>
+                </div>
+            </section>
+
+            <!-- Realizacje -->
+            <section id="section-projects" class="section">
+                <div class="section-header">
+                    <h1>Realizacje</h1>
+                    <button class="btn btn-primary" id="add-project-btn">+ Dodaj realizację</button>
+                </div>
+
+                <!-- Lista realizacji -->
+                <div class="data-table-wrapper">
+                    <table class="data-table" id="projects-table">
+                        <thead>
+                            <tr>
+                                <th>Kategoria</th>
+                                <th>Tytuł (PL)</th>
+                                <th>Ikona</th>
+                                <th>Akcje</th>
+                            </tr>
+                        </thead>
+                        <tbody id="projects-tbody">
+                            <!-- Dynamicznie ładowane -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Formularz realizacji -->
+                <div id="project-form-wrapper" class="form-wrapper hidden">
+                    <div class="form-container">
+                        <div class="form-header">
+                            <h2 id="project-form-title">Dodaj realizację</h2>
+                            <button class="close-btn" id="close-project-form">&times;</button>
+                        </div>
+                        <form id="project-form">
+                            <input type="hidden" id="project-id">
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="project-category">Kategoria</label>
+                                    <select id="project-category" required>
+                                        <option value="windows">Okna</option>
+                                        <option value="doors">Drzwi</option>
+                                        <option value="shutters">Rolety</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="project-icon">Ikona (emoji)</label>
+                                    <input type="text" id="project-icon" placeholder="np. 🏢" value="🏢">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="project-tag">Tag</label>
+                                <select id="project-tag">
+                                    <option value="tagWindows">Okna ALU</option>
+                                    <option value="tagPVC">Okna PCV</option>
+                                    <option value="tagWood">Okna drewniane</option>
+                                    <option value="tagDoors">Drzwi</option>
+                                    <option value="tagShutters">Rolety</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="project-gradient">Gradient (tło)</label>
+                                <select id="project-gradient">
+                                    <option value="linear-gradient(135deg, #1a5f7a 0%, #2980b9 100%)">Niebieski ciemny</option>
+                                    <option value="linear-gradient(135deg, #2980b9 0%, #5dade2 100%)">Niebieski jasny</option>
+                                    <option value="linear-gradient(135deg, #134b5f 0%, #1a5f7a 100%)">Morski</option>
+                                    <option value="linear-gradient(135deg, #2980b9 0%, #3498db 100%)">Błękitny</option>
+                                </select>
+                            </div>
+
+                            <h3>Tytuły</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="project-title-pl">Polski</label>
+                                    <input type="text" id="project-title-pl" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="project-title-de">Niemiecki</label>
+                                    <input type="text" id="project-title-de" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="project-title-en">Angielski</label>
+                                    <input type="text" id="project-title-en" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="project-title-fr">Francuski</label>
+                                    <input type="text" id="project-title-fr" required>
+                                </div>
+                            </div>
+
+                            <h3>Opisy</h3>
+                            <div class="form-group">
+                                <label for="project-desc-pl">Polski</label>
+                                <textarea id="project-desc-pl" rows="2" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="project-desc-de">Niemiecki</label>
+                                <textarea id="project-desc-de" rows="2" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="project-desc-en">Angielski</label>
+                                <textarea id="project-desc-en" rows="2" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="project-desc-fr">Francuski</label>
+                                <textarea id="project-desc-fr" rows="2" required></textarea>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-secondary" id="cancel-project">Anuluj</button>
+                                <button type="submit" class="btn btn-primary">Zapisz</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Blog -->
+            <section id="section-blog" class="section">
+                <div class="section-header">
+                    <h1>Blog</h1>
+                    <button class="btn btn-primary" id="add-blog-btn">+ Dodaj artykuł</button>
+                </div>
+
+                <!-- Lista artykułów -->
+                <div class="data-table-wrapper">
+                    <table class="data-table" id="blog-table">
+                        <thead>
+                            <tr>
+                                <th>Kategoria</th>
+                                <th>Tytuł (PL)</th>
+                                <th>Akcje</th>
+                            </tr>
+                        </thead>
+                        <tbody id="blog-tbody">
+                            <!-- Dynamicznie ładowane -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Formularz bloga -->
+                <div id="blog-form-wrapper" class="form-wrapper hidden">
+                    <div class="form-container">
+                        <div class="form-header">
+                            <h2 id="blog-form-title">Dodaj artykuł</h2>
+                            <button class="close-btn" id="close-blog-form">&times;</button>
+                        </div>
+                        <form id="blog-form">
+                            <input type="hidden" id="blog-id">
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="blog-category">Kategoria</label>
+                                    <select id="blog-category" required>
+                                        <option value="windows">Okna</option>
+                                        <option value="doors">Drzwi</option>
+                                        <option value="shutters">Rolety</option>
+                                        <option value="tips">Porady</option>
+                                        <option value="trends">Trendy</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="blog-gradient">Gradient (tło)</label>
+                                    <select id="blog-gradient">
+                                        <option value="linear-gradient(135deg, #1a5f7a 0%, #2980b9 100%)">Niebieski ciemny</option>
+                                        <option value="linear-gradient(135deg, #2980b9 0%, #5dade2 100%)">Niebieski jasny</option>
+                                        <option value="linear-gradient(135deg, #134b5f 0%, #1a5f7a 100%)">Morski</option>
+                                        <option value="linear-gradient(135deg, #e67e22 0%, #f39c12 100%)">Pomarańczowy</option>
+                                        <option value="linear-gradient(135deg, #2980b9 0%, #3498db 100%)">Błękitny</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <h3>Tytuły</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="blog-title-pl">Polski</label>
+                                    <input type="text" id="blog-title-pl" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="blog-title-de">Niemiecki</label>
+                                    <input type="text" id="blog-title-de" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="blog-title-en">Angielski</label>
+                                    <input type="text" id="blog-title-en" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="blog-title-fr">Francuski</label>
+                                    <input type="text" id="blog-title-fr" required>
+                                </div>
+                            </div>
+
+                            <h3>Zajawki (krótki opis)</h3>
+                            <div class="form-group">
+                                <label for="blog-excerpt-pl">Polski</label>
+                                <textarea id="blog-excerpt-pl" rows="2" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="blog-excerpt-de">Niemiecki</label>
+                                <textarea id="blog-excerpt-de" rows="2" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="blog-excerpt-en">Angielski</label>
+                                <textarea id="blog-excerpt-en" rows="2" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="blog-excerpt-fr">Francuski</label>
+                                <textarea id="blog-excerpt-fr" rows="2" required></textarea>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-secondary" id="cancel-blog">Anuluj</button>
+                                <button type="submit" class="btn btn-primary">Zapisz</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

@@ -30,12 +30,13 @@ const translations = {
             filterWindows: "Okna",
             filterDoors: "Drzwi",
             filterShutters: "Rolety",
-            p1: { title: "Biurowiec Berlin", desc: "Kompleksowa wymiana okien aluminiowych w 12-piętrowym biurowcu. 480 okien, fasada strukturalna." },
-            p2: { title: "Osiedle Zielone Wzgórza", desc: "Montaż drzwi zewnętrznych i wewnętrznych w 45 domach jednorodzinnych. Drzwi drewniane i PCV." },
-            p3: { title: "Hotel Nadmorski", desc: "Instalacja rolet zewnętrznych podtynkowych w 120 pokojach hotelowych z systemem smart home." },
-            p4: { title: "Szkoła w Monachium", desc: "Wymiana okien PCV z pakietami trzyszybowymi. Projekt termomodernizacji budynku publicznego." },
-            p5: { title: "Willa zabytkowa Paryż", desc: "Renowacja i wymiana drewnianych okien skrzynkowych z zachowaniem charakteru historycznego." },
-            p6: { title: "Centrum handlowe Kraków", desc: "Montaż automatycznych drzwi przesuwnych oraz witryn aluminiowych na parterze obiektu." },
+            p1: { title: "Leysin American School", desc: "Przebudowa Grand Hotelu na budynek Leysin American School w Szwajcarii. Kompleksowa wymiana stolarki okiennej." },
+            p2: { title: "Osiedle w Sulnowie", desc: "Montaż drzwi zewnętrznych na osiedlu budowanym przez dewelopera w Sulnowie." },
+            p3: { title: "Dom jednorodzinny w Świeciu", desc: "Wymiana rolet zewnętrznych w domu jednorodzinnym w Świeciu." },
+            p4: { title: "Sąd w Malborku", desc: "Wymiana stolarki okiennej w budynku Sądu w Malborku." },
+            p5: { title: "Kompleks apartamentów na Gibraltarze", desc: "Wymiana okien drewnianych w kompleksie apartamentów znajdujących się na słynnej skale na Gibraltarze." },
+            p6: { title: "Kamienica w Naumburgu", desc: "Wymiana drzwi zewnętrznych w zabytkowej kamienicy w Naumburgu, Niemcy." },
+            p7: { title: "Prosektorium w Świeciu", desc: "Wymiana drzwi zewnętrznych na drzwi z szybą bezpieczną w starym budynku prosektorium w Świeciu." },
             tagWindows: "Okna ALU",
             tagDoors: "Drzwi",
             tagShutters: "Rolety",
@@ -65,7 +66,7 @@ const translations = {
                 externalDesc: "Stalowe, aluminiowe i drewniane. Antywłamaniowe klasy RC2-RC4. Nowoczesne wzornictwo, doskonała izolacja termiczna i akustyczna.",
                 internal: "Drzwi wewnętrzne",
                 internalDesc: "Szeroki wybór stylów – od klasycznych po nowoczesne. Drzwi przylgowe, bezprzylgowe, przesuwne, ukryte. Różne wykończenia i kolory.",
-                brands: "<strong>Producenci:</strong> Hörmann, Gerda, Porta, DRE, Erkado, Barański"
+                brands: "<strong>Producenci:</strong> Hörmann, Gerda, Porta, DRE, Erkado, Barański, PLM, Wikęd"
             },
             garage: {
                 title: "Bramy garażowe",
@@ -76,7 +77,7 @@ const translations = {
                 side: "Bramy uchylne i rozsuwane",
                 sideDesc: "Klasyczne rozwiązania dla większych otworów garażowych. Możliwość wykonania z różnych materiałów.",
                 features: "Sterowanie: ręczne, elektryczne z pilotem, integracja ze smart home. Opcje antywłamaniowe.",
-                brands: "<strong>Producenci:</strong> Hörmann, Wiśniowski, Krispol, Normstahl"
+                brands: "<strong>Producenci:</strong> Wiśniowski, Bramtech"
             },
             extShutters: {
                 title: "Rolety zewnętrzne",
@@ -198,12 +199,13 @@ const translations = {
             filterWindows: "Fenster",
             filterDoors: "Türen",
             filterShutters: "Rollläden",
-            p1: { title: "Bürogebäude Berlin", desc: "Kompletter Austausch von Aluminiumfenstern in einem 12-stöckigen Bürogebäude. 480 Fenster, Strukturfassade." },
-            p2: { title: "Siedlung Grüne Hügel", desc: "Montage von Außen- und Innentüren in 45 Einfamilienhäusern. Holz- und PVC-Türen." },
-            p3: { title: "Strandhotel", desc: "Installation von Unterputz-Außenrollläden in 120 Hotelzimmern mit Smart-Home-System." },
-            p4: { title: "Schule in München", desc: "Austausch von PVC-Fenstern mit Dreifachverglasung. Thermische Sanierung eines öffentlichen Gebäudes." },
-            p5: { title: "Historische Villa Paris", desc: "Renovierung und Austausch von Holzkastenfenstern unter Bewahrung des historischen Charakters." },
-            p6: { title: "Einkaufszentrum Krakau", desc: "Montage von automatischen Schiebetüren und Aluminiumvitrinen im Erdgeschoss." },
+            p1: { title: "Leysin American School", desc: "Umbau des Grand Hotels zum Gebäude der Leysin American School in der Schweiz. Kompletter Fensteraustausch." },
+            p2: { title: "Wohnsiedlung in Sulnowo", desc: "Montage von Außentüren in einer vom Bauträger errichteten Wohnsiedlung in Sulnowo." },
+            p3: { title: "Einfamilienhaus in Świecie", desc: "Austausch von Außenrollläden in einem Einfamilienhaus in Świecie." },
+            p4: { title: "Gericht in Malbork", desc: "Austausch der Fensterschreinerei im Gerichtsgebäude in Malbork." },
+            p5: { title: "Apartmentkomplex auf Gibraltar", desc: "Austausch von Holzfenstern im Apartmentkomplex auf dem berühmten Felsen von Gibraltar." },
+            p6: { title: "Stadthaus in Naumburg", desc: "Austausch der Außentüren in einem historischen Stadthaus in Naumburg, Deutschland." },
+            p7: { title: "Leichenhalle in Świecie", desc: "Austausch der Außentüren gegen Türen mit Sicherheitsglas im alten Gebäude der Leichenhalle in Świecie." },
             tagWindows: "ALU-Fenster",
             tagDoors: "Türen",
             tagShutters: "Rollläden",
@@ -233,7 +235,7 @@ const translations = {
                 externalDesc: "Stahl, Aluminium und Holz. Einbruchsicher der Klassen RC2-RC4. Modernes Design, hervorragende Wärme- und Schalldämmung.",
                 internal: "Innentüren",
                 internalDesc: "Große Auswahl an Stilen – von klassisch bis modern. Falztüren, stumpfe Türen, Schiebetüren, verdeckte Türen. Verschiedene Oberflächen und Farben.",
-                brands: "<strong>Hersteller:</strong> Hörmann, Gerda, Porta, DRE, Erkado, Barański"
+                brands: "<strong>Hersteller:</strong> Hörmann, Gerda, Porta, DRE, Erkado, Barański, PLM, Wikęd"
             },
             garage: {
                 title: "Garagentore",
@@ -244,7 +246,7 @@ const translations = {
                 side: "Kipp- und Schiebetore",
                 sideDesc: "Klassische Lösungen für größere Garagenöffnungen. Herstellung aus verschiedenen Materialien möglich.",
                 features: "Steuerung: manuell, elektrisch mit Fernbedienung, Smart-Home-Integration. Einbruchschutz-Optionen.",
-                brands: "<strong>Hersteller:</strong> Hörmann, Wiśniowski, Krispol, Normstahl"
+                brands: "<strong>Hersteller:</strong> Wiśniowski, Bramtech"
             },
             extShutters: {
                 title: "Außenrollläden",
@@ -366,12 +368,13 @@ const translations = {
             filterWindows: "Windows",
             filterDoors: "Doors",
             filterShutters: "Blinds",
-            p1: { title: "Office Building Berlin", desc: "Complete replacement of aluminium windows in a 12-storey office building. 480 windows, structural facade." },
-            p2: { title: "Green Hills Estate", desc: "Installation of external and internal doors in 45 single-family houses. Wooden and PVC doors." },
-            p3: { title: "Seaside Hotel", desc: "Installation of flush-mounted external blinds in 120 hotel rooms with smart home system." },
-            p4: { title: "School in Munich", desc: "Replacement of PVC windows with triple glazing. Thermal modernisation of a public building." },
-            p5: { title: "Historic Villa Paris", desc: "Renovation and replacement of wooden box windows while preserving the historic character." },
-            p6: { title: "Shopping Center Krakow", desc: "Installation of automatic sliding doors and aluminium showcases on the ground floor." },
+            p1: { title: "Leysin American School", desc: "Conversion of Grand Hotel into Leysin American School building in Switzerland. Complete window replacement." },
+            p2: { title: "Housing Estate in Sulnowo", desc: "Installation of external doors in a housing estate built by a developer in Sulnowo." },
+            p3: { title: "Single-family house in Świecie", desc: "Replacement of external blinds in a single-family house in Świecie." },
+            p4: { title: "Courthouse in Malbork", desc: "Replacement of window joinery in the Courthouse in Malbork." },
+            p5: { title: "Apartment Complex in Gibraltar", desc: "Replacement of wooden windows in an apartment complex located on the famous rock of Gibraltar." },
+            p6: { title: "Townhouse in Naumburg", desc: "Replacement of external doors in a historic townhouse in Naumburg, Germany." },
+            p7: { title: "Mortuary in Świecie", desc: "Replacement of external doors with safety glass doors in the old mortuary building in Świecie." },
             tagWindows: "ALU Windows",
             tagDoors: "Doors",
             tagShutters: "Blinds",
@@ -401,7 +404,7 @@ const translations = {
                 externalDesc: "Steel, aluminium and wooden. Burglar-proof classes RC2-RC4. Modern design, excellent thermal and acoustic insulation.",
                 internal: "Internal Doors",
                 internalDesc: "Wide choice of styles – from classic to modern. Rebated, flush, sliding, hidden doors. Various finishes and colours.",
-                brands: "<strong>Manufacturers:</strong> Hörmann, Gerda, Porta, DRE, Erkado, Barański"
+                brands: "<strong>Manufacturers:</strong> Hörmann, Gerda, Porta, DRE, Erkado, Barański, PLM, Wikęd"
             },
             garage: {
                 title: "Garage Doors",
@@ -412,7 +415,7 @@ const translations = {
                 side: "Tilt and Sliding Doors",
                 sideDesc: "Classic solutions for larger garage openings. Can be made from various materials.",
                 features: "Control: manual, electric with remote, smart home integration. Anti-burglary options.",
-                brands: "<strong>Manufacturers:</strong> Hörmann, Wiśniowski, Krispol, Normstahl"
+                brands: "<strong>Manufacturers:</strong> Wiśniowski, Bramtech"
             },
             extShutters: {
                 title: "External Blinds",
@@ -534,12 +537,13 @@ const translations = {
             filterWindows: "Fenêtres",
             filterDoors: "Portes",
             filterShutters: "Volets",
-            p1: { title: "Immeuble de bureaux Berlin", desc: "Remplacement complet des fenêtres en aluminium dans un immeuble de bureaux de 12 étages. 480 fenêtres, façade structurelle." },
-            p2: { title: "Lotissement Collines Vertes", desc: "Installation de portes extérieures et intérieures dans 45 maisons individuelles. Portes en bois et PVC." },
-            p3: { title: "Hôtel Bord de Mer", desc: "Installation de volets extérieurs encastrés dans 120 chambres d'hôtel avec système domotique." },
-            p4: { title: "École à Munich", desc: "Remplacement des fenêtres PVC avec triple vitrage. Projet de rénovation thermique d'un bâtiment public." },
-            p5: { title: "Villa historique Paris", desc: "Rénovation et remplacement des fenêtres en bois à caisson en préservant le caractère historique." },
-            p6: { title: "Centre commercial Cracovie", desc: "Installation de portes coulissantes automatiques et vitrines en aluminium au rez-de-chaussée." },
+            p1: { title: "Leysin American School", desc: "Transformation du Grand Hôtel en bâtiment de la Leysin American School en Suisse. Remplacement complet des fenêtres." },
+            p2: { title: "Lotissement à Sulnowo", desc: "Installation de portes extérieures dans un lotissement construit par un promoteur à Sulnowo." },
+            p3: { title: "Maison individuelle à Świecie", desc: "Remplacement des volets extérieurs dans une maison individuelle à Świecie." },
+            p4: { title: "Tribunal de Malbork", desc: "Remplacement de la menuiserie des fenêtres dans le bâtiment du Tribunal de Malbork." },
+            p5: { title: "Complexe d'appartements à Gibraltar", desc: "Remplacement des fenêtres en bois dans un complexe d'appartements situé sur le célèbre rocher de Gibraltar." },
+            p6: { title: "Immeuble à Naumburg", desc: "Remplacement des portes extérieures dans un immeuble historique à Naumburg, Allemagne." },
+            p7: { title: "Morgue à Świecie", desc: "Remplacement des portes extérieures par des portes avec vitrage de sécurité dans l'ancien bâtiment de la morgue à Świecie." },
             tagWindows: "Fenêtres ALU",
             tagDoors: "Portes",
             tagShutters: "Volets",
@@ -569,7 +573,7 @@ const translations = {
                 externalDesc: "Acier, aluminium et bois. Anti-effraction classes RC2-RC4. Design moderne, excellente isolation thermique et acoustique.",
                 internal: "Portes intérieures",
                 internalDesc: "Large choix de styles – du classique au moderne. Portes à recouvrement, affleurantes, coulissantes, cachées. Différentes finitions et couleurs.",
-                brands: "<strong>Fabricants:</strong> Hörmann, Gerda, Porta, DRE, Erkado, Barański"
+                brands: "<strong>Fabricants:</strong> Hörmann, Gerda, Porta, DRE, Erkado, Barański, PLM, Wikęd"
             },
             garage: {
                 title: "Portes de garage",
@@ -580,7 +584,7 @@ const translations = {
                 side: "Portes basculantes et coulissantes",
                 sideDesc: "Solutions classiques pour les grandes ouvertures de garage. Possibilité de fabrication en différents matériaux.",
                 features: "Commande: manuelle, électrique avec télécommande, intégration domotique. Options anti-effraction.",
-                brands: "<strong>Fabricants:</strong> Hörmann, Wiśniowski, Krispol, Normstahl"
+                brands: "<strong>Fabricants:</strong> Wiśniowski, Bramtech"
             },
             extShutters: {
                 title: "Volets extérieurs",
