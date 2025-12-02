@@ -23,6 +23,23 @@ const translations = {
             stat2: "zrealizowanych projektów",
             stat3: "krajów działalności"
         },
+        testimonials: {
+            title: "Opinie klientów",
+            subtitle: "Zobacz co mówią o nas nasi klienci",
+            t1: { text: "\"Miła i profesjonalna obsługa. Wszystko zgodnie z umową. Rzetelna firma.\"", location: "Bydgoszcz" },
+            t2: { text: "\"To mój drugi zakup z tej firmy. Wszystko zrobione sprawnie i profesjonalnie, polecam wszystkim firmę LUMIFIL!\"", location: "Wąbrzeźno" },
+            t3: { text: "\"Super kontakt ze specjalistą. Wszystko wytłumaczone na miejscu i doradzone. Krótki termin oczekiwania na montaż. Panowie monterzy bardzo mili i kontaktowi.\"", location: "Polska" },
+            t4: { text: "\"Wymiana okien i drzwi w domku holenderskim wykonana super i bardzo szybko. Oby więcej takich firm, szczerze polecam.\"", location: "Skępe" },
+            seeAll: "Zobacz wszystkie opinie na Oferteo"
+        },
+        cta: {
+            title: "Bezpłatna wycena i pomiar",
+            subtitle: "Skorzystaj z 30 lat doświadczenia. Umów się na bezpłatny pomiar i otrzymaj profesjonalną wycenę.",
+            feature1: "Bezpłatna wycena",
+            feature2: "Profesjonalny pomiar",
+            feature3: "Doradztwo techniczne",
+            button: "Umów bezpłatny pomiar"
+        },
         projects: {
             title: "Realizacje",
             subtitle: "Wybrane projekty z naszego portfolio",
@@ -191,6 +208,23 @@ const translations = {
             stat1: "Jahre Erfahrung",
             stat2: "realisierte Projekte",
             stat3: "Länder der Tätigkeit"
+        },
+        testimonials: {
+            title: "Kundenbewertungen",
+            subtitle: "Sehen Sie, was unsere Kunden über uns sagen",
+            t1: { text: "\"Freundlicher und professioneller Service. Alles wie vereinbart. Zuverlässige Firma.\"", location: "Bydgoszcz" },
+            t2: { text: "\"Das ist mein zweiter Kauf bei dieser Firma. Alles schnell und professionell erledigt, ich empfehle LUMIFIL!\"", location: "Wąbrzeźno" },
+            t3: { text: "\"Super Kontakt mit dem Spezialisten. Alles vor Ort erklärt und beraten. Kurze Wartezeit auf die Montage. Die Monteure waren sehr nett und kontaktfreudig.\"", location: "Polen" },
+            t4: { text: "\"Fenster- und Türenaustausch im Mobilheim super und sehr schnell durchgeführt. Ich empfehle aufrichtig.\"", location: "Skępe" },
+            seeAll: "Alle Bewertungen auf Oferteo ansehen"
+        },
+        cta: {
+            title: "Kostenlose Bewertung und Vermessung",
+            subtitle: "Profitieren Sie von 30 Jahren Erfahrung. Vereinbaren Sie eine kostenlose Vermessung und erhalten Sie ein professionelles Angebot.",
+            feature1: "Kostenlose Bewertung",
+            feature2: "Professionelle Vermessung",
+            feature3: "Technische Beratung",
+            button: "Kostenlose Vermessung vereinbaren"
         },
         projects: {
             title: "Projekte",
@@ -505,6 +539,39 @@ const translations = {
         footer: {
             desc: "Professional installation of windows, doors and blinds for over 30 years.",
             rights: "All rights reserved."
+        },
+        testimonials: {
+            title: "Customer Reviews",
+            subtitle: "See what our customers say about us",
+            t1: {
+                text: "\"Pleasant and professional service. Windows installed with care for every detail. I highly recommend!\"",
+                author: "K.M.",
+                location: "Bydgoszcz"
+            },
+            t2: {
+                text: "\"Very good contact with the company. The work was carried out efficiently and in accordance with the agreement. Definitely recommend.\"",
+                author: "T.K.",
+                location: "Inowrocław"
+            },
+            t3: {
+                text: "\"Professional approach to the customer from the beginning to the end of the order. High quality workmanship.\"",
+                author: "A.S.",
+                location: "Toruń"
+            },
+            t4: {
+                text: "\"Fast delivery and professional installation. Blinds work perfectly. I am very satisfied!\"",
+                author: "M.W.",
+                location: "Świecie"
+            },
+            seeAll: "See all reviews on Oferteo"
+        },
+        cta: {
+            title: "Free Quote and Measurement",
+            subtitle: "Take advantage of 30 years of experience - professional advice, fast deadline and full warranty",
+            feature1: "Free quote",
+            feature2: "Professional measurement",
+            feature3: "Technical advice",
+            button: "Book free measurement"
         }
     },
     fr: {
@@ -674,6 +741,39 @@ const translations = {
         footer: {
             desc: "Installation professionnelle de fenêtres, portes et volets depuis plus de 30 ans.",
             rights: "Tous droits réservés."
+        },
+        testimonials: {
+            title: "Avis clients",
+            subtitle: "Découvrez ce que disent nos clients",
+            t1: {
+                text: "\"Service agréable et professionnel. Fenêtres installées avec soin du moindre détail. Je recommande vivement!\"",
+                author: "K.M.",
+                location: "Bydgoszcz"
+            },
+            t2: {
+                text: "\"Très bon contact avec l'entreprise. Le travail a été effectué efficacement et conformément à l'accord. Je recommande.\"",
+                author: "T.K.",
+                location: "Inowrocław"
+            },
+            t3: {
+                text: "\"Approche professionnelle du client du début à la fin de la commande. Haute qualité d'exécution.\"",
+                author: "A.S.",
+                location: "Toruń"
+            },
+            t4: {
+                text: "\"Livraison rapide et installation professionnelle. Les volets fonctionnent parfaitement. Très satisfait!\"",
+                author: "M.W.",
+                location: "Świecie"
+            },
+            seeAll: "Voir tous les avis sur Oferteo"
+        },
+        cta: {
+            title: "Devis et mesure gratuits",
+            subtitle: "Profitez de 30 ans d'expérience - conseils professionnels, délais rapides et garantie complète",
+            feature1: "Devis gratuit",
+            feature2: "Mesure professionnelle",
+            feature3: "Conseils techniques",
+            button: "Réserver une mesure gratuite"
         }
     }
 };
