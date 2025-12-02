@@ -71,6 +71,13 @@
                 <div class="firebase-status" id="firebase-status">
                     <p>Status Firebase: <span id="fb-status">Sprawdzanie...</span></p>
                 </div>
+
+                <div class="migration-section" id="migration-section">
+                    <h3>Migracja danych</h3>
+                    <p>Jeśli baza jest pusta, zaimportuj istniejące realizacje i artykuły:</p>
+                    <button class="btn btn-primary" id="migrate-btn" onclick="migrateData()">Importuj dane do Firebase</button>
+                    <p id="migrate-status" style="margin-top: 1rem; color: #666;"></p>
+                </div>
             </section>
 
             <!-- Realizacje -->
