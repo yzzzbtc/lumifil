@@ -91,13 +91,15 @@ img {
     padding: 40px;
 }
 
-.logo-large h1 {
+.logo-large h1,
+.logo-large .logo-title {
     font-family: 'Playfair Display', serif;
     font-size: clamp(3rem, 10vw, 5rem);
     font-weight: 500;
     letter-spacing: 0.05em;
     margin-bottom: 12px;
     color: var(--primary);
+    display: block;
 }
 
 .tagline {
@@ -790,6 +792,15 @@ img {
 .project-icon {
     font-size: 4rem;
     opacity: 0.6;
+}
+
+.project-icon.project-dot {
+    width: 16px;
+    height: 16px;
+    background: var(--white);
+    border-radius: 50%;
+    opacity: 0.9;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.3);
 }
 
 .project-info {
@@ -1550,5 +1561,76 @@ img {
 
     .offer-card.active {
         border-color: var(--accent);
+    }
+}
+
+/* =====================================================
+   Floating CTA Button
+   ===================================================== */
+
+.floating-cta {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 900;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-end;
+}
+
+.floating-cta-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    background: var(--accent);
+    color: var(--white);
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 20px rgba(230, 126, 34, 0.4);
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.floating-cta-btn:hover {
+    background: var(--accent-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(230, 126, 34, 0.5);
+}
+
+.floating-cta-btn.phone {
+    background: #25D366;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+}
+
+.floating-cta-btn.phone:hover {
+    background: #128C7E;
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+}
+
+.floating-cta-icon {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .floating-cta {
+        bottom: 16px;
+        right: 16px;
+    }
+
+    .floating-cta-btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    .floating-cta-btn span:not(.floating-cta-icon) {
+        display: none;
+    }
+
+    .floating-cta-btn {
+        padding: 14px;
+        border-radius: 50%;
     }
 }

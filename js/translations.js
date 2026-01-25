@@ -38,7 +38,9 @@ const translations = {
             feature1: "Bezpłatna wycena",
             feature2: "Profesjonalny pomiar",
             feature3: "Doradztwo techniczne",
-            button: "Umów bezpłatny pomiar"
+            button: "Umów bezpłatny pomiar",
+            callNow: "Zadzwoń teraz",
+            freeQuote: "Bezpłatna wycena"
         },
         projects: {
             title: "Realizacje",
@@ -224,7 +226,9 @@ const translations = {
             feature1: "Kostenlose Bewertung",
             feature2: "Professionelle Vermessung",
             feature3: "Technische Beratung",
-            button: "Kostenlose Vermessung vereinbaren"
+            button: "Kostenlose Vermessung vereinbaren",
+            callNow: "Jetzt anrufen",
+            freeQuote: "Kostenloses Angebot"
         },
         projects: {
             title: "Projekte",
@@ -571,7 +575,9 @@ const translations = {
             feature1: "Free quote",
             feature2: "Professional measurement",
             feature3: "Technical advice",
-            button: "Book free measurement"
+            button: "Book free measurement",
+            callNow: "Call Now",
+            freeQuote: "Free Quote"
         }
     },
     fr: {
@@ -773,7 +779,9 @@ const translations = {
             feature1: "Devis gratuit",
             feature2: "Mesure professionnelle",
             feature3: "Conseils techniques",
-            button: "Réserver une mesure gratuite"
+            button: "Réserver une mesure gratuite",
+            callNow: "Appelez maintenant",
+            freeQuote: "Devis gratuit"
         }
     }
 };
