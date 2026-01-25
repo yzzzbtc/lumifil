@@ -131,6 +131,13 @@ const translations = {
                 internal: "Parapety wewnętrzne",
                 internalDesc: "PCV, drewniane, konglomerat, kamień naturalny. Dopasowanie do stylu wnętrza i rodzaju okien."
             },
+            installation: {
+                title: "Metody montażu",
+                warm: "Montaż ciepły na taśmach (ILLBRUCK)",
+                warmDesc: "Montaż ciepły polega na uszczelnianiu szczelin okiennych za pomocą specjalnych taśm poliuretanowych, folii i klejów, zapewniając doskonałą izolację termiczną, akustyczną i paroszczelną. Taśma ILLBRUCK illmod trio umożliwia szybki i pewny montaż, z samoprzylepnym mocowaniem do ramy i muru.",
+                brackets: "Montaż w konsolach",
+                bracketsDesc: "Montaż w konsolach to instalacja okien za pomocą wytrzymałych elementów mocujących (konsol) przytwierdzanych do muru, co pozwala na wysunięcie okna w warstwę ocieplenia. Zapewnia stabilność, lepszą izolację i jest idealny dla dużych konstrukcji."
+            },
             finishing: {
                 title: "Obróbki i wykończenia",
                 intro: "Kompleksowe usługi wykończeniowe po montażu:",
@@ -319,6 +326,13 @@ const translations = {
                 internal: "Innenfensterbänke",
                 internalDesc: "PVC, Holz, Konglomerat, Naturstein. Anpassung an den Innenraumstil und die Fensterart."
             },
+            installation: {
+                title: "Montagemethoden",
+                warm: "Warmmontage mit Bändern (ILLBRUCK)",
+                warmDesc: "Die Warmmontage besteht aus der Abdichtung von Fensterspalten mit speziellen Polyurethanbändern, Folien und Klebstoffen für eine hervorragende Wärme-, Schall- und Dampfdichtigkeit. Das ILLBRUCK illmod trio Band ermöglicht eine schnelle und sichere Montage mit selbstklebender Befestigung am Rahmen und Mauerwerk.",
+                brackets: "Konsolenmontage",
+                bracketsDesc: "Die Konsolenmontage ist die Installation von Fenstern mit robusten Befestigungselementen (Konsolen), die an der Wand befestigt werden und das Fenster in die Dämmschicht verschieben. Sie bietet Stabilität, bessere Isolierung und ist ideal für große Konstruktionen."
+            },
             finishing: {
                 title: "Verarbeitung und Ausführung",
                 intro: "Umfassende Abschlussarbeiten nach der Montage:",
@@ -487,6 +501,13 @@ const translations = {
                 externalDesc: "Aluminium and steel with PVD coating. Water drainage, facade protection. Wide colour range.",
                 internal: "Internal Window Sills",
                 internalDesc: "PVC, wooden, conglomerate, natural stone. Matching interior style and window type."
+            },
+            installation: {
+                title: "Installation Methods",
+                warm: "Warm Installation with Tapes (ILLBRUCK)",
+                warmDesc: "Warm installation involves sealing window gaps using special polyurethane tapes, foils and adhesives, providing excellent thermal, acoustic and vapour-tight insulation. ILLBRUCK illmod trio tape enables fast and secure installation with self-adhesive mounting to frame and wall.",
+                brackets: "Bracket Installation",
+                bracketsDesc: "Bracket installation is the mounting of windows using durable fastening elements (brackets) attached to the wall, allowing the window to be extended into the insulation layer. It provides stability, better insulation and is ideal for large structures."
             },
             finishing: {
                 title: "Finishing Works",
@@ -691,6 +712,13 @@ const translations = {
                 externalDesc: "Aluminium et acier avec revêtement PVD. Évacuation de l'eau, protection de façade. Large gamme de couleurs.",
                 internal: "Appuis intérieurs",
                 internalDesc: "PVC, bois, aggloméré, pierre naturelle. Adaptation au style intérieur et au type de fenêtre."
+            },
+            installation: {
+                title: "Méthodes de pose",
+                warm: "Pose chaude avec bandes (ILLBRUCK)",
+                warmDesc: "La pose chaude consiste à sceller les joints de fenêtre avec des bandes de polyuréthane spéciales, des films et des adhésifs, assurant une excellente isolation thermique, acoustique et pare-vapeur. La bande ILLBRUCK illmod trio permet une pose rapide et sûre avec fixation auto-adhésive au cadre et au mur.",
+                brackets: "Pose sur consoles",
+                bracketsDesc: "La pose sur consoles est l'installation de fenêtres à l'aide d'éléments de fixation robustes (consoles) fixés au mur, permettant de déplacer la fenêtre dans la couche d'isolation. Elle offre stabilité, meilleure isolation et est idéale pour les grandes structures."
             },
             finishing: {
                 title: "Finitions et travaux",
