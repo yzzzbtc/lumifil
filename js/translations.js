@@ -1,6 +1,7 @@
 // Translations for Filipex website
 const translations = {
     pl: {
+        offerLinks: {"okna-pcv":"Okna PCV","okna-aluminiowe":"Okna aluminiowe","okna-drewniane":"Okna drewniane","okna-drzwi-przesuwne":"Systemy przesuwne (HST, PSK)","drzwi-zewnetrzne":"Drzwi zewnętrzne","drzwi-wewnetrzne":"Drzwi wewnętrzne","bramy-garazowe":"Bramy garażowe","rolety-podtynkowe":"Rolety podtynkowe","rolety-natynkowe":"Rolety natynkowe","rolety-dzien-noc":"Rolety dzień-noc","rolety-zaciemniajace":"Rolety zaciemniające","rolety-rzymskie":"Rolety rzymskie","plisy":"Plisy","zaluzje-pionowe":"Żaluzje pionowe","zaluzje-poziome":"Żaluzje poziome","moskitiery-ramkowe":"Moskitiery ramkowe","moskitiery-rolowane":"Moskitiery rolowane","moskitiery-plisowane":"Moskitiery plisowane","moskitiery-drzwiowe":"Moskitiery drzwiowe","parapety-zewnetrzne-aluminiowe":"Parapety zewnętrzne aluminiowe","parapety-zewnetrzne-stalowe":"Parapety zewnętrzne stalowe","parapety-zewnetrzne-granit":"Parapety zewnętrzne z granitu","parapety-wewnetrzne-pcv":"Parapety wewnętrzne PCV","parapety-wewnetrzne-konglomerat":"Parapety wewnętrzne z konglomeratu","parapety-wewnetrzne-mdf":"Parapety wewnętrzne MDF","montaz-klasyczny":"Montaż klasyczny","montaz-cieply-illbruck":"Montaż ciepły Illbruck","montaz-konsole":"Montaż na konsolach","obrobki-tynkarskie":"Obróbki tynkarskie"},
         nav: {
             about: "O nas",
             projects: "Realizacje",
@@ -15,7 +16,7 @@ const translations = {
         },
         about: {
             title: "O nas",
-            p1: "<strong>LUMIFIL</strong> to firma z ponad 30-letnią tradycją w branży stolarki otworowej. Od początku naszej działalności stawiamy na jakość, profesjonalizm i pełne zadowolenie klienta.",
+            p1: "<strong>LUMIFIL</strong> to firma z prawie 30-letnią tradycją w branży stolarki otworowej. Od początku naszej działalności stawiamy na jakość, profesjonalizm i pełne zadowolenie klienta.",
             p2: "Przez lata zrealizowaliśmy setki projektów zarówno w Polsce, jak i na rynkach międzynarodowych – w Niemczech, Francji, Belgii i innych krajach Europy Zachodniej. Nasze doświadczenie obejmuje zarówno małe realizacje prywatne, jak i duże projekty komercyjne.",
             p3: "Dysponujemy własnymi, doświadczonymi ekipami monterskimi, które gwarantują najwyższą jakość wykonania. Każdy członek naszego zespołu posiada wieloletnie doświadczenie i regularnie podnosi swoje kwalifikacje.",
             p4: "<strong>Gwarancja jakości</strong> – to nie tylko hasło, ale nasza filozofia działania. Oferujemy pełną gwarancję na wszystkie wykonane prace oraz produkty, zapewniając klientom spokój i pewność na lata.",
@@ -191,11 +192,12 @@ const translations = {
             }
         },
         footer: {
-            desc: "Profesjonalny montaż okien, drzwi i rolet od ponad 30 lat.",
+            desc: "Profesjonalny montaż okien, drzwi i rolet od prawie 30 lat.",
             rights: "Wszelkie prawa zastrzeżone."
         }
     },
     de: {
+        offerLinks: {"okna-pcv":"PVC-Fenster","okna-aluminiowe":"Aluminiumfenster","okna-drewniane":"Holzfenster","okna-drzwi-przesuwne":"Schiebesysteme (HST, PSK)","drzwi-zewnetrzne":"Außentüren","drzwi-wewnetrzne":"Innentüren","bramy-garazowe":"Garagentore","rolety-podtynkowe":"Unterputzrollläden","rolety-natynkowe":"Aufsatzrollläden","rolety-dzien-noc":"Tag-Nacht-Rollos","rolety-zaciemniajace":"Verdunkelungsrollos","rolety-rzymskie":"Raffrollos","plisy":"Plissees","zaluzje-pionowe":"Vertikaljalousien","zaluzje-poziome":"Horizontaljalousien","moskitiery-ramkowe":"Rahmen-Insektenschutz","moskitiery-rolowane":"Rollo-Insektenschutz","moskitiery-plisowane":"Plissee-Insektenschutz","moskitiery-drzwiowe":"Tür-Insektenschutz","parapety-zewnetrzne-aluminiowe":"Außenfensterbänke aus Aluminium","parapety-zewnetrzne-stalowe":"Außenfensterbänke aus Stahl","parapety-zewnetrzne-granit":"Außenfensterbänke aus Granit","parapety-wewnetrzne-pcv":"Innenfensterbänke aus PVC","parapety-wewnetrzne-konglomerat":"Innenfensterbänke aus Konglomerat","parapety-wewnetrzne-mdf":"Innenfensterbänke aus MDF","montaz-klasyczny":"Klassische Montage","montaz-cieply-illbruck":"Warme Montage Illbruck","montaz-konsole":"Montage auf Konsolen","obrobki-tynkarskie":"Putzarbeiten"},
         nav: {
             about: "Über uns",
             projects: "Projekte",
@@ -210,7 +212,7 @@ const translations = {
         },
         about: {
             title: "Über uns",
-            p1: "<strong>LUMIFIL</strong> ist ein Unternehmen mit über 30 Jahren Tradition in der Fenster- und Türenbranche. Von Anfang an setzen wir auf Qualität, Professionalität und volle Kundenzufriedenheit.",
+            p1: "<strong>LUMIFIL</strong> ist ein Unternehmen mit fast 30 Jahren Tradition in der Fenster- und Türenbranche. Von Anfang an setzen wir auf Qualität, Professionalität und volle Kundenzufriedenheit.",
             p2: "Im Laufe der Jahre haben wir Hunderte von Projekten sowohl in Polen als auch auf internationalen Märkten realisiert – in Deutschland, Frankreich, Belgien und anderen westeuropäischen Ländern. Unsere Erfahrung umfasst sowohl kleine private Projekte als auch große kommerzielle Vorhaben.",
             p3: "Wir verfügen über eigene, erfahrene Montageteams, die höchste Ausführungsqualität garantieren. Jedes Teammitglied verfügt über langjährige Erfahrung und bildet sich regelmäßig weiter.",
             p4: "<strong>Qualitätsgarantie</strong> – das ist nicht nur ein Slogan, sondern unsere Geschäftsphilosophie. Wir bieten volle Garantie auf alle durchgeführten Arbeiten und Produkte und gewährleisten unseren Kunden Ruhe und Sicherheit für Jahre.",
@@ -386,11 +388,12 @@ const translations = {
             }
         },
         footer: {
-            desc: "Professionelle Montage von Fenstern, Türen und Rollläden seit über 30 Jahren.",
+            desc: "Professionelle Montage von Fenstern, Türen und Rollläden seit fast 30 Jahren.",
             rights: "Alle Rechte vorbehalten."
         }
     },
     en: {
+        offerLinks: {"okna-pcv":"PVC windows","okna-aluminiowe":"Aluminium windows","okna-drewniane":"Wooden windows","okna-drzwi-przesuwne":"Sliding systems (HST, PSK)","drzwi-zewnetrzne":"Exterior doors","drzwi-wewnetrzne":"Interior doors","bramy-garazowe":"Garage doors","rolety-podtynkowe":"Built-in roller shutters","rolety-natynkowe":"Surface-mounted roller shutters","rolety-dzien-noc":"Day-night blinds","rolety-zaciemniajace":"Blackout blinds","rolety-rzymskie":"Roman blinds","plisy":"Pleated blinds","zaluzje-pionowe":"Vertical blinds","zaluzje-poziome":"Venetian blinds","moskitiery-ramkowe":"Framed mosquito nets","moskitiery-rolowane":"Roller mosquito nets","moskitiery-plisowane":"Pleated mosquito nets","moskitiery-drzwiowe":"Door mosquito nets","parapety-zewnetrzne-aluminiowe":"External aluminium windowsills","parapety-zewnetrzne-stalowe":"External steel windowsills","parapety-zewnetrzne-granit":"External granite windowsills","parapety-wewnetrzne-pcv":"Internal PVC windowsills","parapety-wewnetrzne-konglomerat":"Internal conglomerate windowsills","parapety-wewnetrzne-mdf":"Internal MDF windowsills","montaz-klasyczny":"Classic Installation","montaz-cieply-illbruck":"Warm Installation Illbruck","montaz-konsole":"Console Installation","obrobki-tynkarskie":"Plastering Works"},
         nav: {
             about: "About",
             projects: "Projects",
@@ -405,7 +408,7 @@ const translations = {
         },
         about: {
             title: "About Us",
-            p1: "<strong>LUMIFIL</strong> is a company with over 30 years of tradition in the window and door industry. From the very beginning, we have focused on quality, professionalism and complete customer satisfaction.",
+            p1: "<strong>LUMIFIL</strong> is a company with almost 30 years of tradition in the window and door industry. From the very beginning, we have focused on quality, professionalism and complete customer satisfaction.",
             p2: "Over the years, we have completed hundreds of projects both in Poland and in international markets – in Germany, France, Belgium and other Western European countries. Our experience covers both small private projects and large commercial ventures.",
             p3: "We have our own experienced installation teams that guarantee the highest quality of workmanship. Every team member has many years of experience and regularly upgrades their qualifications.",
             p4: "<strong>Quality Guarantee</strong> – this is not just a slogan, but our business philosophy. We offer a full guarantee on all work performed and products, providing customers with peace of mind and confidence for years.",
@@ -562,7 +565,7 @@ const translations = {
             }
         },
         footer: {
-            desc: "Professional installation of windows, doors and blinds for over 30 years.",
+            desc: "Professional installation of windows, doors and blinds for almost 30 years.",
             rights: "All rights reserved."
         },
         testimonials: {
@@ -602,6 +605,7 @@ const translations = {
         }
     },
     fr: {
+        offerLinks: {"okna-pcv":"Fenêtres PVC","okna-aluminiowe":"Fenêtres aluminium","okna-drewniane":"Fenêtres bois","okna-drzwi-przesuwne":"Systèmes coulissants (HST, PSK)","drzwi-zewnetrzne":"Portes extérieures","drzwi-wewnetrzne":"Portes intérieures","bramy-garazowe":"Portes de garage","rolety-podtynkowe":"Volets roulants intégrés","rolety-natynkowe":"Volets roulants en applique","rolety-dzien-noc":"Stores jour-nuit","rolety-zaciemniajace":"Stores occultants","rolety-rzymskie":"Stores bateau","plisy":"Stores plissés","zaluzje-pionowe":"Stores à bandes verticales","zaluzje-poziome":"Stores vénitiens","moskitiery-ramkowe":"Moustiquaires à cadre","moskitiery-rolowane":"Moustiquaires enroulables","moskitiery-plisowane":"Moustiquaires plissées","moskitiery-drzwiowe":"Moustiquaires de porte","parapety-zewnetrzne-aluminiowe":"Appuis de fenêtre extérieurs en aluminium","parapety-zewnetrzne-stalowe":"Appuis de fenêtre extérieurs en acier","parapety-zewnetrzne-granit":"Appuis de fenêtre extérieurs en granit","parapety-wewnetrzne-pcv":"Appuis de fenêtre intérieurs en PVC","parapety-wewnetrzne-konglomerat":"Appuis de fenêtre intérieurs en conglomérat","parapety-wewnetrzne-mdf":"Appuis de fenêtre intérieurs en MDF","montaz-klasyczny":"Pose classique","montaz-cieply-illbruck":"Pose chaude Illbruck","montaz-konsole":"Pose sur consoles","obrobki-tynkarskie":"Finitions d'enduit"},
         nav: {
             about: "À propos",
             projects: "Réalisations",
@@ -616,7 +620,7 @@ const translations = {
         },
         about: {
             title: "À propos de nous",
-            p1: "<strong>LUMIFIL</strong> est une entreprise avec plus de 30 ans de tradition dans l'industrie des fenêtres et portes. Depuis le début, nous misons sur la qualité, le professionnalisme et la satisfaction totale du client.",
+            p1: "<strong>LUMIFIL</strong> est une entreprise avec près de 30 ans de tradition dans l'industrie des fenêtres et portes. Depuis le début, nous misons sur la qualité, le professionnalisme et la satisfaction totale du client.",
             p2: "Au fil des années, nous avons réalisé des centaines de projets tant en Pologne que sur les marchés internationaux – en Allemagne, en France, en Belgique et dans d'autres pays d'Europe occidentale. Notre expérience couvre aussi bien les petits projets privés que les grandes réalisations commerciales.",
             p3: "Nous disposons de nos propres équipes de montage expérimentées qui garantissent la plus haute qualité d'exécution. Chaque membre de notre équipe possède de nombreuses années d'expérience et améliore régulièrement ses qualifications.",
             p4: "<strong>Garantie de qualité</strong> – ce n'est pas qu'un slogan, mais notre philosophie d'entreprise. Nous offrons une garantie complète sur tous les travaux effectués et les produits, assurant aux clients tranquillité et confiance pour les années à venir.",
@@ -773,7 +777,7 @@ const translations = {
             }
         },
         footer: {
-            desc: "Installation professionnelle de fenêtres, portes et volets depuis plus de 30 ans.",
+            desc: "Installation professionnelle de fenêtres, portes et volets depuis près de 30 ans.",
             rights: "Tous droits réservés."
         },
         testimonials: {

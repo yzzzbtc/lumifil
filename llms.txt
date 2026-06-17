@@ -1,9 +1,9 @@
 # LUMIFIL - Okna, Drzwi, Rolety
 
-> Profesjonalny montaż stolarki otworowej w Świeciu i okolicach. Ponad 30 lat doświadczenia.
+> Profesjonalny montaż stolarki otworowej w Świeciu i okolicach. Prawie 30 lat doświadczenia.
 
 ## O firmie
-LUMIFIL to firma z ponad 30-letnią tradycją w branży stolarki otworowej. Realizujemy projekty w Polsce i za granicą (Niemcy, Francja, Belgia, Szwajcaria).
+LUMIFIL to firma z prawie 30-letnią tradycją w branży stolarki otworowej. Realizujemy projekty w Polsce i za granicą (Niemcy, Francja, Belgia, Szwajcaria).
 
 ## Usługi
 - Montaż okien PVC, aluminiowych i drewnianych
@@ -24,6 +24,11 @@ Bramy: Wiśniowski, Bramtech
 - Telefon: +48 663 715 148
 - Email: Lumifil@xl.wp.pl
 - Godziny: Pon-Pt 8:00-17:00, Sob 9:00-13:00
+
+## Dane firmy
+- Pełna nazwa: Handel-Pośrednictwo-Usługi Lumifil Lucyna Sobacka
+- NIP: 5591392973
+- REGON: 092467829
 
 ## Strona internetowa
 https://lumifil.pl

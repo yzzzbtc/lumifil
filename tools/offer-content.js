@@ -1,0 +1,433 @@
+/* =====================================================================
+   offer-content.js — treść landing page'ów (źródło: lumifil_landing_pages.pdf;
+   okna drewniane uzupełnione o systemy Maszrol wg Materialy_..._V2.pdf).
+   Schemat strony:
+   { slug, category, i18n: { pl|de|en|fr: {
+       breadcrumb, h1, subtitle, lead, features[], brands,
+       faq:[{q,a}], ctaText, metaTitle, metaDesc } } }
+   Rozszerzane kolejno o następne kategorie.
+   ===================================================================== */
+
+const OKNA = [
+
+  /* ============================ OKNA ============================ */
+
+  // 1 — Okna PCV
+  {
+    slug: 'okna-pcv',
+    category: 'okna',
+    i18n: {
+      pl: {
+        breadcrumb: 'Okna PCV',
+        h1: 'Okna PCV – wysoka izolacyjność, niskie rachunki',
+        subtitle: 'Profile Salamander, Rehau, Decco, Aluplast – z montażem na terenie całego regionu.',
+        lead: 'Okna PCV to dziś standard energooszczędnego budownictwa. Dzięki wielokomorowym profilom i szybom trzyszybowym z argonem skutecznie zatrzymują ciepło zimą i chłód latem. W naszej ofercie znajdziesz systemy wiodących europejskich producentów – dopasowane do każdego budżetu i stylu architektonicznego. Każde okno montujemy zgodnie z normą RAL, z pełnym uszczelnieniem złącza.',
+        features: [
+          'Profile 5-, 6- i 7-komorowe – od ekonomicznych po pasywne',
+          'Szyby dwu- i trzyszybowe z argonem – Uw nawet 0,77 W/(m²K)',
+          'Pełna gama oklein: biały, antracyt, dąb złoty, orzech, mahoń',
+          'Okucia antywłamaniowe RC2 w standardzie lub jako opcja',
+          'Nawiewniki higrosterowane – świeże powietrze bez otwierania okna',
+          'Gwarancja 10 lat na profile, 5 lat na okucia i uszczelki',
+          'Certyfikaty: NF, RAL, ITB – potwierdzenie jakości',
+        ],
+        brands: 'Salamander Blue Evolution 82, Salamander Streamline 76, Rehau GENEO, Rehau EURO-DESIGN 70/86, Decco 83, Decco 76, Aluplast Ideal 4000/5000/8000.',
+        faq: [
+          { q: 'Czym różnią się profile 5- i 7-komorowe?', a: 'Profile 7-komorowe mają lepszy współczynnik izolacji – Uf nawet 0,91 W/(m²K). Wybierz je przy termomodernizacji i do domów pasywnych. Profile 5-komorowe są ekonomicznym wyborem do standardowego budownictwa.' },
+          { q: 'Czy okna PCV wymagają konserwacji?', a: 'Nie – wystarczy regularne mycie i smarowanie uszczelek raz w roku. Okucia należy smarować olejem bezbarwnym. Uszczelki zalecamy wymieniać co 10–15 lat.' },
+          { q: 'Jak długo trwa montaż okien?', a: 'Montaż standardowego okna trwa ok. 30–60 minut. Wymiana okien w całym domu jednorodzinnym zajmuje zwykle 1–2 dni robocze.' },
+        ],
+        ctaText: 'Skonfiguruj swoje okna PCV i odbierz darmową wycenę w 48h!',
+        metaTitle: 'Okna PCV Salamander, Rehau, Aluplast | Montaż – LUMIFIL',
+        metaDesc: 'Wymień okna na energooszczędne – zyskaj ciepło i spokój. Profile Salamander, Rehau i Aluplast w atrakcyjnych cenach. Bezpłatna wycena i montaż.',
+      },
+      de: {
+        breadcrumb: 'PVC-Fenster',
+        h1: 'PVC-Fenster – hohe Dämmung, niedrige Rechnungen',
+        subtitle: 'Profile Salamander, Rehau, Decco, Aluplast – mit Montage in der gesamten Region.',
+        lead: 'PVC-Fenster sind heute der Standard im energieeffizienten Bauen. Dank Mehrkammerprofilen und Dreifachverglasung mit Argon halten sie die Wärme im Winter und die Kühle im Sommer zuverlässig im Haus. In unserem Angebot finden Sie Systeme führender europäischer Hersteller – passend zu jedem Budget und Baustil. Jedes Fenster montieren wir nach RAL-Norm mit vollständig abgedichteter Anschlussfuge.',
+        features: [
+          'Profile mit 5, 6 und 7 Kammern – von wirtschaftlich bis Passivhaus',
+          'Zwei- und Dreifachverglasung mit Argon – Uw bis 0,77 W/(m²K)',
+          'Volle Dekorpalette: weiß, anthrazit, Goldeiche, Nuss, Mahagoni',
+          'Einbruchhemmende Beschläge RC2 serienmäßig oder optional',
+          'Feuchtegeführte Lüfter – frische Luft ohne Fensteröffnen',
+          '10 Jahre Garantie auf Profile, 5 Jahre auf Beschläge und Dichtungen',
+          'Zertifikate: NF, RAL, ITB – als Qualitätsnachweis',
+        ],
+        brands: 'Salamander Blue Evolution 82, Salamander Streamline 76, Rehau GENEO, Rehau EURO-DESIGN 70/86, Decco 83, Decco 76, Aluplast Ideal 4000/5000/8000.',
+        faq: [
+          { q: 'Worin unterscheiden sich 5- und 7-Kammer-Profile?', a: '7-Kammer-Profile haben einen besseren Dämmwert – Uf bis 0,91 W/(m²K). Wählen Sie sie bei Sanierungen und Passivhäusern. 5-Kammer-Profile sind die wirtschaftliche Wahl für den Standardbau.' },
+          { q: 'Müssen PVC-Fenster gewartet werden?', a: 'Nein – regelmäßiges Reinigen und einmal jährliches Einfetten der Dichtungen genügt. Beschläge mit farblosem Öl schmieren. Dichtungen empfehlen wir alle 10–15 Jahre zu erneuern.' },
+          { q: 'Wie lange dauert die Fenstermontage?', a: 'Die Montage eines Standardfensters dauert ca. 30–60 Minuten. Der Fenstertausch in einem ganzen Einfamilienhaus dauert in der Regel 1–2 Werktage.' },
+        ],
+        ctaText: 'Konfigurieren Sie Ihre PVC-Fenster und erhalten Sie ein kostenloses Angebot in 48 Std.!',
+        metaTitle: 'PVC-Fenster Salamander, Rehau, Aluplast | Montage – LUMIFIL',
+        metaDesc: 'Energieeffiziente Fenster für mehr Wärme und Ruhe. Profile Salamander, Rehau und Aluplast zu attraktiven Preisen. Kostenloses Angebot und Montage.',
+      },
+      en: {
+        breadcrumb: 'PVC windows',
+        h1: 'PVC windows – high insulation, low bills',
+        subtitle: 'Salamander, Rehau, Decco and Aluplast profiles – with installation across the whole region.',
+        lead: 'PVC windows are today the standard of energy-efficient construction. Thanks to multi-chamber profiles and triple glazing with argon, they keep heat in during winter and coolness in during summer. Our range includes systems from leading European manufacturers – matched to every budget and architectural style. Every window is installed to the RAL standard, with a fully sealed joint.',
+        features: [
+          '5-, 6- and 7-chamber profiles – from economy to passive-house grade',
+          'Double and triple glazing with argon – Uw down to 0.77 W/(m²K)',
+          'Full range of finishes: white, anthracite, golden oak, walnut, mahogany',
+          'RC2 anti-burglary hardware as standard or optional',
+          'Humidity-controlled vents – fresh air without opening the window',
+          '10-year warranty on profiles, 5 years on hardware and seals',
+          'Certificates: NF, RAL, ITB – proof of quality',
+        ],
+        brands: 'Salamander Blue Evolution 82, Salamander Streamline 76, Rehau GENEO, Rehau EURO-DESIGN 70/86, Decco 83, Decco 76, Aluplast Ideal 4000/5000/8000.',
+        faq: [
+          { q: 'How do 5- and 7-chamber profiles differ?', a: '7-chamber profiles have a better insulation value – Uf down to 0.91 W/(m²K). Choose them for thermal upgrades and passive houses. 5-chamber profiles are the economical choice for standard construction.' },
+          { q: 'Do PVC windows need maintenance?', a: 'No – regular cleaning and lubricating the seals once a year is enough. Hardware should be oiled with a colourless oil. We recommend replacing the seals every 10–15 years.' },
+          { q: 'How long does installation take?', a: 'Installing a standard window takes about 30–60 minutes. Replacing all windows in a detached house usually takes 1–2 working days.' },
+        ],
+        ctaText: 'Configure your PVC windows and get a free quote within 48 hours!',
+        metaTitle: 'PVC windows Salamander, Rehau, Aluplast | Installation – LUMIFIL',
+        metaDesc: 'Switch to energy-efficient windows for more warmth and quiet. Salamander, Rehau and Aluplast profiles at attractive prices. Free quote and installation.',
+      },
+      fr: {
+        breadcrumb: 'Fenêtres PVC',
+        h1: 'Fenêtres PVC – haute isolation, factures réduites',
+        subtitle: 'Profilés Salamander, Rehau, Decco, Aluplast – avec pose dans toute la région.',
+        lead: 'Les fenêtres PVC sont aujourd’hui la norme de la construction économe en énergie. Grâce aux profilés multichambres et au triple vitrage à l’argon, elles retiennent efficacement la chaleur en hiver et la fraîcheur en été. Notre offre comprend les systèmes des principaux fabricants européens – adaptés à chaque budget et style architectural. Chaque fenêtre est posée selon la norme RAL, avec un joint parfaitement étanche.',
+        features: [
+          'Profilés 5, 6 et 7 chambres – de l’économique au passif',
+          'Double et triple vitrage à l’argon – Uw jusqu’à 0,77 W/(m²K)',
+          'Gamme complète de finitions : blanc, anthracite, chêne doré, noyer, acajou',
+          'Ferrures anti-effraction RC2 de série ou en option',
+          'Aérateurs hygroréglables – air frais sans ouvrir la fenêtre',
+          'Garantie 10 ans sur les profilés, 5 ans sur ferrures et joints',
+          'Certificats : NF, RAL, ITB – preuve de qualité',
+        ],
+        brands: 'Salamander Blue Evolution 82, Salamander Streamline 76, Rehau GENEO, Rehau EURO-DESIGN 70/86, Decco 83, Decco 76, Aluplast Ideal 4000/5000/8000.',
+        faq: [
+          { q: 'Quelle différence entre les profilés 5 et 7 chambres ?', a: 'Les profilés 7 chambres offrent une meilleure isolation – Uf jusqu’à 0,91 W/(m²K). Choisissez-les pour la rénovation thermique et les maisons passives. Les profilés 5 chambres sont le choix économique pour la construction standard.' },
+          { q: 'Les fenêtres PVC nécessitent-elles un entretien ?', a: 'Non – un nettoyage régulier et un graissage des joints une fois par an suffisent. Les ferrures se graissent avec une huile incolore. Nous recommandons de remplacer les joints tous les 10 à 15 ans.' },
+          { q: 'Combien de temps dure la pose ?', a: 'La pose d’une fenêtre standard prend environ 30 à 60 minutes. Le remplacement de toutes les fenêtres d’une maison individuelle prend généralement 1 à 2 jours ouvrés.' },
+        ],
+        ctaText: 'Configurez vos fenêtres PVC et recevez un devis gratuit sous 48 h !',
+        metaTitle: 'Fenêtres PVC Salamander, Rehau, Aluplast | Pose – LUMIFIL',
+        metaDesc: 'Passez à des fenêtres économes en énergie pour plus de confort. Profilés Salamander, Rehau et Aluplast à prix attractifs. Devis gratuit et pose.',
+      },
+    },
+  },
+
+  // 2 — Okna aluminiowe
+  {
+    slug: 'okna-aluminiowe',
+    category: 'okna',
+    i18n: {
+      pl: {
+        breadcrumb: 'Okna aluminiowe',
+        h1: 'Okna aluminiowe – minimalizm i trwałość na lata',
+        subtitle: 'Systemy Procural i Ponzio – wersje standardowe oraz przeciwpożarowe EI30 i EI60.',
+        lead: 'Okna aluminiowe wyróżniają się wyjątkowo smukłymi ramami, które maksymalizują powierzchnię przeszklenia. Są idealne do nowoczesnych domów, biurowców i obiektów użyteczności publicznej wymagających podwyższonej odporności ogniowej. Oferujemy systemy z ciepłą przekładką termiczną oraz certyfikowane wersje przeciwpożarowe EI30 i EI60.',
+        features: [
+          'Przekładka termiczna z poliamidu PA66 – eliminacja mostków cieplnych',
+          'Wersje ppoż EI30 i EI60 – do klatek schodowych, korytarzy i hal',
+          'Minimalistyczna linia widoczna od 42 mm – maksimum szkła',
+          'Dowolna kolorystyka RAL, anodowanie, okleiny drewniane',
+          'Duże przeszklenia – skrzydła do 300 kg, szerokość do 3 m',
+          'Odporność na korozję – idealne do stref nadmorskich i przemysłowych',
+          'Kompatybilne z systemami fasad słupowo-ryglowych',
+        ],
+        brands: 'Procural, Ponzio PE 68, Ponzio PE 78N, Ponzio PX 92, systemy EI30, systemy EI60.',
+        faq: [
+          { q: 'Jakie są zalety okien aluminiowych nad PVC?', a: 'Aluminium jest trwalsze, odporniejsze na odkształcenia termiczne i pozwala na cieńsze profile. Idealne tam, gdzie liczy się estetyka minimalistyczna i duże przeszklenia.' },
+          { q: 'Co oznacza klasa EI30 lub EI60?', a: 'EI30 oznacza odporność ogniową 30 minut (szczelność E i izolacyjność I), EI60 – 60 minut. Wymagane m.in. w budynkach wielorodzinnych, hotelach i obiektach użyteczności publicznej.' },
+        ],
+        ctaText: 'Zapytaj o wycenę projektu aluminiowego / ppoż.',
+        metaTitle: 'Okna aluminiowe Procural i Ponzio, EI30/EI60 – LUMIFIL',
+        metaDesc: 'Okna aluminiowe Procural i Ponzio – wersje standardowe i ppoż EI30/EI60. Elegancja, trwałość i bezpieczeństwo. Bezpłatna wycena dla inwestorów i firm.',
+      },
+      de: {
+        breadcrumb: 'Aluminiumfenster',
+        h1: 'Aluminiumfenster – Minimalismus und Langlebigkeit',
+        subtitle: 'Systeme Procural und Ponzio – Standardausführungen sowie Brandschutz EI30 und EI60.',
+        lead: 'Aluminiumfenster zeichnen sich durch besonders schlanke Rahmen aus, die die Glasfläche maximieren. Sie sind ideal für moderne Häuser, Bürogebäude und öffentliche Bauten mit erhöhten Brandschutzanforderungen. Wir bieten Systeme mit thermischer Trennung sowie zertifizierte Brandschutzausführungen EI30 und EI60.',
+        features: [
+          'Thermische Trennung aus Polyamid PA66 – keine Wärmebrücken',
+          'Brandschutzversionen EI30 und EI60 – für Treppenhäuser, Flure und Hallen',
+          'Minimalistische Ansicht ab 42 mm – maximaler Glasanteil',
+          'Beliebige RAL-Farben, Eloxierung, Holzdekore',
+          'Große Verglasungen – Flügel bis 300 kg, Breite bis 3 m',
+          'Korrosionsbeständig – ideal für Küsten- und Industriegebiete',
+          'Kompatibel mit Pfosten-Riegel-Fassadensystemen',
+        ],
+        brands: 'Procural, Ponzio PE 68, Ponzio PE 78N, Ponzio PX 92, EI30-Systeme, EI60-Systeme.',
+        faq: [
+          { q: 'Welche Vorteile haben Aluminiumfenster gegenüber PVC?', a: 'Aluminium ist langlebiger, widerstandsfähiger gegen thermische Verformung und erlaubt schlankere Profile. Ideal dort, wo minimalistische Ästhetik und große Verglasungen zählen.' },
+          { q: 'Was bedeutet die Klasse EI30 oder EI60?', a: 'EI30 bedeutet 30 Minuten Feuerwiderstand (Dichtheit E und Dämmung I), EI60 – 60 Minuten. Erforderlich u. a. in Mehrfamilienhäusern, Hotels und öffentlichen Gebäuden.' },
+        ],
+        ctaText: 'Fragen Sie nach einem Angebot für Ihr Aluminium-/Brandschutzprojekt.',
+        metaTitle: 'Aluminiumfenster Procural und Ponzio, EI30/EI60 – LUMIFIL',
+        metaDesc: 'Aluminiumfenster Procural und Ponzio – Standard- und Brandschutzversionen EI30/EI60. Eleganz, Langlebigkeit und Sicherheit. Kostenloses Angebot für Investoren und Firmen.',
+      },
+      en: {
+        breadcrumb: 'Aluminium windows',
+        h1: 'Aluminium windows – minimalism and lasting durability',
+        subtitle: 'Procural and Ponzio systems – standard versions plus EI30 and EI60 fire-rated.',
+        lead: 'Aluminium windows stand out with exceptionally slim frames that maximise the glazed area. They are ideal for modern homes, office buildings and public facilities requiring increased fire resistance. We offer systems with a thermal break as well as certified EI30 and EI60 fire-rated versions.',
+        features: [
+          'PA66 polyamide thermal break – eliminates thermal bridges',
+          'EI30 and EI60 fire-rated versions – for stairwells, corridors and halls',
+          'Minimalist sightline from 42 mm – maximum glass',
+          'Any RAL colour, anodising, wood-effect finishes',
+          'Large glazing – sashes up to 300 kg, width up to 3 m',
+          'Corrosion resistant – ideal for coastal and industrial areas',
+          'Compatible with mullion-transom façade systems',
+        ],
+        brands: 'Procural, Ponzio PE 68, Ponzio PE 78N, Ponzio PX 92, EI30 systems, EI60 systems.',
+        faq: [
+          { q: 'What are the advantages of aluminium windows over PVC?', a: 'Aluminium is more durable, more resistant to thermal deformation and allows slimmer profiles. Ideal where minimalist aesthetics and large glazing matter.' },
+          { q: 'What does class EI30 or EI60 mean?', a: 'EI30 means 30 minutes of fire resistance (integrity E and insulation I), EI60 – 60 minutes. Required in multi-family buildings, hotels and public facilities, among others.' },
+        ],
+        ctaText: 'Ask for a quote for your aluminium / fire-rated project.',
+        metaTitle: 'Aluminium windows Procural and Ponzio, EI30/EI60 – LUMIFIL',
+        metaDesc: 'Aluminium windows Procural and Ponzio – standard and fire-rated EI30/EI60 versions. Elegance, durability and safety. Free quote for investors and companies.',
+      },
+      fr: {
+        breadcrumb: 'Fenêtres aluminium',
+        h1: 'Fenêtres aluminium – minimalisme et durabilité',
+        subtitle: 'Systèmes Procural et Ponzio – versions standard ainsi que coupe-feu EI30 et EI60.',
+        lead: 'Les fenêtres en aluminium se distinguent par des cadres particulièrement fins qui maximisent la surface vitrée. Elles sont idéales pour les maisons modernes, les immeubles de bureaux et les bâtiments publics exigeant une résistance au feu accrue. Nous proposons des systèmes à rupture de pont thermique ainsi que des versions coupe-feu certifiées EI30 et EI60.',
+        features: [
+          'Rupture de pont thermique en polyamide PA66 – élimine les ponts thermiques',
+          'Versions coupe-feu EI30 et EI60 – pour cages d’escalier, couloirs et halls',
+          'Ligne minimaliste dès 42 mm – un maximum de verre',
+          'Toutes couleurs RAL, anodisation, finitions effet bois',
+          'Grands vitrages – ouvrants jusqu’à 300 kg, largeur jusqu’à 3 m',
+          'Résistance à la corrosion – idéales en zones côtières et industrielles',
+          'Compatibles avec les systèmes de façade poteau-traverse',
+        ],
+        brands: 'Procural, Ponzio PE 68, Ponzio PE 78N, Ponzio PX 92, systèmes EI30, systèmes EI60.',
+        faq: [
+          { q: 'Quels sont les avantages des fenêtres aluminium par rapport au PVC ?', a: 'L’aluminium est plus durable, plus résistant à la déformation thermique et permet des profilés plus fins. Idéal là où comptent l’esthétique minimaliste et les grands vitrages.' },
+          { q: 'Que signifie la classe EI30 ou EI60 ?', a: 'EI30 signifie 30 minutes de résistance au feu (étanchéité E et isolation I), EI60 – 60 minutes. Exigé notamment dans les immeubles collectifs, les hôtels et les bâtiments publics.' },
+        ],
+        ctaText: 'Demandez un devis pour votre projet aluminium / coupe-feu.',
+        metaTitle: 'Fenêtres aluminium Procural et Ponzio, EI30/EI60 – LUMIFIL',
+        metaDesc: 'Fenêtres aluminium Procural et Ponzio – versions standard et coupe-feu EI30/EI60. Élégance, durabilité et sécurité. Devis gratuit pour investisseurs et entreprises.',
+      },
+    },
+  },
+
+  // 3 — Okna drewniane (z systemami Maszrol wg dok. V2)
+  {
+    slug: 'okna-drewniane',
+    category: 'okna',
+    i18n: {
+      pl: {
+        breadcrumb: 'Okna drewniane',
+        h1: 'Okna drewniane – naturalny materiał, ponadczasowy styl',
+        subtitle: 'Systemy Maszrol VBH 92 i VBH 68 – tradycja połączona z nowoczesną technologią izolacji.',
+        lead: 'Drewno klejone warstwowo łączy piękno natury z doskonałymi parametrami technicznymi. Okna drewniane oddychają, naturalnie regulują wilgotność i nadają wnętrzu wyjątkowego charakteru. Impregnacja ciśnieniowa i wielowarstwowe malowanie gwarantują odporność na warunki atmosferyczne przez dziesięciolecia.',
+        features: [
+          'Drewno klejone trójwarstwowo – stabilność wymiarowa i odporność',
+          'Cztery gatunki do wyboru: sosna, meranti, dąb i modrzew syberyjski',
+          'System Maszrol VBH 92 – zabudowa 88 mm, pakiety do 52 mm, klasa pasywna',
+          'System Maszrol VBH 68 – klasyczny, dla budownictwa standardowego i renowacji',
+          'Podwójny system uszczelek przylgowych i aluminiowe okapniki w standardzie',
+          'Szyby trzyszybowe – Uw nawet 0,79 W/(m²K), okucia RC2',
+          'Impregnacja ciśnieniowa i lakier 4-warstwowy w kolorach RAL lub bejcach',
+        ],
+        brands: 'Systemy Maszrol VBH 92 (klasa pasywna) i VBH 68; gatunki: sosna skandynawska, meranti, dąb, modrzew syberyjski.',
+        faq: [
+          { q: 'Jak często konserwować okna drewniane?', a: 'Okna malowane lakierem PU wymagają przeglądu co 5–8 lat i ewentualnego odświeżenia. Wystarczy lekkie szlifowanie i nałożenie warstwy wykończeniowej.' },
+          { q: 'Czy okna drewniane są energooszczędne?', a: 'Tak – drewno jest naturalnym izolatorem. Przy odpowiednim zestawie szybowym (triple glass) osiągamy Uw 0,79 W/(m²K), co spełnia wymogi domów pasywnych.' },
+        ],
+        ctaText: 'Skonsultuj swój projekt – zamów okna drewniane Maszrol z profesjonalnym montażem.',
+        metaTitle: 'Okna drewniane Maszrol VBH 92/68, klejone – LUMIFIL',
+        metaDesc: 'Okna drewniane – trwały luksus z natury. Systemy Maszrol VBH 92/68, drewno klejone, izolacyjność 0,79 W/(m²K), kolory RAL. Bezpłatny pomiar i wycena.',
+      },
+      de: {
+        breadcrumb: 'Holzfenster',
+        h1: 'Holzfenster – natürliches Material, zeitloser Stil',
+        subtitle: 'Systeme Maszrol VBH 92 und VBH 68 – Tradition trifft moderne Dämmtechnik.',
+        lead: 'Schichtverleimtes Holz verbindet die Schönheit der Natur mit hervorragenden technischen Eigenschaften. Holzfenster atmen, regulieren auf natürliche Weise die Feuchtigkeit und verleihen dem Innenraum besonderen Charakter. Druckimprägnierung und mehrschichtige Lackierung garantieren jahrzehntelange Wetterbeständigkeit.',
+        features: [
+          'Dreischichtig verleimtes Holz – Maßhaltigkeit und Beständigkeit',
+          'Vier Holzarten zur Wahl: Kiefer, Meranti, Eiche und sibirische Lärche',
+          'System Maszrol VBH 92 – 88 mm Bautiefe, Pakete bis 52 mm, Passivhausklasse',
+          'System Maszrol VBH 68 – klassisch, für Standardbau und Renovierung',
+          'Doppeltes Anschlagdichtungssystem und Aluminium-Wetterschenkel serienmäßig',
+          'Dreifachverglasung – Uw bis 0,79 W/(m²K), Beschläge RC2',
+          'Druckimprägnierung und 4-schichtige Lackierung in RAL-Farben oder Beizen',
+        ],
+        brands: 'Systeme Maszrol VBH 92 (Passivhausklasse) und VBH 68; Holzarten: skandinavische Kiefer, Meranti, Eiche, sibirische Lärche.',
+        faq: [
+          { q: 'Wie oft müssen Holzfenster gewartet werden?', a: 'Mit PU-Lack gestrichene Fenster sollten alle 5–8 Jahre geprüft und ggf. aufgefrischt werden. Leichtes Anschleifen und eine neue Deckschicht genügen.' },
+          { q: 'Sind Holzfenster energieeffizient?', a: 'Ja – Holz ist ein natürlicher Dämmstoff. Mit der passenden Dreifachverglasung erreichen wir Uw 0,79 W/(m²K) und erfüllen damit die Anforderungen an Passivhäuser.' },
+        ],
+        ctaText: 'Lassen Sie Ihr Projekt beraten – bestellen Sie Maszrol-Holzfenster mit fachgerechter Montage.',
+        metaTitle: 'Holzfenster Maszrol VBH 92/68, verleimt – LUMIFIL',
+        metaDesc: 'Holzfenster – langlebiger Luxus aus der Natur. Systeme Maszrol VBH 92/68, verleimtes Holz, Dämmwert 0,79 W/(m²K), RAL-Farben. Kostenloses Aufmaß und Angebot.',
+      },
+      en: {
+        breadcrumb: 'Wooden windows',
+        h1: 'Wooden windows – natural material, timeless style',
+        subtitle: 'Maszrol VBH 92 and VBH 68 systems – tradition combined with modern insulation technology.',
+        lead: 'Laminated timber combines the beauty of nature with excellent technical performance. Wooden windows breathe, naturally regulate humidity and give an interior a unique character. Pressure impregnation and multi-layer painting guarantee weather resistance for decades.',
+        features: [
+          'Three-layer laminated timber – dimensional stability and durability',
+          'Four species to choose from: pine, meranti, oak and Siberian larch',
+          'Maszrol VBH 92 system – 88 mm depth, units up to 52 mm, passive-house class',
+          'Maszrol VBH 68 system – classic, for standard construction and renovation',
+          'Double rebate seal system and aluminium drip caps as standard',
+          'Triple glazing – Uw down to 0.79 W/(m²K), RC2 hardware',
+          'Pressure impregnation and 4-layer paint in RAL colours or stains',
+        ],
+        brands: 'Maszrol VBH 92 (passive-house class) and VBH 68 systems; species: Scandinavian pine, meranti, oak, Siberian larch.',
+        faq: [
+          { q: 'How often should wooden windows be maintained?', a: 'Windows painted with PU lacquer need an inspection every 5–8 years and occasional refreshing. Light sanding and a new top coat are enough.' },
+          { q: 'Are wooden windows energy-efficient?', a: 'Yes – timber is a natural insulator. With the right triple-glazed unit we achieve Uw 0.79 W/(m²K), meeting passive-house requirements.' },
+        ],
+        ctaText: 'Get your project advised – order Maszrol wooden windows with professional installation.',
+        metaTitle: 'Wooden windows Maszrol VBH 92/68, laminated – LUMIFIL',
+        metaDesc: 'Wooden windows – lasting luxury from nature. Maszrol VBH 92/68 systems, laminated timber, 0.79 W/(m²K) insulation, RAL colours. Free measurement and quote.',
+      },
+      fr: {
+        breadcrumb: 'Fenêtres bois',
+        h1: 'Fenêtres bois – matériau naturel, style intemporel',
+        subtitle: 'Systèmes Maszrol VBH 92 et VBH 68 – tradition alliée à une technologie d’isolation moderne.',
+        lead: 'Le bois lamellé-collé associe la beauté de la nature à d’excellentes performances techniques. Les fenêtres bois respirent, régulent naturellement l’humidité et donnent à l’intérieur un caractère unique. L’imprégnation sous pression et la peinture multicouche garantissent une résistance aux intempéries pendant des décennies.',
+        features: [
+          'Bois lamellé-collé trois plis – stabilité dimensionnelle et résistance',
+          'Quatre essences au choix : pin, meranti, chêne et mélèze de Sibérie',
+          'Système Maszrol VBH 92 – profondeur 88 mm, vitrages jusqu’à 52 mm, classe passive',
+          'Système Maszrol VBH 68 – classique, pour construction standard et rénovation',
+          'Double système de joints de feuillure et bavettes aluminium de série',
+          'Triple vitrage – Uw jusqu’à 0,79 W/(m²K), ferrures RC2',
+          'Imprégnation sous pression et peinture 4 couches en teintes RAL ou lasures',
+        ],
+        brands: 'Systèmes Maszrol VBH 92 (classe passive) et VBH 68 ; essences : pin scandinave, meranti, chêne, mélèze de Sibérie.',
+        faq: [
+          { q: 'À quelle fréquence entretenir les fenêtres bois ?', a: 'Les fenêtres peintes au vernis PU nécessitent un contrôle tous les 5 à 8 ans et un rafraîchissement éventuel. Un léger ponçage et une nouvelle couche de finition suffisent.' },
+          { q: 'Les fenêtres bois sont-elles économes en énergie ?', a: 'Oui – le bois est un isolant naturel. Avec le bon triple vitrage, nous atteignons Uw 0,79 W/(m²K), conforme aux exigences des maisons passives.' },
+        ],
+        ctaText: 'Faites étudier votre projet – commandez des fenêtres bois Maszrol avec pose professionnelle.',
+        metaTitle: 'Fenêtres bois Maszrol VBH 92/68, lamellé-collé – LUMIFIL',
+        metaDesc: 'Fenêtres bois – un luxe durable issu de la nature. Systèmes Maszrol VBH 92/68, bois lamellé-collé, isolation 0,79 W/(m²K), teintes RAL. Métrage et devis gratuits.',
+      },
+    },
+  },
+
+  // 4 — Drzwi i okna przesuwne PCV i ALU
+  {
+    slug: 'okna-drzwi-przesuwne',
+    category: 'okna',
+    i18n: {
+      pl: {
+        breadcrumb: 'Systemy przesuwne (HST, PSK)',
+        h1: 'Drzwi i okna przesuwne PCV i ALU – otwórz się na przestrzeń',
+        subtitle: 'Systemy HST, PSK i Slide – płynne połączenie wnętrza z ogrodem.',
+        lead: 'Systemy przesuwne to najlepszy sposób na połączenie salonu z tarasem lub ogrodem. Dzięki rolkom nośnym i laserowo prowadzonym prowadnicom nawet skrzydło ważące 400 kg przesuwa się jednym palcem. Oferujemy systemy PVC i aluminiowe – od ekonomicznych PSK po minimalistyczne rozwiązania ALU ze szkłem podłogowym.',
+        features: [
+          'HST – uchylno-przesuwne, skrzydło do 400 kg, uszczelka obwodowa',
+          'PSK – przesuwno-uchylne, oszczędność miejsca, dobra izolacja',
+          'Slide & Turn – system harmonijkowy, pełne otwarcie do 90%',
+          'Próg niski 20 mm w systemach ALU – komfort dla osób starszych',
+          'Okucia antywłamaniowe RC2 w każdym systemie',
+          'Uszczelnienie szczotkowe i gumowe – brak przeciągów',
+          'Możliwość integracji z roletą podtynkową lub moskitierą',
+        ],
+        brands: 'Rehau HST, Salamander HST, Ponzio PE 96 HST, systemy Slide ALU, PSK Aluplast.',
+        faq: [
+          { q: 'Czym różni się HST od PSK?', a: 'PSK (przesuwno-uchylne) działa jak okno uchylne, ale zamiast otwierać się do wewnątrz – przesuwa się wzdłuż ściany. HST (uchylno-przesuwne) unosi się na specjalnych rolkach i przesuwa, co pozwala na cięższe i szersze skrzydła.' },
+          { q: 'Czy systemy przesuwne są szczelne?', a: 'Tak. Nowoczesne systemy HST mają uszczelki czteropołowe i osiągają klasę szczelności 4 (wg EN 12208). Przy prawidłowym montażu eliminują mostek termiczny.' },
+        ],
+        ctaText: 'Wybierz swój system tarasowy – zapytaj eksperta o doradztwo.',
+        metaTitle: 'Drzwi przesuwne HST, PSK, Slide – PCV i ALU – LUMIFIL',
+        metaDesc: 'Drzwi przesuwne HST, PSK i Slide ALU – otwórz salon na ogród. Systemy PVC i aluminium, niski próg, RC2. Bezpłatna wycena.',
+      },
+      de: {
+        breadcrumb: 'Schiebesysteme (HST, PSK)',
+        h1: 'Schiebetüren und -fenster aus PVC und Alu – öffnen Sie sich zum Raum',
+        subtitle: 'Systeme HST, PSK und Slide – fließender Übergang vom Innenraum zum Garten.',
+        lead: 'Schiebesysteme sind die beste Lösung, um das Wohnzimmer mit Terrasse oder Garten zu verbinden. Dank Laufrollen und lasergeführten Schienen lässt sich selbst ein 400 kg schwerer Flügel mit einem Finger bewegen. Wir bieten PVC- und Aluminiumsysteme – vom wirtschaftlichen PSK bis zu minimalistischen Alu-Lösungen mit bodenbündigem Glas.',
+        features: [
+          'HST – Hebe-Schiebe, Flügel bis 400 kg, umlaufende Dichtung',
+          'PSK – Parallel-Schiebe-Kipp, platzsparend, gute Dämmung',
+          'Slide & Turn – Faltsystem, volle Öffnung bis 90%',
+          'Niedrige Schwelle 20 mm in Alu-Systemen – Komfort für Senioren',
+          'Einbruchhemmende Beschläge RC2 in jedem System',
+          'Bürsten- und Gummidichtung – keine Zugluft',
+          'Integration mit Unterputzrollladen oder Insektenschutz möglich',
+        ],
+        brands: 'Rehau HST, Salamander HST, Ponzio PE 96 HST, Slide-Alu-Systeme, PSK Aluplast.',
+        faq: [
+          { q: 'Worin unterscheidet sich HST von PSK?', a: 'PSK (Parallel-Schiebe-Kipp) funktioniert wie ein Kippfenster, schiebt sich aber entlang der Wand statt nach innen zu öffnen. HST (Hebe-Schiebe) hebt sich auf speziellen Rollen und schiebt – das erlaubt schwerere und breitere Flügel.' },
+          { q: 'Sind Schiebesysteme dicht?', a: 'Ja. Moderne HST-Systeme haben Vierkammerdichtungen und erreichen die Dichtheitsklasse 4 (nach EN 12208). Bei fachgerechter Montage entfällt die Wärmebrücke.' },
+        ],
+        ctaText: 'Wählen Sie Ihr Terrassensystem – fragen Sie unseren Experten um Rat.',
+        metaTitle: 'Schiebetüren HST, PSK, Slide – PVC und Alu – LUMIFIL',
+        metaDesc: 'Schiebetüren HST, PSK und Slide Alu – öffnen Sie das Wohnzimmer zum Garten. PVC- und Aluminiumsysteme, niedrige Schwelle, RC2. Kostenloses Angebot.',
+      },
+      en: {
+        breadcrumb: 'Sliding systems (HST, PSK)',
+        h1: 'Sliding doors and windows in PVC and aluminium – open up to space',
+        subtitle: 'HST, PSK and Slide systems – a seamless link between interior and garden.',
+        lead: 'Sliding systems are the best way to connect the living room with a terrace or garden. Thanks to load-bearing rollers and laser-guided tracks, even a 400 kg sash slides with one finger. We offer PVC and aluminium systems – from economical PSK to minimalist aluminium solutions with floor-level glass.',
+        features: [
+          'HST – lift-and-slide, sash up to 400 kg, perimeter seal',
+          'PSK – tilt-and-slide, space-saving, good insulation',
+          'Slide & Turn – folding system, full opening up to 90%',
+          'Low 20 mm threshold in aluminium systems – comfort for the elderly',
+          'RC2 anti-burglary hardware in every system',
+          'Brush and rubber sealing – no draughts',
+          'Can be integrated with a flush-mounted blind or insect screen',
+        ],
+        brands: 'Rehau HST, Salamander HST, Ponzio PE 96 HST, Slide aluminium systems, PSK Aluplast.',
+        faq: [
+          { q: 'How does HST differ from PSK?', a: 'PSK (tilt-and-slide) works like a tilt window but slides along the wall instead of opening inward. HST (lift-and-slide) rises on special rollers and slides, allowing heavier and wider sashes.' },
+          { q: 'Are sliding systems airtight?', a: 'Yes. Modern HST systems have four-chamber seals and reach airtightness class 4 (per EN 12208). With correct installation they eliminate the thermal bridge.' },
+        ],
+        ctaText: 'Choose your terrace system – ask our expert for advice.',
+        metaTitle: 'Sliding doors HST, PSK, Slide – PVC and aluminium – LUMIFIL',
+        metaDesc: 'Sliding doors HST, PSK and Slide aluminium – open the living room to the garden. PVC and aluminium systems, low threshold, RC2. Free quote.',
+      },
+      fr: {
+        breadcrumb: 'Systèmes coulissants (HST, PSK)',
+        h1: 'Portes et fenêtres coulissantes PVC et alu – ouvrez-vous à l’espace',
+        subtitle: 'Systèmes HST, PSK et Slide – une liaison fluide entre l’intérieur et le jardin.',
+        lead: 'Les systèmes coulissants sont la meilleure façon de relier le salon à la terrasse ou au jardin. Grâce aux galets porteurs et aux rails guidés au laser, même un ouvrant de 400 kg coulisse d’un seul doigt. Nous proposons des systèmes PVC et aluminium – du PSK économique aux solutions alu minimalistes avec verre au ras du sol.',
+        features: [
+          'HST – levant-coulissant, ouvrant jusqu’à 400 kg, joint périphérique',
+          'PSK – coulissant-oscillant, gain de place, bonne isolation',
+          'Slide & Turn – système pliant, ouverture totale jusqu’à 90 %',
+          'Seuil bas 20 mm dans les systèmes alu – confort pour les personnes âgées',
+          'Ferrures anti-effraction RC2 dans chaque système',
+          'Joints brosse et caoutchouc – aucun courant d’air',
+          'Intégration possible avec volet sous enduit ou moustiquaire',
+        ],
+        brands: 'Rehau HST, Salamander HST, Ponzio PE 96 HST, systèmes Slide alu, PSK Aluplast.',
+        faq: [
+          { q: 'Quelle différence entre HST et PSK ?', a: 'Le PSK (coulissant-oscillant) fonctionne comme une fenêtre oscillante mais coulisse le long du mur au lieu de s’ouvrir vers l’intérieur. Le HST (levant-coulissant) se soulève sur des galets spéciaux et coulisse, ce qui permet des ouvrants plus lourds et plus larges.' },
+          { q: 'Les systèmes coulissants sont-ils étanches ?', a: 'Oui. Les systèmes HST modernes ont des joints à quatre chambres et atteignent la classe d’étanchéité 4 (selon EN 12208). Une pose correcte élimine le pont thermique.' },
+        ],
+        ctaText: 'Choisissez votre système de terrasse – demandez conseil à notre expert.',
+        metaTitle: 'Portes coulissantes HST, PSK, Slide – PVC et alu – LUMIFIL',
+        metaDesc: 'Portes coulissantes HST, PSK et Slide alu – ouvrez le salon sur le jardin. Systèmes PVC et aluminium, seuil bas, RC2. Devis gratuit.',
+      },
+    },
+  },
+
+];
+
+// Treść pozostałych kategorii w osobnych plikach tools/content/<kat>.js.
+// inc() zwraca [] dopóki dany plik nie istnieje (generowanie przyrostowe).
+function inc(p) { try { return require(p); } catch (e) { return []; } }
+
+module.exports = [
+  ...OKNA,
+  ...inc('./content/drzwi.js'),
+  ...inc('./content/rolety-zew.js'),
+  ...inc('./content/oslony.js'),
+  ...inc('./content/moskitiery.js'),
+  ...inc('./content/parapety.js'),
+  ...inc('./content/montaz.js'),
+];
