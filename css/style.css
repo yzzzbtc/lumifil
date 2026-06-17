@@ -913,14 +913,55 @@ img {
 }
 
 .offer-details {
+    display: block;
+    padding: 0 24px 22px;
+}
+
+/* Kafelek zwinięty: chowamy opisy, ale linki do podstron (.offer-sublinks)
+   pozostają zawsze widoczne, żeby były oczywistym wejściem na strony ofertowe. */
+.offer-card:not(.active) .offer-details > *:not(.offer-sublinks) {
     display: none;
-    padding: 0 24px 24px;
-    border-top: 1px solid var(--border-color);
+}
+
+.offer-card.active .offer-details > *:not(.offer-sublinks) {
     animation: slideDown 0.3s ease;
 }
 
-.offer-card.active .offer-details {
-    display: block;
+/* Linki do podstron ofertowych — zawsze widoczne, wyraźne przyciski */
+.offer-sublinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border-color);
+}
+
+.offer-sublinks a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 16px;
+    background: var(--primary-pale);
+    color: var(--primary);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.offer-sublinks a::after {
+    content: "\2192";
+    transition: transform 0.2s ease;
+}
+
+.offer-sublinks a:hover {
+    background: var(--accent);
+    color: var(--white);
+}
+
+.offer-sublinks a:hover::after {
+    transform: translateX(3px);
 }
 
 @keyframes slideDown {

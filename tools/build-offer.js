@@ -13,7 +13,7 @@ const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
 const OUT_DIR = path.join(ROOT, 'oferta');
-const SITE = 'https://lumifil.pl';
+const SITE = 'https://yzzzbtc.github.io/lumifil';
 const PHONE = '+48663715148';
 const PHONE_HUMAN = '+48 663 715 148';
 

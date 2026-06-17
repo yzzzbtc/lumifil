@@ -216,23 +216,7 @@
     border-color: var(--primary);
 }
 
-/* Offer card link affordance on homepage */
-.offer-sublinks {
-    margin-top: 14px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-.offer-sublinks a {
-    font-size: 0.85rem;
-    padding: 6px 12px;
-    border-radius: 50px;
-    background: var(--primary-pale);
-    color: var(--primary);
-    text-decoration: none;
-    transition: var(--transition);
-}
-.offer-sublinks a:hover { background: var(--primary); color: var(--white); }
+/* Style kafelków oferty (.offer-sublinks) są w css/style.css — stamtąd je ładuje strona główna. */
 
 @media (max-width: 600px) {
     .lp-hero { padding: 48px 0 54px; }
