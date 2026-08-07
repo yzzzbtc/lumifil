@@ -1,0 +1,27 @@
+{
+  "slug": "leysin-american-school",
+  "order": 1,
+  "category": "windows",
+  "tag": "tagWindows",
+  "icon": "🏫",
+  "gradient": "linear-gradient(135deg, #1a5f7a 0%, #2980b9 100%)",
+  "image": "",
+  "i18n": {
+    "pl": {
+      "title": "Leysin American School",
+      "desc": "Przebudowa Grand Hotelu na budynek Leysin American School w Szwajcarii. Kompleksowa wymiana stolarki okiennej."
+    },
+    "de": {
+      "title": "Leysin American School",
+      "desc": "Umbau des Grand Hotels zum Gebäude der Leysin American School in der Schweiz. Kompletter Fensteraustausch."
+    },
+    "en": {
+      "title": "Leysin American School",
+      "desc": "Conversion of Grand Hotel into Leysin American School building in Switzerland. Complete window replacement."
+    },
+    "fr": {
+      "title": "Leysin American School",
+      "desc": "Transformation du Grand Hôtel en bâtiment de la Leysin American School en Suisse. Remplacement complet des fenêtres."
+    }
+  }
+}

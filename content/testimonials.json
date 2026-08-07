@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "id": "t1",
+      "location": "Bydgoszcz",
+      "i18n": {
+        "pl": {
+          "text": "\"Miła i profesjonalna obsługa. Wszystko zgodnie z umową. Rzetelna firma.\""
+        },
+        "de": {
+          "text": "\"Freundlicher und professioneller Service. Alles wie vereinbart. Zuverlässige Firma.\""
+        },
+        "en": {
+          "text": "\"Pleasant and professional service. Windows installed with care for every detail. I highly recommend!\""
+        },
+        "fr": {
+          "text": "\"Service agréable et professionnel. Fenêtres installées avec soin du moindre détail. Je recommande vivement!\""
+        }
+      }
+    },
+    {
+      "id": "t2",
+      "location": "Wąbrzeźno",
+      "i18n": {
+        "pl": {
+          "text": "\"To mój drugi zakup z tej firmy. Wszystko zrobione sprawnie i profesjonalnie, polecam wszystkim firmę LUMIFIL!\""
+        },
+        "de": {
+          "text": "\"Das ist mein zweiter Kauf bei dieser Firma. Alles schnell und professionell erledigt, ich empfehle LUMIFIL!\""
+        },
+        "en": {
+          "text": "\"Very good contact with the company. The work was carried out efficiently and in accordance with the agreement. Definitely recommend.\""
+        },
+        "fr": {
+          "text": "\"Très bon contact avec l'entreprise. Le travail a été effectué efficacement et conformément à l'accord. Je recommande.\""
+        }
+      }
+    },
+    {
+      "id": "t3",
+      "location": "Polska",
+      "i18n": {
+        "pl": {
+          "text": "\"Super kontakt ze specjalistą. Wszystko wytłumaczone na miejscu i doradzone. Krótki termin oczekiwania na montaż. Panowie monterzy bardzo mili i kontaktowi.\""
+        },
+        "de": {
+          "text": "\"Super Kontakt mit dem Spezialisten. Alles vor Ort erklärt und beraten. Kurze Wartezeit auf die Montage. Die Monteure waren sehr nett und kontaktfreudig.\""
+        },
+        "en": {
+          "text": "\"Professional approach to the customer from the beginning to the end of the order. High quality workmanship.\""
+        },
+        "fr": {
+          "text": "\"Approche professionnelle du client du début à la fin de la commande. Haute qualité d'exécution.\""
+        }
+      }
+    },
+    {
+      "id": "t4",
+      "location": "Skępe",
+      "i18n": {
+        "pl": {
+          "text": "\"Wymiana okien i drzwi w domku holenderskim wykonana super i bardzo szybko. Oby więcej takich firm, szczerze polecam.\""
+        },
+        "de": {
+          "text": "\"Fenster- und Türenaustausch im Mobilheim super und sehr schnell durchgeführt. Ich empfehle aufrichtig.\""
+        },
+        "en": {
+          "text": "\"Fast delivery and professional installation. Blinds work perfectly. I am very satisfied!\""
+        },
+        "fr": {
+          "text": "\"Livraison rapide et installation professionnelle. Les volets fonctionnent parfaitement. Très satisfait!\""
+        }
+      }
+    }
+  ]
+}

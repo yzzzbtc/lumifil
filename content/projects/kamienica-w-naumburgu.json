@@ -1,0 +1,27 @@
+{
+  "slug": "kamienica-w-naumburgu",
+  "order": 6,
+  "category": "windows",
+  "tag": "tagPVC",
+  "icon": "🏢",
+  "gradient": "linear-gradient(135deg, #2980b9 0%, #1a5f7a 100%)",
+  "image": "",
+  "i18n": {
+    "pl": {
+      "title": "Kamienica w Naumburgu",
+      "desc": "Wymiana drzwi zewnętrznych w zabytkowej kamienicy w Naumburgu, Niemcy."
+    },
+    "de": {
+      "title": "Stadthaus in Naumburg",
+      "desc": "Austausch der Außentüren in einem historischen Stadthaus in Naumburg, Deutschland."
+    },
+    "en": {
+      "title": "Townhouse in Naumburg",
+      "desc": "Replacement of external doors in a historic townhouse in Naumburg, Germany."
+    },
+    "fr": {
+      "title": "Immeuble à Naumburg",
+      "desc": "Remplacement des portes extérieures dans un immeuble historique à Naumburg, Allemagne."
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "sad-w-malborku",
+  "order": 4,
+  "category": "windows",
+  "tag": "tagWindows",
+  "icon": "⚖️",
+  "gradient": "linear-gradient(135deg, #1a5f7a 0%, #134b5f 100%)",
+  "image": "",
+  "i18n": {
+    "pl": {
+      "title": "Sąd w Malborku",
+      "desc": "Wymiana stolarki okiennej w budynku Sądu w Malborku."
+    },
+    "de": {
+      "title": "Gericht in Malbork",
+      "desc": "Austausch der Fensterschreinerei im Gerichtsgebäude in Malbork."
+    },
+    "en": {
+      "title": "Courthouse in Malbork",
+      "desc": "Replacement of window joinery in the Courthouse in Malbork."
+    },
+    "fr": {
+      "title": "Tribunal de Malbork",
+      "desc": "Remplacement de la menuiserie des fenêtres dans le bâtiment du Tribunal de Malbork."
+    }
+  }
+}

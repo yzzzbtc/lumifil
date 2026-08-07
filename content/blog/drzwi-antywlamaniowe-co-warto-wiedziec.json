@@ -1,0 +1,30 @@
+{
+  "slug": "drzwi-antywlamaniowe-co-warto-wiedziec",
+  "date": "2026-01-15",
+  "category": "doors",
+  "gradient": "linear-gradient(135deg, #2c3e50 0%, #5a6c7d 100%)",
+  "image": "",
+  "draft": true,
+  "i18n": {
+    "pl": {
+      "title": "Drzwi antywłamaniowe - co warto wiedzieć?",
+      "excerpt": "Przegląd klas antywłamaniowych i najważniejsze cechy bezpiecznych drzwi...",
+      "body": ""
+    },
+    "de": {
+      "title": "Einbruchsichere Türen - was Sie wissen sollten",
+      "excerpt": "Überblick über Sicherheitsklassen und die wichtigsten Merkmale...",
+      "body": ""
+    },
+    "en": {
+      "title": "Burglar-proof doors - what to know?",
+      "excerpt": "Overview of security classes and key features...",
+      "body": ""
+    },
+    "fr": {
+      "title": "Portes anti-effraction - ce qu'il faut savoir",
+      "excerpt": "Aperçu des classes de sécurité et des caractéristiques principales...",
+      "body": ""
+    }
+  }
+}

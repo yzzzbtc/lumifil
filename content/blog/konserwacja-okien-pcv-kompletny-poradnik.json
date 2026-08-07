@@ -1,0 +1,30 @@
+{
+  "slug": "konserwacja-okien-pcv-kompletny-poradnik",
+  "date": "2026-01-15",
+  "category": "tips",
+  "gradient": "linear-gradient(135deg, #e67e22 0%, #f39c12 100%)",
+  "image": "",
+  "draft": true,
+  "i18n": {
+    "pl": {
+      "title": "Konserwacja okien PCV - kompletny poradnik",
+      "excerpt": "Dowiedz się, jak prawidłowo dbać o okna PCV, aby służyły przez wiele lat...",
+      "body": ""
+    },
+    "de": {
+      "title": "PVC-Fensterpflege - vollständiger Leitfaden",
+      "excerpt": "Erfahren Sie, wie Sie PVC-Fenster richtig pflegen...",
+      "body": ""
+    },
+    "en": {
+      "title": "PVC window maintenance - complete guide",
+      "excerpt": "Learn how to properly care for PVC windows...",
+      "body": ""
+    },
+    "fr": {
+      "title": "Entretien des fenêtres PVC - guide complet",
+      "excerpt": "Apprenez comment entretenir correctement les fenêtres PVC...",
+      "body": ""
+    }
+  }
+}

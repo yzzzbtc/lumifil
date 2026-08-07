@@ -1,0 +1,30 @@
+{
+  "slug": "trendy-w-stolarce-okiennej-2024",
+  "date": "2026-01-15",
+  "category": "trends",
+  "gradient": "linear-gradient(135deg, #8a9299 0%, #5a6268 100%)",
+  "image": "",
+  "draft": true,
+  "i18n": {
+    "pl": {
+      "title": "Trendy w stolarce okiennej 2024",
+      "excerpt": "Minimalistyczne ramy, duże przeszklenia i smart home - zobacz co jest modne...",
+      "body": ""
+    },
+    "de": {
+      "title": "Fenstertrends 2024",
+      "excerpt": "Minimalistische Rahmen, große Verglasungen und Smart Home...",
+      "body": ""
+    },
+    "en": {
+      "title": "Window trends 2024",
+      "excerpt": "Minimalist frames, large glazings and smart home...",
+      "body": ""
+    },
+    "fr": {
+      "title": "Tendances fenêtres 2024",
+      "excerpt": "Cadres minimalistes, grands vitrages et maison intelligente...",
+      "body": ""
+    }
+  }
+}

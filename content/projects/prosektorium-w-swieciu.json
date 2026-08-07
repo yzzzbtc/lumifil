@@ -1,0 +1,27 @@
+{
+  "slug": "prosektorium-w-swieciu",
+  "order": 7,
+  "category": "doors",
+  "tag": "tagDoors",
+  "icon": "🏥",
+  "gradient": "linear-gradient(135deg, #5a6268 0%, #2c3e50 100%)",
+  "image": "",
+  "i18n": {
+    "pl": {
+      "title": "Prosektorium w Świeciu",
+      "desc": "Wymiana drzwi zewnętrznych na drzwi z szybą bezpieczną w starym budynku prosektorium w Świeciu."
+    },
+    "de": {
+      "title": "Leichenhalle in Świecie",
+      "desc": "Austausch der Außentüren gegen Türen mit Sicherheitsglas im alten Gebäude der Leichenhalle in Świecie."
+    },
+    "en": {
+      "title": "Mortuary in Świecie",
+      "desc": "Replacement of external doors with safety glass doors in the old mortuary building in Świecie."
+    },
+    "fr": {
+      "title": "Morgue à Świecie",
+      "desc": "Remplacement des portes extérieures par des portes avec vitrage de sécurité dans l'ancien bâtiment de la morgue à Świecie."
+    }
+  }
+}

@@ -1,8 +1,6 @@
 // Main JavaScript for Filipex website
 
 let currentLang = 'pl';
-let firebaseProjects = [];
-let firebaseBlog = [];
 
 // Language Selection
 function selectLanguage(lang) {
@@ -15,8 +13,6 @@ function selectLanguage(lang) {
     // Apply translations
     applyTranslations(lang);
 
-    // Update Firebase content with new language
-    updateFirebaseContent();
 
     // Hide language selector, show main site
     document.getElementById('language-selector').classList.add('hidden');
@@ -275,117 +271,6 @@ function initBlogFilter() {
     });
 }
 
-// Firebase - Load Projects
-function initFirebaseData() {
-    if (typeof firebase === 'undefined' || !isFirebaseConfigured()) {
-        console.log('Firebase not configured - using static data');
-        return;
-    }
-
-    try {
-        firebase.initializeApp(firebaseConfig);
-        const db = firebase.database();
-
-        // Load projects from Firebase
-        db.ref('projects').on('value', (snapshot) => {
-            const data = snapshot.val();
-            if (data) {
-                firebaseProjects = Object.keys(data).map(key => ({ id: key, ...data[key] }));
-                renderFirebaseProjects();
-            }
-        });
-
-        // Load blog from Firebase
-        db.ref('blog').on('value', (snapshot) => {
-            const data = snapshot.val();
-            if (data) {
-                firebaseBlog = Object.keys(data).map(key => ({ id: key, ...data[key] }));
-                renderFirebaseBlog();
-            }
-        });
-    } catch (error) {
-        console.log('Firebase initialization error:', error);
-    }
-}
-
-// Render projects from Firebase
-function renderFirebaseProjects() {
-    const container = document.querySelector('.projects-grid');
-    if (!container || firebaseProjects.length === 0) return;
-
-    const tagTranslations = {
-        tagWindows: { pl: 'Okna ALU', de: 'ALU-Fenster', en: 'ALU Windows', fr: 'Fenêtres ALU' },
-        tagPVC: { pl: 'Okna PCV', de: 'PVC-Fenster', en: 'PVC Windows', fr: 'Fenêtres PVC' },
-        tagWood: { pl: 'Okna drewniane', de: 'Holzfenster', en: 'Wooden Windows', fr: 'Fenêtres bois' },
-        tagDoors: { pl: 'Drzwi', de: 'Türen', en: 'Doors', fr: 'Portes' },
-        tagShutters: { pl: 'Rolety', de: 'Rollläden', en: 'Blinds', fr: 'Volets' }
-    };
-
-    container.innerHTML = firebaseProjects.map(project => `
-        <div class="project-card" data-category="${project.category}">
-            <div class="project-image" style="background: ${project.gradient || 'linear-gradient(135deg, #1a5f7a 0%, #2980b9 100%)'};">
-                <div class="project-overlay">
-                    <span class="project-icon">${project.icon || '🏢'}</span>
-                </div>
-            </div>
-            <div class="project-info">
-                <h3>${project.titles?.[currentLang] || project.titles?.pl || ''}</h3>
-                <p>${project.descriptions?.[currentLang] || project.descriptions?.pl || ''}</p>
-                <span class="project-tag">${tagTranslations[project.tag]?.[currentLang] || tagTranslations[project.tag]?.pl || ''}</span>
-            </div>
-        </div>
-    `).join('');
-
-    // Re-init filter for new elements
-    initProjectFilter();
-}
-
-// Render blog from Firebase
-function renderFirebaseBlog() {
-    const container = document.querySelector('.blog-grid');
-    if (!container || firebaseBlog.length === 0) return;
-
-    const categoryTranslations = {
-        windows: { pl: 'Okna', de: 'Fenster', en: 'Windows', fr: 'Fenêtres' },
-        doors: { pl: 'Drzwi', de: 'Türen', en: 'Doors', fr: 'Portes' },
-        shutters: { pl: 'Rolety', de: 'Rollläden', en: 'Blinds', fr: 'Volets' },
-        tips: { pl: 'Porady', de: 'Tipps', en: 'Tips', fr: 'Conseils' },
-        trends: { pl: 'Trendy', de: 'Trends', en: 'Trends', fr: 'Tendances' }
-    };
-
-    const readMoreTranslations = {
-        pl: 'Czytaj więcej',
-        de: 'Mehr lesen',
-        en: 'Read more',
-        fr: 'Lire plus'
-    };
-
-    container.innerHTML = firebaseBlog.map(post => `
-        <article class="blog-card" data-category="${post.category}">
-            <div class="blog-card-image" style="background: ${post.gradient || 'linear-gradient(135deg, #1a5f7a 0%, #2980b9 100%)'};"></div>
-            <div class="blog-card-content">
-                <span class="blog-card-category">${categoryTranslations[post.category]?.[currentLang] || post.category}</span>
-                <h4>${post.titles?.[currentLang] || post.titles?.pl || ''}</h4>
-                <p>${post.excerpts?.[currentLang] || post.excerpts?.pl || ''}</p>
-                <a href="#" class="blog-read-more">${readMoreTranslations[currentLang]}</a>
-            </div>
-        </article>
-    `).join('');
-
-    // Re-init filter for new elements
-    initBlogFilter();
-}
-
-// Re-render Firebase content when language changes
-function updateFirebaseContent() {
-    if (firebaseProjects.length > 0) {
-        renderFirebaseProjects();
-    }
-    if (firebaseBlog.length > 0) {
-        renderFirebaseBlog();
-    }
-}
-
 // Initialize on DOM load
 document.addEventListener('DOMContentLoaded', () => {
     // Check for saved language preference
@@ -405,8 +290,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     initProjectCardStyles();
 
-    // Initialize Firebase data
-    initFirebaseData();
 });
 
 // Close mobile menu when clicking outside

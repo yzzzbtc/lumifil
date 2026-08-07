@@ -1,0 +1,27 @@
+{
+  "slug": "kompleks-apartamentow-na-gibraltarze",
+  "order": 5,
+  "category": "windows",
+  "tag": "tagWood",
+  "icon": "🏛️",
+  "gradient": "linear-gradient(135deg, #8a9299 0%, #5a6268 100%)",
+  "image": "",
+  "i18n": {
+    "pl": {
+      "title": "Kompleks apartamentów na Gibraltarze",
+      "desc": "Wymiana okien drewnianych w kompleksie apartamentów znajdujących się na słynnej skale na Gibraltarze."
+    },
+    "de": {
+      "title": "Apartmentkomplex auf Gibraltar",
+      "desc": "Austausch von Holzfenstern im Apartmentkomplex auf dem berühmten Felsen von Gibraltar."
+    },
+    "en": {
+      "title": "Apartment Complex in Gibraltar",
+      "desc": "Replacement of wooden windows in an apartment complex located on the famous rock of Gibraltar."
+    },
+    "fr": {
+      "title": "Complexe d'appartements à Gibraltar",
+      "desc": "Remplacement des fenêtres en bois dans un complexe d'appartements situé sur le célèbre rocher de Gibraltar."
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "slug": "okna-aluminiowe-czy-pcv",
+  "date": "2026-01-15",
+  "category": "windows",
+  "gradient": "linear-gradient(135deg, #2980b9 0%, #1a5f7a 100%)",
+  "image": "",
+  "draft": true,
+  "i18n": {
+    "pl": {
+      "title": "Okna aluminiowe czy PCV?",
+      "excerpt": "Szczegółowe porównanie obu materiałów - wady, zalety i zastosowania...",
+      "body": ""
+    },
+    "de": {
+      "title": "Aluminium- oder PVC-Fenster?",
+      "excerpt": "Detaillierter Vergleich beider Materialien...",
+      "body": ""
+    },
+    "en": {
+      "title": "Aluminium or PVC windows?",
+      "excerpt": "Detailed comparison of both materials...",
+      "body": ""
+    },
+    "fr": {
+      "title": "Fenêtres aluminium ou PVC?",
+      "excerpt": "Comparaison détaillée des deux matériaux...",
+      "body": ""
+    }
+  }
+}

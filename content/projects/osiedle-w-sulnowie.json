@@ -1,0 +1,27 @@
+{
+  "slug": "osiedle-w-sulnowie",
+  "order": 2,
+  "category": "doors",
+  "tag": "tagDoors",
+  "icon": "🏘️",
+  "gradient": "linear-gradient(135deg, #e67e22 0%, #f39c12 100%)",
+  "image": "",
+  "i18n": {
+    "pl": {
+      "title": "Osiedle w Sulnowie",
+      "desc": "Montaż drzwi zewnętrznych na osiedlu budowanym przez dewelopera w Sulnowie."
+    },
+    "de": {
+      "title": "Wohnsiedlung in Sulnowo",
+      "desc": "Montage von Außentüren in einer vom Bauträger errichteten Wohnsiedlung in Sulnowo."
+    },
+    "en": {
+      "title": "Housing Estate in Sulnowo",
+      "desc": "Installation of external doors in a housing estate built by a developer in Sulnowo."
+    },
+    "fr": {
+      "title": "Lotissement à Sulnowo",
+      "desc": "Installation de portes extérieures dans un lotissement construit par un promoteur à Sulnowo."
+    }
+  }
+}

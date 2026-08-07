@@ -1,0 +1,27 @@
+{
+  "slug": "dom-jednorodzinny-w-swieciu",
+  "order": 3,
+  "category": "shutters",
+  "tag": "tagShutters",
+  "icon": "🏠",
+  "gradient": "linear-gradient(135deg, #2c3e50 0%, #5a6c7d 100%)",
+  "image": "",
+  "i18n": {
+    "pl": {
+      "title": "Dom jednorodzinny w Świeciu",
+      "desc": "Wymiana rolet zewnętrznych w domu jednorodzinnym w Świeciu."
+    },
+    "de": {
+      "title": "Einfamilienhaus in Świecie",
+      "desc": "Austausch von Außenrollläden in einem Einfamilienhaus in Świecie."
+    },
+    "en": {
+      "title": "Single-family house in Świecie",
+      "desc": "Replacement of external blinds in a single-family house in Świecie."
+    },
+    "fr": {
+      "title": "Maison individuelle à Świecie",
+      "desc": "Remplacement des volets extérieurs dans une maison individuelle à Świecie."
+    }
+  }
+}

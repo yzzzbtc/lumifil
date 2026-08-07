@@ -1,0 +1,30 @@
+{
+  "slug": "rolety-zewnetrzne-vs-wewnetrzne",
+  "date": "2026-01-15",
+  "category": "shutters",
+  "gradient": "linear-gradient(135deg, #1a5f7a 0%, #134b5f 100%)",
+  "image": "",
+  "draft": true,
+  "i18n": {
+    "pl": {
+      "title": "Rolety zewnętrzne vs. wewnętrzne",
+      "excerpt": "Porównanie zalet i wad obu rozwiązań - które wybrać do swojego domu?",
+      "body": ""
+    },
+    "de": {
+      "title": "Außenrollläden vs. Innenrollläden",
+      "excerpt": "Vergleich der Vor- und Nachteile beider Lösungen...",
+      "body": ""
+    },
+    "en": {
+      "title": "External vs. internal blinds",
+      "excerpt": "Comparison of pros and cons of both solutions...",
+      "body": ""
+    },
+    "fr": {
+      "title": "Volets extérieurs vs. intérieurs",
+      "excerpt": "Comparaison des avantages et inconvénients des deux solutions...",
+      "body": ""
+    }
+  }
+}

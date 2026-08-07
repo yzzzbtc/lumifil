@@ -167,6 +167,7 @@ const translations = {
             catTips: "Porady",
             catTrends: "Trendy",
             readMore: "Czytaj więcej",
+            empty: "Wkrótce pojawią się tu pierwsze wpisy.",
             post1: { title: "Jak wybrać okna energooszczędne?", excerpt: "Poznaj kluczowe parametry okien, które wpływają na oszczędność energii w Twoim domu..." },
             post2: { title: "Konserwacja okien PCV - kompletny poradnik", excerpt: "Dowiedz się, jak prawidłowo dbać o okna PCV, aby służyły przez wiele lat..." },
             post3: { title: "Drzwi antywłamaniowe - co warto wiedzieć?", excerpt: "Przegląd klas antywłamaniowych i najważniejsze cechy bezpiecznych drzwi..." },
@@ -369,6 +370,7 @@ const translations = {
             catTips: "Tipps",
             catTrends: "Trends",
             readMore: "Mehr lesen",
+            empty: "Hier erscheinen bald die ersten Beiträge.",
             post1: { title: "Wie wählt man energiesparende Fenster?", excerpt: "Lernen Sie die wichtigsten Fensterparameter kennen, die die Energieeinsparung beeinflussen..." },
             post2: { title: "PVC-Fensterpflege - vollständiger Leitfaden", excerpt: "Erfahren Sie, wie Sie PVC-Fenster richtig pflegen..." },
             post3: { title: "Einbruchsichere Türen - was Sie wissen sollten", excerpt: "Überblick über Sicherheitsklassen und die wichtigsten Merkmale..." },
@@ -552,6 +554,7 @@ const translations = {
             catTips: "Tips",
             catTrends: "Trends",
             readMore: "Read more",
+            empty: "The first posts will appear here soon.",
             post1: { title: "How to choose energy-efficient windows?", excerpt: "Learn the key window parameters that affect energy savings..." },
             post2: { title: "PVC window maintenance - complete guide", excerpt: "Learn how to properly care for PVC windows..." },
             post3: { title: "Burglar-proof doors - what to know?", excerpt: "Overview of security classes and key features..." },
@@ -770,6 +773,7 @@ const translations = {
             catTips: "Conseils",
             catTrends: "Tendances",
             readMore: "Lire plus",
+            empty: "Les premiers articles apparaîtront bientôt ici.",
             post1: { title: "Comment choisir des fenêtres économes en énergie?", excerpt: "Découvrez les paramètres clés des fenêtres qui affectent les économies d'énergie..." },
             post2: { title: "Entretien des fenêtres PVC - guide complet", excerpt: "Apprenez comment entretenir correctement les fenêtres PVC..." },
             post3: { title: "Portes anti-effraction - ce qu'il faut savoir", excerpt: "Aperçu des classes de sécurité et des caractéristiques principales..." },
@@ -849,3 +853,9 @@ const flags = {
     en: '🇬🇧',
     fr: '🇫🇷'
 };
+
+// BLOG_POSTS:AUTO — generowane przez tools/build-blog.js, nie edytuj ręcznie
+if (typeof translations !== 'undefined' && translations.pl) translations.pl.blogPosts = {"jak-wybrac-okna-energooszczedne":{"title":"Jak wybrać okna energooszczędne?","excerpt":"Współczynnik Uw, pakiet szybowy, ciepła ramka i montaż – cztery rzeczy, które naprawdę decydują o rachunkach za ogrzewanie."}};
+if (typeof translations !== 'undefined' && translations.de) translations.de.blogPosts = {"jak-wybrac-okna-energooszczedne":{"title":"Wie wählt man energiesparende Fenster?","excerpt":"Lernen Sie die wichtigsten Fensterparameter kennen, die die Energieeinsparung beeinflussen..."}};
+if (typeof translations !== 'undefined' && translations.en) translations.en.blogPosts = {"jak-wybrac-okna-energooszczedne":{"title":"How to choose energy-efficient windows?","excerpt":"Learn the key window parameters that affect energy savings..."}};
+if (typeof translations !== 'undefined' && translations.fr) translations.fr.blogPosts = {"jak-wybrac-okna-energooszczedne":{"title":"Comment choisir des fenêtres économes en énergie?","excerpt":"Découvrez les paramètres clés des fenêtres qui affectent les économies d'énergie..."}};

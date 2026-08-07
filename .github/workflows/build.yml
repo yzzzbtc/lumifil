@@ -1,0 +1,50 @@
+name: Build site
+
+# Uruchamia się, gdy zmieni się treść (panel zapisuje do content/) albo generatory.
+# Efekt: przetłumaczone treści + wygenerowane strony wracają commitem na main,
+# a GitHub Pages publikuje je automatycznie (Pages działa z gałęzi main / root).
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/**'
+      - 'tools/**'
+      - '.github/workflows/build.yml'
+  workflow_dispatch:
+
+# Potrzebne, żeby workflow mógł wypchnąć wygenerowane pliki z powrotem.
+permissions:
+  contents: write
+
+# Gdy właściciel zapisze kilka wpisów pod rząd, liczy się tylko ostatni build.
+concurrency:
+  group: build-site
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build (tłumaczenia + strony + sitemap)
+        env:
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+        run: node tools/build-all.js
+
+      - name: Commit wygenerowanych plików
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Brak zmian do zapisania."
+            exit 0
+          fi
+          # [skip ci] zapobiega pętli: ten commit nie uruchamia workflow ponownie.
+          git commit -m "Rebuild strony po zmianie treści [skip ci]"
+          git push

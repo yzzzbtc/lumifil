@@ -1,0 +1,32 @@
+{
+  "slug": "jak-wybrac-okna-energooszczedne",
+  "date": "2026-08-07",
+  "category": "windows",
+  "gradient": "linear-gradient(135deg, #1a5f7a 0%, #2980b9 100%)",
+  "image": "",
+  "draft": false,
+  "i18n": {
+    "pl": {
+      "title": "Jak wybrać okna energooszczędne?",
+      "excerpt": "Współczynnik Uw, pakiet szybowy, ciepła ramka i montaż – cztery rzeczy, które naprawdę decydują o rachunkach za ogrzewanie.",
+      "metaTitle": "Jak wybrać okna energooszczędne? Poradnik | LUMIFIL Świecie",
+      "metaDesc": "Uw, pakiet szybowy, ciepła ramka i montaż ciepły – praktyczny poradnik wyboru okien energooszczędnych. Doradztwo i bezpłatna wycena w Świeciu.",
+      "body": "Wymiana okien to inwestycja na 25–30 lat, a różnica między przeciętnym a naprawdę ciepłym oknem widać na rachunkach każdej zimy. Poniżej wyjaśniamy, na co patrzeć, żeby nie przepłacić za parametry, których nie wykorzystasz.\n\n## Współczynnik Uw – najważniejsza liczba\n\nUw opisuje, ile ciepła ucieka przez całe okno: szybę, ramę i ich połączenie. Im niższy, tym lepiej.\n\n- Obowiązujące w Polsce Warunki Techniczne wymagają dla okien pionowych **Uw ≤ 0,9 W/(m²·K)**.\n- Dobre okna trzyszybowe osiągają dziś 0,7–0,8 W/(m²·K).\n- Okna do domów pasywnych schodzą poniżej 0,7 W/(m²·K).\n\nUwaga na częsty chwyt marketingowy: producenci lubią podawać **Ug**, czyli współczynnik samej szyby. Ug zawsze wygląda lepiej niż Uw. Porównuj wyłącznie Uw dla całego okna.\n\n## Pakiet szybowy – dwie czy trzy szyby?\n\nW nowym budownictwie i przy kompleksowej termomodernizacji standardem są dziś **szyby trzykomorowe**. Dwie szyby wystarczą tam, gdzie okno jest małe, osłonięte albo wymieniane pojedynczo w starszym budynku – wtedy różnica w rachunkach nie zwróci dopłaty.\n\nDrugim parametrem jest **współczynnik przepuszczalności energii słonecznej (g)**. Wysokie g na elewacji południowej to darmowe dogrzewanie zimą. Na dużych przeszkleniach zachodnich bywa odwrotnie – latem pokój się przegrzewa i lepiej sprawdzi się szkło przeciwsłoneczne albo [rolety zewnętrzne](https://lumifil.org/oferta/rolety-natynkowe.html).\n\n## Ciepła ramka międzyszybowa\n\nRamka dystansowa oddziela szyby na obwodzie pakietu. Klasyczna aluminiowa przewodzi ciepło i tworzy mostek termiczny – to na niej najczęściej skrapla się woda przy krawędzi szyby. **Ciepła ramka** z kompozytu lub stali nierdzewnej poprawia Uw o około 0,1 W/(m²·K) i wyraźnie ogranicza problem zaparowanych naroży. Przy dzisiejszych cenach to jeden z najbardziej opłacalnych dodatków.\n\n## Montaż potrafi zepsuć najlepsze okno\n\nTo punkt, który klienci pomijają najczęściej. Okno o Uw 0,7 osadzone bez odpowiedniego uszczelnienia potrafi zachowywać się w praktyce jak okno o parametrach dużo gorszych – ciepło ucieka bokiem, przez szczelinę między ramą a murem.\n\nRozwiązaniem jest **montaż ciepły (warstwowy)**: od wewnątrz folia paroszczelna, w środku pianka niskorozprężna, od zewnątrz folia paroprzepuszczalna. Taki układ nie wpuszcza wilgoci z pomieszczenia w szczelinę i pozwala jej odparować na zewnątrz.\n\nPrzy ocieplaniu ścian od zewnątrz warto rozważyć **montaż w warstwie ocieplenia na konsolach** – okno wysuwa się poza mur, co niemal całkowicie eliminuje mostek termiczny na ościeżu.\n\n## Na co jeszcze zwrócić uwagę\n\n- **Liczba komór profilu** – 5 do 7 komór i głębokość zabudowy min. 70 mm.\n- **Okucia i uszczelki** – dwie, a najlepiej trzy uszczelki na obwodzie skrzydła.\n- **Nawiewniki** – szczelne okna wymagają kontrolowanego dopływu powietrza, inaczej pojawia się wilgoć i pleśń.\n- **Gwarancja i serwis** – regulacja okuć po pierwszym sezonie to normalna część eksploatacji.\n\n## Podsumowanie\n\nNajlepszy efekt daje kombinacja: sensowny pakiet szybowy dobrany do strony świata, ciepła ramka, profil o odpowiedniej głębokości i – przede wszystkim – porządny montaż. Dopłata do najniższego Uw na rynku ma sens dopiero wtedy, gdy reszta jest zrobiona dobrze.\n\nJeśli planujesz wymianę okien, **przyjedziemy na bezpłatny pomiar i doradzimy dobór parametrów pod konkretny budynek**. Działamy w Świeciu i okolicach, mamy też punkty handlowe w Mokrem i Włocławku."
+    },
+    "de": {
+      "title": "Wie wählt man energiesparende Fenster?",
+      "excerpt": "Lernen Sie die wichtigsten Fensterparameter kennen, die die Energieeinsparung beeinflussen...",
+      "body": ""
+    },
+    "en": {
+      "title": "How to choose energy-efficient windows?",
+      "excerpt": "Learn the key window parameters that affect energy savings...",
+      "body": ""
+    },
+    "fr": {
+      "title": "Comment choisir des fenêtres économes en énergie?",
+      "excerpt": "Découvrez les paramètres clés des fenêtres qui affectent les économies d'énergie...",
+      "body": ""
+    }
+  }
+}
