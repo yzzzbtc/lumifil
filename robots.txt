@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yzzzbtc.github.io/lumifil/sitemap.xml
+Sitemap: https://lumifil.org/sitemap.xml

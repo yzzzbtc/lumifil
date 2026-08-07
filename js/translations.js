@@ -22,7 +22,13 @@ const translations = {
             p4: "<strong>Gwarancja jakości</strong> – to nie tylko hasło, ale nasza filozofia działania. Oferujemy pełną gwarancję na wszystkie wykonane prace oraz produkty, zapewniając klientom spokój i pewność na lata.",
             stat1: "lat doświadczenia",
             stat2: "zrealizowanych projektów",
-            stat3: "krajów działalności"
+            stat3: "krajów działalności",
+            locationsTitle: "Nasze punkty handlowe",
+            locationsSubtitle: "Zapraszamy do naszych trzech placówek – doradzimy i przygotujemy bezpłatną wycenę.",
+            loc1Label: "Siedziba główna",
+            loc2Label: "Punkt handlowy",
+            loc3Label: "Punkt handlowy",
+            locMap: "Zobacz na mapie"
         },
         testimonials: {
             title: "Opinie klientów",
@@ -218,7 +224,13 @@ const translations = {
             p4: "<strong>Qualitätsgarantie</strong> – das ist nicht nur ein Slogan, sondern unsere Geschäftsphilosophie. Wir bieten volle Garantie auf alle durchgeführten Arbeiten und Produkte und gewährleisten unseren Kunden Ruhe und Sicherheit für Jahre.",
             stat1: "Jahre Erfahrung",
             stat2: "realisierte Projekte",
-            stat3: "Länder der Tätigkeit"
+            stat3: "Länder der Tätigkeit",
+            locationsTitle: "Unsere Verkaufsstellen",
+            locationsSubtitle: "Besuchen Sie eine unserer drei Filialen – wir beraten Sie und erstellen ein kostenloses Angebot.",
+            loc1Label: "Hauptsitz",
+            loc2Label: "Verkaufsstelle",
+            loc3Label: "Verkaufsstelle",
+            locMap: "Auf der Karte ansehen"
         },
         testimonials: {
             title: "Kundenbewertungen",
@@ -414,7 +426,13 @@ const translations = {
             p4: "<strong>Quality Guarantee</strong> – this is not just a slogan, but our business philosophy. We offer a full guarantee on all work performed and products, providing customers with peace of mind and confidence for years.",
             stat1: "years of experience",
             stat2: "completed projects",
-            stat3: "countries of operation"
+            stat3: "countries of operation",
+            locationsTitle: "Our sales points",
+            locationsSubtitle: "Visit any of our three locations – we will advise you and prepare a free quote.",
+            loc1Label: "Head office",
+            loc2Label: "Sales point",
+            loc3Label: "Sales point",
+            locMap: "View on map"
         },
         projects: {
             title: "Projects",
@@ -626,7 +644,13 @@ const translations = {
             p4: "<strong>Garantie de qualité</strong> – ce n'est pas qu'un slogan, mais notre philosophie d'entreprise. Nous offrons une garantie complète sur tous les travaux effectués et les produits, assurant aux clients tranquillité et confiance pour les années à venir.",
             stat1: "ans d'expérience",
             stat2: "projets réalisés",
-            stat3: "pays d'activité"
+            stat3: "pays d'activité",
+            locationsTitle: "Nos points de vente",
+            locationsSubtitle: "Rendez-nous visite dans l'un de nos trois points de vente – nous vous conseillons et préparons un devis gratuit.",
+            loc1Label: "Siège principal",
+            loc2Label: "Point de vente",
+            loc3Label: "Point de vente",
+            locMap: "Voir sur la carte"
         },
         projects: {
             title: "Réalisations",
