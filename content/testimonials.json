@@ -2,7 +2,9 @@
   "items": [
     {
       "id": "t1",
+      "author": "Beata",
       "location": "Bydgoszcz",
+      "stars": 5,
       "i18n": {
         "pl": {
           "text": "\"Miła i profesjonalna obsługa. Wszystko zgodnie z umową. Rzetelna firma.\""
@@ -20,7 +22,9 @@
     },
     {
       "id": "t2",
+      "author": "Anna",
       "location": "Wąbrzeźno",
+      "stars": 5,
       "i18n": {
         "pl": {
           "text": "\"To mój drugi zakup z tej firmy. Wszystko zrobione sprawnie i profesjonalnie, polecam wszystkim firmę LUMIFIL!\""
@@ -38,7 +42,9 @@
     },
     {
       "id": "t3",
+      "author": "K.A.",
       "location": "Polska",
+      "stars": 5,
       "i18n": {
         "pl": {
           "text": "\"Super kontakt ze specjalistą. Wszystko wytłumaczone na miejscu i doradzone. Krótki termin oczekiwania na montaż. Panowie monterzy bardzo mili i kontaktowi.\""
@@ -56,7 +62,9 @@
     },
     {
       "id": "t4",
+      "author": "T.M.",
       "location": "Skępe",
+      "stars": 5,
       "i18n": {
         "pl": {
           "text": "\"Wymiana okien i drzwi w domku holenderskim wykonana super i bardzo szybko. Oby więcej takich firm, szczerze polecam.\""

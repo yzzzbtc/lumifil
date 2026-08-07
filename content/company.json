@@ -1,0 +1,26 @@
+{
+  "phone": "+48 663 715 148",
+  "email": "Lumifil@xl.wp.pl",
+  "hoursWeek": "Pon-Pt: 8:00 - 17:00",
+  "hoursSat": "Sob: 9:00 - 13:00",
+  "locations": [
+    {
+      "street": "ul. Wojska Polskiego 66",
+      "postalCode": "86-100",
+      "city": "Świecie",
+      "isMain": true
+    },
+    {
+      "street": "ul. Pogodna 14",
+      "postalCode": "86-302",
+      "city": "Mokre",
+      "isMain": false
+    },
+    {
+      "street": "Aleja Fryderyka Chopina 2/4",
+      "postalCode": "87-800",
+      "city": "Włocławek",
+      "isMain": false
+    }
+  ]
+}

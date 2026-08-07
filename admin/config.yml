@@ -1,0 +1,281 @@
+########################################################################
+# Konfiguracja panelu (Decap CMS) — LUMIFIL
+#
+# Panel zapisuje zmiany bezpośrednio do repozytorium na GitHubie.
+# Po zapisie GitHub Actions tłumaczy treść na DE/EN/FR, przebudowuje
+# strony i publikuje je na lumifil.org (zwykle ok. 1-2 minuty).
+#
+# UWAGA: `base_url` poniżej trzeba ustawić na adres własnego serwera
+# autoryzacji OAuth (patrz README-panel.md) — bez tego logowanie
+# przez GitHub nie zadziała.
+########################################################################
+
+backend:
+  name: github
+  repo: yzzzbtc/lumifil
+  branch: main
+  base_url: https://USTAW-ADRES-SERWERA-OAUTH   # <- do uzupełnienia
+  commit_messages:
+    create: 'Panel: dodano {{collection}} "{{slug}}"'
+    update: 'Panel: zmieniono {{collection}} "{{slug}}"'
+    delete: 'Panel: usunięto {{collection}} "{{slug}}"'
+    uploadMedia: 'Panel: dodano plik {{path}}'
+    deleteMedia: 'Panel: usunięto plik {{path}}'
+
+# Zdjęcia lądują w repo — bez zewnętrznego hostingu.
+media_folder: images/uploads
+public_folder: /images/uploads
+
+locale: pl
+publish_mode: simple
+
+collections:
+  # ------------------------------------------------------------------ BLOG
+  - name: blog
+    label: 'Blog'
+    label_singular: 'wpis'
+    description: >-
+      Wypełnij tylko część POLSKĄ. Tłumaczenia na niemiecki, angielski
+      i francuski powstaną automatycznie po zapisaniu.
+      Dopóki "Szkic" jest włączony, wpis nie pojawia się na stronie.
+    folder: content/blog
+    extension: json
+    format: json
+    create: true
+    slug: '{{fields.slug}}'
+    identifier_field: slug
+    summary: '{{i18n.pl.title}} — {{date}}'
+    sortable_fields: ['date', 'i18n.pl.title']
+    fields:
+      - label: 'Adres URL wpisu'
+        name: slug
+        widget: string
+        hint: 'Tylko małe litery, cyfry i myślniki — bez polskich znaków i spacji. Np. jak-wybrac-okna'
+        pattern: ['^[a-z0-9]+(-[a-z0-9]+)*$', 'Dozwolone tylko małe litery, cyfry i myślniki']
+
+      - label: 'Data publikacji'
+        name: date
+        widget: datetime
+        date_format: 'YYYY-MM-DD'
+        time_format: false
+        picker_utc: true
+
+      - label: 'Kategoria'
+        name: category
+        widget: select
+        options:
+          - { label: 'Okna', value: 'windows' }
+          - { label: 'Drzwi', value: 'doors' }
+          - { label: 'Rolety', value: 'shutters' }
+          - { label: 'Porady', value: 'tips' }
+          - { label: 'Trendy', value: 'trends' }
+
+      - label: 'Szkic (nie publikuj jeszcze)'
+        name: draft
+        widget: boolean
+        default: true
+        hint: 'Wyłącz, gdy wpis jest gotowy do publikacji.'
+
+      - label: 'Zdjęcie główne'
+        name: image
+        widget: image
+        required: false
+        hint: 'Opcjonalne. Bez zdjęcia użyty zostanie kolorowy gradient.'
+
+      - label: 'Kolor tła (gdy brak zdjęcia)'
+        name: gradient
+        widget: hidden
+        default: 'linear-gradient(135deg, #1a5f7a 0%, #2980b9 100%)'
+
+      - label: 'Treść'
+        name: i18n
+        widget: object
+        fields:
+          - label: '🇵🇱 Polski — TO WYPEŁNIJ'
+            name: pl
+            widget: object
+            fields:
+              - { label: 'Tytuł', name: title, widget: string }
+              - { label: 'Zajawka (widoczna na liście wpisów)', name: excerpt, widget: text }
+              - label: 'Treść wpisu'
+                name: body
+                widget: markdown
+                hint: 'Nagłówki, pogrubienia i listy działają. Wpis bez treści nie zostanie opublikowany.'
+              - { label: 'Tytuł w Google (SEO)', name: metaTitle, widget: string, required: false, hint: 'Opcjonalne. Do 60 znaków. Puste = tytuł wpisu.' }
+              - { label: 'Opis w Google (SEO)', name: metaDesc, widget: text, required: false, hint: 'Opcjonalne. Do 155 znaków. Puste = zajawka.' }
+
+          - label: '🇩🇪 Niemiecki (automatycznie)'
+            name: de
+            widget: object
+            collapsed: true
+            required: false
+            hint: 'Uzupełniane automatycznie. Możesz poprawić ręcznie.'
+            fields:
+              - { label: 'Tytuł', name: title, widget: string, required: false }
+              - { label: 'Zajawka', name: excerpt, widget: text, required: false }
+              - { label: 'Treść', name: body, widget: markdown, required: false }
+              - { label: 'Tytuł SEO', name: metaTitle, widget: string, required: false }
+              - { label: 'Opis SEO', name: metaDesc, widget: text, required: false }
+
+          - label: '🇬🇧 Angielski (automatycznie)'
+            name: en
+            widget: object
+            collapsed: true
+            required: false
+            fields:
+              - { label: 'Tytuł', name: title, widget: string, required: false }
+              - { label: 'Zajawka', name: excerpt, widget: text, required: false }
+              - { label: 'Treść', name: body, widget: markdown, required: false }
+              - { label: 'Tytuł SEO', name: metaTitle, widget: string, required: false }
+              - { label: 'Opis SEO', name: metaDesc, widget: text, required: false }
+
+          - label: '🇫🇷 Francuski (automatycznie)'
+            name: fr
+            widget: object
+            collapsed: true
+            required: false
+            fields:
+              - { label: 'Tytuł', name: title, widget: string, required: false }
+              - { label: 'Zajawka', name: excerpt, widget: text, required: false }
+              - { label: 'Treść', name: body, widget: markdown, required: false }
+              - { label: 'Tytuł SEO', name: metaTitle, widget: string, required: false }
+              - { label: 'Opis SEO', name: metaDesc, widget: text, required: false }
+
+  # ------------------------------------------------------------ REALIZACJE
+  - name: projects
+    label: 'Realizacje'
+    label_singular: 'realizacja'
+    description: 'Zrealizowane projekty pokazywane w sekcji "Realizacje". Wypełnij część polską.'
+    folder: content/projects
+    extension: json
+    format: json
+    create: true
+    slug: '{{fields.slug}}'
+    identifier_field: slug
+    summary: '{{i18n.pl.title}}'
+    sortable_fields: ['order', 'i18n.pl.title']
+    fields:
+      - label: 'Adres URL (identyfikator)'
+        name: slug
+        widget: string
+        pattern: ['^[a-z0-9]+(-[a-z0-9]+)*$', 'Dozwolone tylko małe litery, cyfry i myślniki']
+
+      - { label: 'Kolejność wyświetlania', name: order, widget: number, value_type: int, default: 99 }
+
+      - label: 'Kategoria (filtr na stronie)'
+        name: category
+        widget: select
+        options:
+          - { label: 'Okna', value: 'windows' }
+          - { label: 'Drzwi', value: 'doors' }
+          - { label: 'Rolety', value: 'shutters' }
+
+      - label: 'Etykieta na kafelku'
+        name: tag
+        widget: select
+        options:
+          - { label: 'Okna ALU', value: 'tagWindows' }
+          - { label: 'Okna PCV', value: 'tagPVC' }
+          - { label: 'Okna drewniane', value: 'tagWood' }
+          - { label: 'Drzwi', value: 'tagDoors' }
+          - { label: 'Rolety', value: 'tagShutters' }
+
+      - { label: 'Zdjęcie', name: image, widget: image, required: false }
+      - { label: 'Ikona (emoji, gdy brak zdjęcia)', name: icon, widget: string, required: false, default: '🏢' }
+      - { label: 'Kolor tła', name: gradient, widget: hidden, default: 'linear-gradient(135deg, #1a5f7a 0%, #2980b9 100%)' }
+
+      - label: 'Opis'
+        name: i18n
+        widget: object
+        fields:
+          - label: '🇵🇱 Polski — TO WYPEŁNIJ'
+            name: pl
+            widget: object
+            fields:
+              - { label: 'Nazwa realizacji', name: title, widget: string }
+              - { label: 'Opis', name: desc, widget: text }
+          - label: '🇩🇪 Niemiecki (automatycznie)'
+            name: de
+            widget: object
+            collapsed: true
+            required: false
+            fields:
+              - { label: 'Nazwa', name: title, widget: string, required: false }
+              - { label: 'Opis', name: desc, widget: text, required: false }
+          - label: '🇬🇧 Angielski (automatycznie)'
+            name: en
+            widget: object
+            collapsed: true
+            required: false
+            fields:
+              - { label: 'Nazwa', name: title, widget: string, required: false }
+              - { label: 'Opis', name: desc, widget: text, required: false }
+          - label: '🇫🇷 Francuski (automatycznie)'
+            name: fr
+            widget: object
+            collapsed: true
+            required: false
+            fields:
+              - { label: 'Nazwa', name: title, widget: string, required: false }
+              - { label: 'Opis', name: desc, widget: text, required: false }
+
+  # ---------------------------------------------------------------- OPINIE
+  - name: settings
+    label: 'Opinie i dane firmy'
+    files:
+      - name: testimonials
+        label: 'Opinie klientów'
+        file: content/testimonials.json
+        fields:
+          - label: 'Opinie'
+            name: items
+            widget: list
+            summary: '{{i18n.pl.text}}'
+            fields:
+              - { label: 'Identyfikator', name: id, widget: string, hint: 'Dowolny unikalny, np. t5' }
+              - { label: 'Miejscowość', name: location, widget: string }
+              - label: 'Treść opinii'
+                name: i18n
+                widget: object
+                fields:
+                  - label: '🇵🇱 Polski — TO WYPEŁNIJ'
+                    name: pl
+                    widget: object
+                    fields:
+                      - { label: 'Treść', name: text, widget: text }
+                  - label: '🇩🇪 Niemiecki (automatycznie)'
+                    name: de
+                    widget: object
+                    collapsed: true
+                    required: false
+                    fields: [{ label: 'Treść', name: text, widget: text, required: false }]
+                  - label: '🇬🇧 Angielski (automatycznie)'
+                    name: en
+                    widget: object
+                    collapsed: true
+                    required: false
+                    fields: [{ label: 'Treść', name: text, widget: text, required: false }]
+                  - label: '🇫🇷 Francuski (automatycznie)'
+                    name: fr
+                    widget: object
+                    collapsed: true
+                    required: false
+                    fields: [{ label: 'Treść', name: text, widget: text, required: false }]
+
+      - name: company
+        label: 'Dane firmy'
+        file: content/company.json
+        fields:
+          - { label: 'Telefon', name: phone, widget: string }
+          - { label: 'E-mail', name: email, widget: string }
+          - { label: 'Godziny — pon-pt', name: hoursWeek, widget: string }
+          - { label: 'Godziny — sobota', name: hoursSat, widget: string }
+          - label: 'Punkty handlowe'
+            name: locations
+            widget: list
+            summary: '{{city}} — {{street}}'
+            fields:
+              - { label: 'Ulica i numer', name: street, widget: string }
+              - { label: 'Kod pocztowy', name: postalCode, widget: string, required: false }
+              - { label: 'Miejscowość', name: city, widget: string }
+              - { label: 'Siedziba główna', name: isMain, widget: boolean, default: false }

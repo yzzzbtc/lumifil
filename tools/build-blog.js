@@ -10,6 +10,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { injectBlock } = require('./lib-inject.js');
 
 const ROOT = path.resolve(__dirname, '..');
 const SRC_DIR = path.join(ROOT, 'content/blog');
@@ -396,13 +397,10 @@ function injectHome(posts) {
       blob[lang][p.slug] = { title: c.title, excerpt: c.excerpt };
     });
   }
-  const marker = '\n// BLOG_POSTS:AUTO — generowane przez tools/build-blog.js, nie edytuj ręcznie\n';
-  const injected = marker + LANGS.map(l =>
+  const body = LANGS.map(l =>
     `if (typeof translations !== 'undefined' && translations.${l}) translations.${l}.blogPosts = ${JSON.stringify(blob[l])};`
-  ).join('\n') + '\n';
-  const mi = ts.indexOf('// BLOG_POSTS:AUTO');
-  if (mi >= 0) ts = ts.slice(0, mi).replace(/\n+$/, '\n');
-  fs.writeFileSync(tPath, ts.replace(/\n+$/, '\n') + injected, 'utf8');
+  ).join('\n');
+  injectBlock(tPath, 'BLOG_POSTS', body);
   return true;
 }
 

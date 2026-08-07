@@ -6,13 +6,14 @@
                       content/testimonials.json
 
    Zasady:
-   - tłumaczymy tylko pola PUSTE albo takie, które wcześniej sami
-     wygenerowaliśmy, a polskie źródło się od tego czasu zmieniło,
-   - pole wypełnione ręcznie (bez wpisu w `_auto`) NIE jest nadpisywane,
+   - tłumaczymy pole, gdy jest PUSTE albo gdy polskie źródło zmieniło się
+     od czasu, gdy sami je tłumaczyliśmy,
+   - pole wypełnione ręcznie (którego nigdy nie tłumaczyliśmy) NIE jest ruszane,
    - bez klucza API skrypt kończy się bez błędu (build lokalny działa dalej).
 
-   Znacznik `_auto` w pliku treści przechowuje skrót polskiego źródła,
-   z którego powstało dane tłumaczenie.
+   Skróty polskich źródeł trzymamy w tools/.translate-cache.json, a NIE
+   w plikach treści — panel CMS zapisuje pliki w całości i skasowałby
+   dodatkowe klucze. Cache jest commitowany, żeby CI go nie gubiło.
    ===================================================================== */
 
 const fs = require('fs');
@@ -20,11 +21,11 @@ const path = require('path');
 const crypto = require('crypto');
 
 const ROOT = path.resolve(__dirname, '..');
+const CACHE_PATH = path.join(__dirname, '.translate-cache.json');
 const KEY = process.env.DEEPL_API_KEY || '';
 const SOURCE_LANG = 'PL';
 const TARGETS = { de: 'DE', en: 'EN-GB', fr: 'FR' };
 
-// Pola tłumaczone w poszczególnych typach treści
 const FIELDS = {
   blog: ['title', 'excerpt', 'body', 'metaTitle', 'metaDesc'],
   projects: ['title', 'desc'],
@@ -33,11 +34,29 @@ const FIELDS = {
 
 const sha1 = (s) => crypto.createHash('sha1').update(String(s), 'utf8').digest('hex').slice(0, 12);
 
-// DeepL: klucze free kończą się na ":fx"
 const ENDPOINT = KEY.endsWith(':fx')
   ? 'https://api-free.deepl.com/v2/translate'
   : 'https://api.deepl.com/v2/translate';
 
+// ------------------------------------------------------------------ cache
+let cache = {};
+if (fs.existsSync(CACHE_PATH)) {
+  try { cache = JSON.parse(fs.readFileSync(CACHE_PATH, 'utf8')); }
+  catch { cache = {}; }
+}
+const getHash = (key, lang, field) => ((cache[key] || {})[lang] || {})[field];
+function setHash(key, lang, field, hash) {
+  cache[key] = cache[key] || {};
+  cache[key][lang] = cache[key][lang] || {};
+  cache[key][lang][field] = hash;
+}
+function saveCache() {
+  const sorted = {};
+  for (const k of Object.keys(cache).sort()) sorted[k] = cache[k];
+  fs.writeFileSync(CACHE_PATH, JSON.stringify(sorted, null, 2) + '\n', 'utf8');
+}
+
+// ------------------------------------------------------------------ DeepL
 let apiCalls = 0;
 let charsSent = 0;
 
@@ -76,16 +95,16 @@ async function deepl(text, targetLang) {
   throw new Error('DeepL: przekroczono liczbę prób.');
 }
 
-/* Zwraca true, jeśli pole trzeba (prze)tłumaczyć. */
-function needsTranslation(target, field, plHash) {
+// ------------------------------------------------------------------ logika
+function needsTranslation(cacheKey, target, lang, field, plHash) {
   const current = String(target[field] || '').trim();
-  const auto = (target._auto || {})[field];
-  if (!current) return true;                 // puste -> tłumacz
-  if (auto && auto !== plHash) return true;  // nasze tłumaczenie, ale PL się zmienił
-  return false;                              // ręcznie wpisane albo aktualne
+  const known = getHash(cacheKey, lang, field);
+  if (!current) return true;              // puste -> tłumacz
+  if (known && known !== plHash) return true; // nasze tłumaczenie, PL się zmienił
+  return false;                            // ręczne albo aktualne
 }
 
-async function translateEntry(entry, fields, label) {
+async function translateEntry(entry, fields, cacheKey, label) {
   const pl = entry.i18n && entry.i18n.pl;
   if (!pl) return 0;
   let changed = 0;
@@ -98,12 +117,10 @@ async function translateEntry(entry, fields, label) {
       const source = String(pl[field] || '').trim();
       if (!source) continue;
       const plHash = sha1(source);
-      if (!needsTranslation(target, field, plHash)) continue;
+      if (!needsTranslation(cacheKey, target, lang, field, plHash)) continue;
 
-      const translated = await deepl(source, deeplCode);
-      target[field] = translated;
-      target._auto = target._auto || {};
-      target._auto[field] = plHash;
+      target[field] = await deepl(source, deeplCode);
+      setHash(cacheKey, lang, field, plHash);
       changed++;
       console.log(`  ${label} [${lang}.${field}] ${source.length} zn.`);
     }
@@ -116,21 +133,23 @@ async function processDir(dir, fields) {
   if (!fs.existsSync(abs)) return 0;
   let total = 0;
   for (const file of fs.readdirSync(abs).filter(f => f.endsWith('.json'))) {
+    const rel = `${dir}/${file}`;
     const p = path.join(abs, file);
     const entry = JSON.parse(fs.readFileSync(p, 'utf8'));
-    const n = await translateEntry(entry, fields, file.replace(/\.json$/, ''));
+    const n = await translateEntry(entry, fields, rel, file.replace(/\.json$/, ''));
     if (n) { fs.writeFileSync(p, JSON.stringify(entry, null, 2) + '\n', 'utf8'); total += n; }
   }
   return total;
 }
 
 async function processTestimonials() {
-  const p = path.join(ROOT, 'content/testimonials.json');
+  const rel = 'content/testimonials.json';
+  const p = path.join(ROOT, rel);
   if (!fs.existsSync(p)) return 0;
   const data = JSON.parse(fs.readFileSync(p, 'utf8'));
   let total = 0;
   for (const item of data.items || []) {
-    total += await translateEntry(item, FIELDS.testimonials, item.id || 'opinia');
+    total += await translateEntry(item, FIELDS.testimonials, `${rel}#${item.id}`, item.id || 'opinia');
   }
   if (total) fs.writeFileSync(p, JSON.stringify(data, null, 2) + '\n', 'utf8');
   return total;
@@ -147,12 +166,12 @@ async function processTestimonials() {
   total += await processDir('content/projects', FIELDS.projects);
   total += await processTestimonials();
 
-  if (total === 0) {
-    console.log('✓ Tłumaczenia aktualne — nic do zrobienia.');
-  } else {
-    console.log(`✓ Przetłumaczono ${total} pól (${apiCalls} zapytań, ${charsSent} znaków).`);
-  }
+  saveCache();
+
+  if (total === 0) console.log('✓ Tłumaczenia aktualne — nic do zrobienia.');
+  else console.log(`✓ Przetłumaczono ${total} pól (${apiCalls} zapytań, ${charsSent} znaków).`);
 })().catch(e => {
+  saveCache(); // zachowaj to, co zdążyliśmy przetłumaczyć
   console.error('✗ ' + e.message);
   process.exit(1);
 });
