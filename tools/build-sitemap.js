@@ -7,6 +7,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { execFileSync } = require('child_process');
 
 const ROOT = path.resolve(__dirname, '..');
 const SITE = 'https://lumifil.org';
@@ -20,9 +21,29 @@ const SECTIONS = [
   { loc: '/#contact',  priority: '0.8', changefreq: 'monthly' },
 ];
 
-function today() {
-  // data pliku najświeższej zmiany zamiast Date.now() — stabilne między buildami
-  return new Date().toISOString().slice(0, 10);
+/* lastmod bierzemy z daty ostatniego commita dotykającego pliku, a NIE
+   z bieżącej daty ani z mtime. Powody:
+   - bieżąca data zmieniałaby sitemap.xml przy każdym buildzie, więc
+     GitHub Actions commitowałby zmianę nawet gdy nic się nie zmieniło,
+   - mtime w CI to moment checkoutu, czyli też za każdym razem inny.
+   Dzięki temu build jest deterministyczny, a lastmod prawdziwy. */
+const dateCache = new Map();
+function gitDate(relPath) {
+  if (dateCache.has(relPath)) return dateCache.get(relPath);
+  let d;
+  try {
+    d = execFileSync('git', ['log', '-1', '--format=%cs', '--', relPath],
+      { cwd: ROOT, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
+  } catch { d = ''; }
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(d)) {
+    // plik jeszcze niezacommitowany (np. świeżo wygenerowany) — użyj mtime
+    const abs = path.join(ROOT, relPath);
+    d = fs.existsSync(abs)
+      ? fs.statSync(abs).mtime.toISOString().slice(0, 10)
+      : new Date().toISOString().slice(0, 10);
+  }
+  dateCache.set(relPath, d);
+  return d;
 }
 
 function listHtml(dir) {
@@ -31,17 +52,15 @@ function listHtml(dir) {
   return fs.readdirSync(abs)
     .filter(f => f.endsWith('.html'))
     .sort()
-    .map(f => ({
-      loc: `/${dir}/${f}`,
-      lastmod: fs.statSync(path.join(abs, f)).mtime.toISOString().slice(0, 10),
-    }));
+    .map(f => ({ loc: `/${dir}/${f}`, lastmod: gitDate(`${dir}/${f}`) }));
 }
 
-const stamp = today();
+// Sekcje żyją w index.html — ich lastmod to data ostatniej zmiany tego pliku.
+const homeDate = gitDate('index.html');
 const urls = [];
 
 for (const s of SECTIONS) {
-  urls.push({ loc: s.loc, lastmod: stamp, changefreq: s.changefreq, priority: s.priority });
+  urls.push({ loc: s.loc, lastmod: homeDate, changefreq: s.changefreq, priority: s.priority });
 }
 for (const p of listHtml('oferta')) {
   urls.push({ ...p, changefreq: 'monthly', priority: '0.8' });

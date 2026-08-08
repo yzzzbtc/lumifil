@@ -47,4 +47,17 @@ jobs:
           fi
           # [skip ci] zapobiega pętli: ten commit nie uruchamia workflow ponownie.
           git commit -m "Rebuild strony po zmianie treści [skip ci]"
-          git push
+
+          # W międzyczasie ktoś mógł wypchnąć coś na main (np. zapis z panelu
+          # albo zmiana domeny przez API Pages, która dopisuje plik CNAME).
+          # Bez tego push leci błędem "fetch first" i cały build pada.
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "Wypchnięto (próba $attempt)."
+              exit 0
+            fi
+            echo "Push odrzucony — pobieram zmiany i próbuję ponownie…"
+            git pull --rebase --autostash origin main || exit 1
+          done
+          echo "Nie udało się wypchnąć po 3 próbach."
+          exit 1
