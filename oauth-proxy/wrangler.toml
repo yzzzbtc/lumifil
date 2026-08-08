@@ -1,0 +1,11 @@
+name = "lumifil-oauth"
+main = "worker.js"
+compatibility_date = "2024-11-06"
+
+# Sekrety NIE trafiają tutaj — ustawia się je poleceniem:
+#   npx wrangler secret put GITHUB_CLIENT_ID
+#   npx wrangler secret put GITHUB_CLIENT_SECRET
+#
+# Zmienne jawne (bez sekretów) mogą być tutaj:
+[vars]
+ALLOWED_ORIGIN = "https://lumifil.org"

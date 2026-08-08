@@ -57,23 +57,25 @@ Decap CMS zapisuje przez API GitHuba, a to wymaga logowania OAuth. GitHub
 wymaga przy tym *client secret*, którego nie da się trzymać w przeglądarce —
 potrzebny jest maleńki pośrednik.
 
-Kroki:
+**Kod pośrednika jest gotowy w katalogu `oauth-proxy/`** (Cloudflare Worker,
+darmowy plan). Pełna instrukcja: [`oauth-proxy/README.md`](oauth-proxy/README.md).
 
-1. **Zarejestruj OAuth App na GitHubie**
-   Settings → Developer settings → OAuth Apps → New OAuth App
-   - Homepage URL: `https://lumifil.org`
-   - Authorization callback URL: adres pośrednika + `/callback`
-   - zapisz **Client ID** i **Client Secret**
+W skrócie:
 
-2. **Postaw pośrednika.** Najprościej gotowy worker na Cloudflare (darmowy)
-   albo funkcja na Vercelu. Wystarczy jeden endpoint `/auth` + `/callback`,
-   który wymienia kod na token.
+```bash
+cd oauth-proxy
+npx wrangler login            # interaktywne — otwiera przeglądarkę
+npx wrangler deploy           # wypisze adres workera
+npx wrangler secret put GITHUB_CLIENT_ID
+npx wrangler secret put GITHUB_CLIENT_SECRET
+```
 
-3. **Wpisz jego adres** w `admin/config.yml` w polu `base_url`
-   (teraz jest tam `https://USTAW-ADRES-SERWERA-OAUTH`).
+Do tego rejestracja OAuth App na <https://github.com/settings/developers>
+(callback = adres workera + `/callback`) i wpisanie adresu workera
+w `admin/config.yml` → `base_url` (teraz jest tam placeholder).
 
-4. Właściciel musi mieć konto GitHub z dostępem do repozytorium — to ono jest
-   zabezpieczeniem panelu. Żadnych haseł w kodzie.
+Właściciel musi mieć konto GitHub z dostępem do repozytorium — to ono jest
+zabezpieczeniem panelu. Żadnych haseł w kodzie.
 
 > Poprzedni panel miał hasło wpisane wprost w `js/admin.js`, publicznie
 > dostępne pod `lumifil.org/js/admin.js`. Tak się tego nie robi — stąd OAuth.
