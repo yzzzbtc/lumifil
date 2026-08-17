@@ -5,16 +5,15 @@
 # Po zapisie GitHub Actions tłumaczy treść na DE/EN/FR, przebudowuje
 # strony i publikuje je na lumifil.org (zwykle ok. 1-2 minuty).
 #
-# UWAGA: `base_url` poniżej trzeba ustawić na adres własnego serwera
-# autoryzacji OAuth (patrz README-panel.md) — bez tego logowanie
-# przez GitHub nie zadziała.
+# `base_url` wskazuje na pośrednika OAuth (Cloudflare Worker, katalog
+# oauth-proxy/). To jedyne miejsce, gdzie żyje client secret GitHuba.
 ########################################################################
 
 backend:
   name: github
   repo: yzzzbtc/lumifil
   branch: main
-  base_url: https://USTAW-ADRES-SERWERA-OAUTH   # <- do uzupełnienia
+  base_url: https://lumifil-oauth.lumifil.workers.dev
   commit_messages:
     create: 'Panel: dodano {{collection}} "{{slug}}"'
     update: 'Panel: zmieniono {{collection}} "{{slug}}"'
