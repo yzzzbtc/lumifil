@@ -27,6 +27,20 @@ const SECTIONS = [
      GitHub Actions commitowałby zmianę nawet gdy nic się nie zmieniło,
    - mtime w CI to moment checkoutu, czyli też za każdym razem inny.
    Dzięki temu build jest deterministyczny, a lastmod prawdziwy. */
+/* Płytki klon (domyślny w actions/checkout) sprawia, że `git log -- <plik>`
+   nic nie zwraca i wszystko spada na mtime — sitemap zmieniałby się co build.
+   Lepiej głośno ostrzec, niż cicho generować śmieciowe daty. */
+(function warnIfShallow() {
+  try {
+    const shallow = execFileSync('git', ['rev-parse', '--is-shallow-repository'],
+      { cwd: ROOT, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
+    if (shallow === 'true') {
+      console.warn('! Płytki klon repozytorium — daty lastmod będą niedokładne.');
+      console.warn('  W GitHub Actions ustaw: actions/checkout z fetch-depth: 0');
+    }
+  } catch { /* brak gita — i tak zadziała fallback */ }
+})();
+
 const dateCache = new Map();
 function gitDate(relPath) {
   if (dateCache.has(relPath)) return dateCache.get(relPath);

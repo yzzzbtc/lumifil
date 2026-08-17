@@ -26,6 +26,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Pełna historia jest wymagana: build-sitemap.js ustala `lastmod`
+          # z daty ostatniego commita dotykającego pliku. Przy domyślnym
+          # płytkim klonie `git log -- <plik>` nic nie zwraca, skrypt spada
+          # na mtime (czyli czas checkoutu) i sitemap.xml zmienia się przy
+          # każdym uruchomieniu.
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
